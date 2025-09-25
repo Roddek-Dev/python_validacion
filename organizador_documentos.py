@@ -117,36 +117,35 @@ class DocumentOrganizer:
         text = re.sub(r"[^\w\s]", " ", text)
         text = re.sub(r"\s+", " ", text)
         return text.strip()
-
-    def extract_user_from_folder(self, file_path: Path) -> Optional[str]:
+    
+    def extract_user_from_folder(self, file_path: Path, origen_path: Path) -> Optional[str]:
         """Extrae nombre de usuario de la estructura de carpetas."""
-        # Buscar en la jerarquía de carpetas hacia arriba
-        current_path = file_path.parent
+        # Obtener la ruta relativa desde la carpeta origen
+        try:
+            relative_path = file_path.relative_to(origen_path)
+        except ValueError:
+            return None
+        
+        # Dividir la ruta en partes
+        path_parts = relative_path.parts
         
         # Patrones para detectar carpetas de usuario
         user_patterns = [
-            r"([A-Z][A-Za-z\s]+)\s+-\s+CC\s+\d+",  # "NOMBRE APELLIDO - CC 123456789"
-            r"([A-Z][A-Za-z\s]+)\s+CC\s+\d+",      # "NOMBRE APELLIDO CC 123456789"
-            r"([A-Z][A-Za-z\s]+)\s+-\s+\d+",       # "NOMBRE APELLIDO - 123456789"
+            r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑ\s]+)\s+-\s+CC\s+\d+",  # "NOMBRE APELLIDO - CC 123456789"
+            r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑ\s]+)\s+CC\s+\d+",      # "NOMBRE APELLIDO CC 123456789"
+            r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑ\s]+)\s+-\s+\d+",       # "NOMBRE APELLIDO - 123456789"
         ]
         
-        # Buscar hasta 3 niveles hacia arriba
-        for _ in range(3):
-            folder_name = current_path.name
-            
+        # Buscar en las primeras partes de la ruta (carpetas más cercanas al origen)
+        for part in path_parts[:3]:  # Solo las primeras 3 carpetas
             for pattern in user_patterns:
-                match = re.search(pattern, folder_name, re.IGNORECASE)
+                match = re.search(pattern, part, re.IGNORECASE)
                 if match:
                     user_name = match.group(1).strip()
                     return self._clean_user_name(user_name)
-            
-            # Subir un nivel
-            current_path = current_path.parent
-            if current_path == current_path.parent:  # Llegamos a la raíz
-                break
         
         return None
-
+    
     def _clean_user_name(self, name: str) -> str:
         """Limpia y formatea el nombre de usuario."""
         # Normalizar y limpiar
@@ -234,11 +233,11 @@ class DocumentOrganizer:
                         if page_text:
                             text += page_text + "\n"
 
-                            tables = page.extract_tables()
-                            for table in tables:
-                                for row in table:
-                                    if row:
-                                        text += " ".join(str(cell) for cell in row if cell) + "\n"
+                        tables = page.extract_tables()
+                        for table in tables:
+                            for row in table:
+                                if row:
+                                    text += " ".join(str(cell) for cell in row if cell) + "\n"
                     except Exception as page_error:
                         self.logger.warning(f"Error procesando página {i+1} de {file_path}: {page_error}")
                         continue
@@ -328,7 +327,7 @@ class DocumentOrganizer:
                 except Exception as conv_error:
                     self.logger.error(f"Error convirtiendo PDF para OCR {file_path}: {conv_error}")
                     return ""
-
+            
             elif extension in [".jpg", ".jpeg", ".png", ".tiff", ".tif", ".bmp"]:
                 image = Image.open(file_path)
                 processed_image = self.preprocess_image_for_ocr(image)
@@ -552,15 +551,24 @@ class DocumentOrganizer:
         
         return clean_name
     
-    def generate_destination_path(self, original_path: Path, category_id: str, dest_folder: Path, user_name: Optional[str] = None) -> Tuple[str, Path]:
+    def generate_destination_path(self, original_path: Path, category_id: str, destino_path: Path, user_name: Optional[str] = None) -> Tuple[str, Path]:
         """Genera ruta de destino manteniendo el nombre original del archivo."""
-        # Crear carpeta de usuario si está habilitado y se detectó usuario
-        final_dest_folder = dest_folder
+        # Crear estructura: destino_path / usuario / categoria
         if (self.config.get("enable_user_organization", False) and user_name):
-            user_folder = dest_folder / user_name
+            # Crear carpeta de usuario en la raíz del destino
+            user_folder = destino_path / user_name
             user_folder.mkdir(parents=True, exist_ok=True)
-            final_dest_folder = user_folder
+            
+            # Crear carpeta de categoría dentro del usuario
+            category_name = self.config["categories"][category_id]
+            final_dest_folder = user_folder / category_name
+            final_dest_folder.mkdir(parents=True, exist_ok=True)
             self.stats["users_created"] += 1
+        else:
+            # Estructura tradicional: destino_path / categoria
+            category_name = self.config["categories"][category_id]
+            final_dest_folder = destino_path / category_name
+            final_dest_folder.mkdir(parents=True, exist_ok=True)
 
         # Mantener nombre original del archivo
         original_filename = original_path.name
@@ -634,18 +642,21 @@ class DocumentOrganizer:
             result["palabras_clave_encontradas"] = "; ".join(keywords)
             
             # Detectar usuario de la estructura de carpetas
-            user_name = self.extract_user_from_folder(file_path)
+            user_name = self.extract_user_from_folder(file_path, origen_path)
             
             if category_id == "Pendientes_Revisar":
-                dest_folder = destino_path / "Pendientes_Revisar"
-                dest_folder.mkdir(parents=True, exist_ok=True)
-                
-                # Crear carpeta de usuario si está habilitado
                 if (self.config.get("enable_user_organization", False) and user_name):
-                    user_folder = dest_folder / user_name
+                    # Crear carpeta de usuario en la raíz del destino
+                    user_folder = destino_path / user_name
                     user_folder.mkdir(parents=True, exist_ok=True)
-                    dest_folder = user_folder
+                    
+                    # Crear carpeta Pendientes_Revisar dentro del usuario
+                    dest_folder = user_folder / "Pendientes_Revisar"
+                    dest_folder.mkdir(parents=True, exist_ok=True)
                     self.stats["users_created"] += 1
+                else:
+                    dest_folder = destino_path / "Pendientes_Revisar"
+                    dest_folder.mkdir(parents=True, exist_ok=True)
                 
                 new_filename = file_path.name
                 dest_path = dest_folder / new_filename
@@ -658,11 +669,7 @@ class DocumentOrganizer:
                     dest_path = dest_folder / new_filename
                     counter += 1
             else:
-                category_name = self.config["categories"][category_id]
-                dest_folder = destino_path / category_name
-                dest_folder.mkdir(parents=True, exist_ok=True)
-                
-                new_filename, final_dest_folder = self.generate_destination_path(file_path, category_id, dest_folder, user_name)
+                new_filename, final_dest_folder = self.generate_destination_path(file_path, category_id, destino_path, user_name)
                 dest_path = final_dest_folder / new_filename
                 self.stats["classified"] += 1
             

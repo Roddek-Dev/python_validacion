@@ -1,20 +1,20 @@
 # Configuración de Operación
-dry_run: true
-default_mode: "copy" # 'copy' o 'move'
-num_threads: 4
+dry_run: false
+default_mode: "copy"
+num_threads: 6
+confidence_threshold: 15
 
 # Configuración de Análisis de Contenido
-enable_content_search: false
-pdf_pages_to_read: 2
+enable_content_search: true
+pdf_pages_to_read: 1
 extensions_for_content_search: [".pdf", ".docx", ".txt", ".xlsx"]
 
 # Configuración de OCR
-enable_ocr: false
+enable_ocr: true
 ocr_languages: "spa"
-scanned_pdf_threshold: 100  # Caracteres mínimos para considerar PDF no escaneado
-ocr_max_pages: 3           # Páginas máximas para OCR en PDF
-pdf_pages_to_read: 3    # Páginas para análisis de contenido
-ocr_min_text_threshold: 50 # Caracteres para decidir si un PDF es escaneado
+scanned_pdf_threshold: 50
+ocr_max_pages: 1
+ocr_min_text_threshold: 30
 
 # Configuración de Renombrado
 max_filename_length: 100
@@ -24,7 +24,10 @@ single_file_name_categories:
   "10": true
   "20": true
 
-# Mapa de Categorías (NO MODIFICAR NÚMEROS NI NOMBRES)
+# Configuración de Organización por Usuario
+enable_user_organization: false
+
+# Categorías de Documentos
 categories:
   "00": "00 Formato Check List"
   "01": "01 Requisición del Personal"
@@ -69,47 +72,47 @@ categories:
   "41": "41 Otros documentos"
   "42": "42 Evaluaciones de desempeño"
 
-# Palabras Clave por Categoría
+# Keywords por Categoría (máximo 5 por categoría para optimizar rendimiento)
 keywords:
-  "00": ["check list", "lista chequeo"]
-  "01": ["requisicion", "solicitud personal"]
-  "02": ["hoja de vida", "cv", "curriculum", "hv"]
-  "03": ["estudios", "diploma", "acta grado", "titulo profesional", "tecnologo", "tecnico"]
-  "04": ["experiencia laboral", "certificacion laboral", "constancia laboral"]
-  "05": ["eps", "afiliacion salud"]
-  "06": ["arl", "riesgos laborales"]
-  "07": ["caja compensacion", "ccf"]
-  "08": ["pensiones", "fondo pension", "afiliacion pension"]
-  "09": ["contrato"]
-  "10": ["cedula", "documento identidad", "cc"]
-  "11": ["examen medico", "examen ingreso", "aptitud medica"]
-  "12": ["pgn", "procuraduria", "antecedentes disciplinarios"]
-  "13": ["cgr", "contraloria", "antecedentes fiscales"]
-  "14": ["ponal", "policia", "antecedentes judiciales"]
-  "15": ["medidas correctivas"]
-  "16": ["certificacion bancaria", "cuenta bancaria"]
-  "17": ["licencia conduccion", "pase"]
-  "18": ["tarjeta profesional", "matricula profesional"]
-  "19": ["induccion", "reinduccion"]
-  "20": ["foto"]
-  "21": ["tratamiento datos", "habeas data", "autorizacion datos"]
-  "22": ["inhabilidad", "incompatibilidad", "declaracion juramentada"]
-  "23": ["otros ingreso"]
-  "24": ["examen periodico", "reubicacion"]
-  "25": ["permiso", "licencia no remunerada"]
-  "27": ["incapacidad"]
-  "28": ["vacaciones", "solicitud vacaciones"]
-  "29": ["encargo"]
-  "30": ["cesantias", "retiro cesantias"]
-  "31": ["certificaciones laborales", "constancias laborales"]
-  "32": ["deduccion", "retefuente", "retencion fuente"]
-  "33": ["ingresos y retenciones"]
-  "34": ["verificacion", "poligrafo"]
-  "35": ["reinducciones"]
-  "36": ["vacunas", "carnet vacunacion"]
-  "37": ["retiro", "paz y salvo", "acta retiro", "examen egreso"]
-  "38": ["acta entrega", "entrega puesto"]
-  "39": ["validacion"]
-  "40": ["proceso disciplinario", "llamado atencion", "memorando"]
-  "41": ["otros", "varios"]
-  "42": ["evaluacion desempeño", "evaluacion rendimiento"]
+  "00": ["check list", "lista chequeo", "formato check list", "expediente laboral", "lista de chequeo"]
+  "01": ["requisicion", "solicitud personal", "requisicion personal", "formato requisicion", "solicitud empleo"]
+  "02": ["hoja de vida", "cv", "curriculum", "hv", "curriculum vitae"]
+  "03": ["estudios", "diploma", "acta grado", "titulo profesional", "tecnologo"]
+  "04": ["experiencia laboral", "certificacion laboral", "constancia laboral", "certificaciones experiencia", "certificado experiencia"]
+  "05": ["eps", "afiliacion salud", "salud eps", "afiliacion eps", "certificacion eps"]
+  "06": ["arl", "riesgos laborales", "afiliacion arl", "certificado arl", "seguro riesgos laborales"]
+  "07": ["caja compensacion", "ccf", "compensacion familiar", "certificado caja compensacion", "afiliacion compensacion familiar"]
+  "08": ["pensiones", "fondo pension", "afiliacion pension", "fondo pensiones obligatorias", "porvenir"]
+  "09": ["contrato", "contrato trabajo", "contrato laboral", "contrato individual trabajo", "termino indefinido"]
+  "10": ["cedula", "documento identidad", "cc", "cedula ciudadania", "identificacion personal"]
+  "11": ["examen medico", "examen ingreso", "aptitud medica", "examen medico ingreso", "certificado medico ocupacional"]
+  "12": ["pgn", "procuraduria", "antecedentes disciplinarios", "certificado antecedentes", "procuraduria general nacion"]
+  "13": ["cgr", "contraloria", "antecedentes fiscales", "contraloria general republica", "certificado fiscal"]
+  "14": ["ponal", "policia", "antecedentes judiciales", "policia nacional", "antecedentes penales"]
+  "15": ["medidas correctivas", "medidas correctivas ponal", "registro nacional medidas correctivas", "rnmc", "certificado medidas correctivas"]
+  "16": ["certificacion bancaria", "cuenta bancaria", "certificado bancario", "cuenta ahorros", "cuenta corriente"]
+  "17": ["licencia conduccion", "pase", "licencia conducir", "licencia transito", "pase conduccion"]
+  "18": ["tarjeta profesional", "matricula profesional", "copnia", "consejo profesional ingenieria", "matricula ingeniero"]
+  "19": ["induccion", "reinduccion", "induccion corporativa", "constancia induccion", "formato induccion"]
+  "20": ["foto", "fotografia", "foto documento", "foto carnet", "foto 3x4"]
+  "21": ["tratamiento datos", "habeas data", "autorizacion datos", "datos personales", "autorizacion tratamiento datos"]
+  "22": ["inhabilidad", "incompatibilidad", "declaracion juramentada", "certificado inhabilidades", "conflicto intereses"]
+  "23": ["otros ingreso", "otros documentos ingreso", "evaluacion periodo prueba", "formato evaluacion", "periodo prueba"]
+  "24": ["examen periodico", "reubicacion", "examen medico periodico", "certificado medico periodico", "examen ocupacional periodico"]
+  "25": ["permiso", "licencia no remunerada", "permisos", "formato control novedades", "permiso personal"]
+  "27": ["incapacidad", "incapacidades", "incapacidad medica", "certificado incapacidad", "licencia medica"]
+  "28": ["vacaciones", "solicitud vacaciones", "formato vacaciones", "solicitud disfrute vacaciones", "periodo vacaciones"]
+  "29": ["encargo", "encargos", "encargo cargo", "encargo funciones", "delegacion funciones"]
+  "30": ["cesantias", "retiro cesantias", "solicitud cesantias", "liquidacion cesantias", "certificado cesantias"]
+  "31": ["certificaciones laborales", "constancias laborales", "certificado laboral", "constancia laboral", "certificacion trabajo"]
+  "32": ["deduccion", "retefuente", "retencion fuente", "deduccion retefuente", "formato deduccion"]
+  "33": ["ingresos y retenciones", "ingresos retenciones", "certificado ingresos", "certificado retenciones", "certificacion ingresos"]
+  "34": ["verificacion", "poligrafo", "verificaciones", "verificacion titulo", "verificacion titulos"]
+  "35": ["reinducciones", "reinduccion", "capacitacion recurrente", "entrenamiento periodico", "actualizacion induccion"]
+  "36": ["vacunas", "carnet vacunacion", "carnet vacunas", "vacunacion", "certificado vacunas"]
+  "37": ["retiro", "paz y salvo", "acta retiro", "examen egreso", "paz salvo"]
+  "38": ["acta entrega", "entrega puesto", "actas entrega", "inventario entrega", "transferencia responsabilidades"]
+  "39": ["validacion", "validaciones", "aprobacion", "revision formal", "validacion documentos"]
+  "40": ["proceso disciplinario", "llamado atencion", "memorando", "memorando disciplinario", "sancion disciplinaria"]
+  "41": ["otros", "varios", "otros documentos", "documentos varios", "miscelaneos"]
+  "42": ["evaluacion desempeño", "evaluacion rendimiento", "evaluacion desempeno", "calificacion desempeño", "review desempeño"]

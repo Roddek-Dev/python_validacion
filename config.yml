@@ -1,0 +1,115 @@
+# Configuración de Operación
+dry_run: true
+default_mode: "copy" # 'copy' o 'move'
+num_threads: 4
+
+# Configuración de Análisis de Contenido
+enable_content_search: false
+pdf_pages_to_read: 2
+extensions_for_content_search: [".pdf", ".docx", ".txt", ".xlsx"]
+
+# Configuración de OCR
+enable_ocr: false
+ocr_languages: "spa"
+scanned_pdf_threshold: 100  # Caracteres mínimos para considerar PDF no escaneado
+ocr_max_pages: 3           # Páginas máximas para OCR en PDF
+pdf_pages_to_read: 3    # Páginas para análisis de contenido
+ocr_min_text_threshold: 50 # Caracteres para decidir si un PDF es escaneado
+
+# Configuración de Renombrado
+max_filename_length: 100
+single_file_name_categories:
+  "00": true
+  "02": true
+  "10": true
+  "20": true
+
+# Mapa de Categorías (NO MODIFICAR NÚMEROS NI NOMBRES)
+categories:
+  "00": "00 Formato Check List"
+  "01": "01 Requisición del Personal"
+  "02": "02 Formato Hoja de Vida Unica"
+  "03": "03 Certificados de Estudios"
+  "04": "04 Certificaciones de Experiencia Laboral"
+  "05": "05 certificación y Afiliación EPS"
+  "06": "06 Afiliación ARL"
+  "07": "07 Afiliación Caja de Compensación"
+  "08": "08 Afiliación Fondo de Pensiones"
+  "09": "09 Contrato de Trabajo"
+  "10": "10 Documento de Identidad"
+  "11": "11 Examen Médico de Ingreso"
+  "12": "12 Antecedentes Disciplinarios PGN"
+  "13": "13 Antecedentes Fiscales CGR"
+  "14": "14 Antecedentes Judiciales PONAL"
+  "15": "15 Medidas Correctivas PONAL"
+  "16": "16 Certificación Bancaria"
+  "17": "17 Licencia de Conducción"
+  "18": "18 Tarjeta Profesional"
+  "19": "19 Constancia Inducción Corporativa"
+  "20": "20 Foto (png)"
+  "21": "21 Autorización Tratamiento Datos Personales"
+  "22": "22 Declaración de no Inhabilidad e Incompatibilidad"
+  "23": "23 Otros Documentos Solicitados para el Ingreso"
+  "24": "24 Examen Medico Periódico y Reubicación"
+  "25": "25 Permisos"
+  "27": "27 Incapacidades"
+  "28": "28 Vacaciones"
+  "29": "29 Encargos"
+  "30": "30 Cesantías"
+  "31": "31 Certificaciones Laborales"
+  "32": "32 Formatos Dedución Rte Fte"
+  "33": "33 Certificados Ingresos y Retenciones"
+  "34": "34 Verificaciones"
+  "35": "35 Reinducciones"
+  "36": "36 Carnet de Vacunas"
+  "37": "37 Protocolo de Retiro y documentos de retiro"
+  "38": "38 Actas de Entrega"
+  "39": "39 Validaciones"
+  "40": "40 Procesos Disciplinarios"
+  "41": "41 Otros documentos"
+  "42": "42 Evaluaciones de desempeño"
+
+# Palabras Clave por Categoría
+keywords:
+  "00": ["check list", "lista chequeo"]
+  "01": ["requisicion", "solicitud personal"]
+  "02": ["hoja de vida", "cv", "curriculum", "hv"]
+  "03": ["estudios", "diploma", "acta grado", "titulo profesional", "tecnologo", "tecnico"]
+  "04": ["experiencia laboral", "certificacion laboral", "constancia laboral"]
+  "05": ["eps", "afiliacion salud"]
+  "06": ["arl", "riesgos laborales"]
+  "07": ["caja compensacion", "ccf"]
+  "08": ["pensiones", "fondo pension", "afiliacion pension"]
+  "09": ["contrato"]
+  "10": ["cedula", "documento identidad", "cc"]
+  "11": ["examen medico", "examen ingreso", "aptitud medica"]
+  "12": ["pgn", "procuraduria", "antecedentes disciplinarios"]
+  "13": ["cgr", "contraloria", "antecedentes fiscales"]
+  "14": ["ponal", "policia", "antecedentes judiciales"]
+  "15": ["medidas correctivas"]
+  "16": ["certificacion bancaria", "cuenta bancaria"]
+  "17": ["licencia conduccion", "pase"]
+  "18": ["tarjeta profesional", "matricula profesional"]
+  "19": ["induccion", "reinduccion"]
+  "20": ["foto"]
+  "21": ["tratamiento datos", "habeas data", "autorizacion datos"]
+  "22": ["inhabilidad", "incompatibilidad", "declaracion juramentada"]
+  "23": ["otros ingreso"]
+  "24": ["examen periodico", "reubicacion"]
+  "25": ["permiso", "licencia no remunerada"]
+  "27": ["incapacidad"]
+  "28": ["vacaciones", "solicitud vacaciones"]
+  "29": ["encargo"]
+  "30": ["cesantias", "retiro cesantias"]
+  "31": ["certificaciones laborales", "constancias laborales"]
+  "32": ["deduccion", "retefuente", "retencion fuente"]
+  "33": ["ingresos y retenciones"]
+  "34": ["verificacion", "poligrafo"]
+  "35": ["reinducciones"]
+  "36": ["vacunas", "carnet vacunacion"]
+  "37": ["retiro", "paz y salvo", "acta retiro", "examen egreso"]
+  "38": ["acta entrega", "entrega puesto"]
+  "39": ["validacion"]
+  "40": ["proceso disciplinario", "llamado atencion", "memorando"]
+  "41": ["otros", "varios"]
+  "42": ["evaluacion desempeño", "evaluacion rendimiento"]

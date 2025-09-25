@@ -1,0 +1,7 @@
+Permissions Size User       Date Modified Name
+.rw-rw-r--  4,2k roddek-dev 24 sep 16:06  config.yml
+.rw-r--r--     0 roddek-dev 24 sep 15:02  estructura_proyecto_script.txt
+.rw-rw-r--   41k roddek-dev 24 sep 14:44  organizador_documentos.py
+.rw-r--r--   45k roddek-dev 24 sep 14:50  proceso.log
+.rw-rw-r--  2,1k roddek-dev 24 sep 14:51  README.md
+.rw-r--r--   20k roddek-dev 24 sep 14:50  resultados.csv

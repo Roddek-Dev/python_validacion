@@ -1,0 +1,631 @@
+2025-09-24 11:42:48,705 - DocumentOrganizer - INFO - Iniciando organización de documentos
+2025-09-24 11:42:48,705 - DocumentOrganizer - INFO - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-24 11:42:48,705 - DocumentOrganizer - INFO - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-24 11:42:48,705 - DocumentOrganizer - INFO - Modo: DRY RUN
+2025-09-24 11:42:48,718 - DocumentOrganizer - INFO - Encontrados 54 archivos para procesar
+2025-09-24 11:42:48,760 - DocumentOrganizer - INFO - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 09 (prefijo_numerico)
+2025-09-24 11:42:48,762 - DocumentOrganizer - INFO - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 25 (prefijo_numerico)
+2025-09-24 11:42:48,763 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en carpeta padre para categoría 06
+2025-09-24 11:42:48,763 - DocumentOrganizer - DEBUG - Keyword 'cc' encontrada en carpeta padre para categoría 10
+2025-09-24 11:42:48,764 - DocumentOrganizer - WARNING - Archivo sin clasificar (puntuación 5 < 10): estructura_proyecto.txt
+2025-09-24 11:42:48,764 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: estructura_proyecto.txt -> sin_clasificar
+2025-09-24 11:42:48,765 - DocumentOrganizer - INFO - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 08 (prefijo_numerico)
+2025-09-24 11:42:48,767 - DocumentOrganizer - INFO - Archivo procesado: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> 22 (prefijo_numerico)
+2025-09-24 11:42:48,770 - DocumentOrganizer - INFO - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 13 (prefijo_numerico)
+2025-09-24 11:42:48,771 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,771 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en carpeta padre para categoría 06
+2025-09-24 11:42:48,771 - DocumentOrganizer - DEBUG - Keyword 'cc' encontrada en carpeta padre para categoría 10
+2025-09-24 11:42:48,772 - DocumentOrganizer - INFO - Archivo procesado: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 11:42:48,773 - DocumentOrganizer - INFO - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 18 (prefijo_numerico)
+2025-09-24 11:42:48,775 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,775 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en carpeta padre para categoría 06
+2025-09-24 11:42:48,775 - DocumentOrganizer - DEBUG - Keyword 'cc' encontrada en carpeta padre para categoría 10
+2025-09-24 11:42:48,776 - DocumentOrganizer - INFO - Archivo procesado: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> 06 (carpeta_padre)
+2025-09-24 11:42:48,780 - DocumentOrganizer - INFO - Archivo procesado: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> 05 (prefijo_numerico)
+2025-09-24 11:42:48,786 - DocumentOrganizer - INFO - Archivo procesado: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> 10 (prefijo_numerico)
+2025-09-24 11:42:48,791 - DocumentOrganizer - INFO - Archivo procesado: 2. Hoja de vida.pdf -> 02 (prefijo_numerico)
+2025-09-24 11:42:48,793 - DocumentOrganizer - INFO - Archivo procesado: 19. FP CARLOS BAUTISTA.pdf -> 19 (prefijo_numerico)
+2025-09-24 11:42:48,796 - DocumentOrganizer - INFO - Archivo procesado: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> 00 (prefijo_numerico)
+2025-09-24 11:42:48,797 - DocumentOrganizer - INFO - Archivo procesado: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> 12 (prefijo_numerico)
+2025-09-24 11:42:48,799 - DocumentOrganizer - INFO - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 23 (prefijo_numerico)
+2025-09-24 11:42:48,800 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,801 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en carpeta padre para categoría 06
+2025-09-24 11:42:48,801 - DocumentOrganizer - DEBUG - Keyword 'cc' encontrada en carpeta padre para categoría 10
+2025-09-24 11:42:48,801 - DocumentOrganizer - INFO - Archivo procesado: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> 06 (carpeta_padre)
+2025-09-24 11:42:48,803 - DocumentOrganizer - INFO - Archivo procesado: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> 21 (prefijo_numerico)
+2025-09-24 11:42:48,804 - DocumentOrganizer - INFO - Archivo procesado: 3. Certificados estudios.pdf -> 03 (prefijo_numerico)
+2025-09-24 11:42:48,807 - DocumentOrganizer - DEBUG - Keyword 'diploma' encontrada en filename para categoría 03
+2025-09-24 11:42:48,807 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en carpeta padre para categoría 06
+2025-09-24 11:42:48,807 - DocumentOrganizer - DEBUG - Keyword 'cc' encontrada en carpeta padre para categoría 10
+2025-09-24 11:42:48,809 - DocumentOrganizer - INFO - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 06 (prefijo_numerico)
+2025-09-24 11:42:48,810 - DocumentOrganizer - INFO - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (carpeta_padre)
+2025-09-24 11:42:48,813 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,814 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en carpeta padre para categoría 06
+2025-09-24 11:42:48,815 - DocumentOrganizer - DEBUG - Keyword 'cc' encontrada en carpeta padre para categoría 10
+2025-09-24 11:42:48,815 - DocumentOrganizer - INFO - Archivo procesado: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 11:42:48,816 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,817 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en carpeta padre para categoría 06
+2025-09-24 11:42:48,817 - DocumentOrganizer - DEBUG - Keyword 'cc' encontrada en carpeta padre para categoría 10
+2025-09-24 11:42:48,818 - DocumentOrganizer - INFO - Archivo procesado: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> 06 (carpeta_padre)
+2025-09-24 11:42:48,827 - DocumentOrganizer - INFO - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (prefijo_numerico)
+2025-09-24 11:42:48,829 - DocumentOrganizer - INFO - Archivo procesado: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> 00 (prefijo_numerico)
+2025-09-24 11:42:48,836 - DocumentOrganizer - INFO - Archivo procesado: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> 07 (prefijo_numerico)
+2025-09-24 11:42:48,840 - DocumentOrganizer - INFO - Archivo procesado: 11. TP CARLOS BAUTISTA.pdf -> 11 (prefijo_numerico)
+2025-09-24 11:42:48,842 - DocumentOrganizer - INFO - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 20 (prefijo_numerico)
+2025-09-24 11:42:48,850 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en carpeta padre para categoría 06
+2025-09-24 11:42:48,850 - DocumentOrganizer - DEBUG - Keyword 'cc' encontrada en carpeta padre para categoría 10
+2025-09-24 11:42:48,851 - DocumentOrganizer - WARNING - Archivo sin clasificar (puntuación 5 < 10): 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf
+2025-09-24 11:42:48,853 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> sin_clasificar
+2025-09-24 11:42:48,857 - DocumentOrganizer - INFO - Archivo procesado: 17. FOTO.jpeg -> 17 (prefijo_numerico)
+2025-09-24 11:42:48,859 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,862 - DocumentOrganizer - INFO - Archivo procesado: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 06 (nombre_archivo)
+2025-09-24 11:42:48,869 - DocumentOrganizer - INFO - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-24 11:42:48,872 - DocumentOrganizer - INFO - Archivo procesado: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> 00 (prefijo_numerico)
+2025-09-24 11:42:48,874 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,874 - DocumentOrganizer - DEBUG - Keyword 'verificacion' encontrada en filename para categoría 34
+2025-09-24 11:42:48,874 - DocumentOrganizer - DEBUG - Keyword 'verificacion' encontrada en carpeta padre para categoría 34
+2025-09-24 11:42:48,875 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,879 - DocumentOrganizer - DEBUG - Keyword 'cc' encontrada en carpeta padre para categoría 10
+2025-09-24 11:42:48,881 - DocumentOrganizer - DEBUG - Keyword 'deduccion' encontrada en carpeta padre para categoría 32
+2025-09-24 11:42:48,884 - DocumentOrganizer - INFO - Archivo procesado: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> 34 (carpeta_padre)
+2025-09-24 11:42:48,890 - DocumentOrganizer - INFO - Archivo procesado: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> 06 (carpeta_padre)
+2025-09-24 11:42:48,893 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,894 - DocumentOrganizer - DEBUG - Keyword 'vacaciones' encontrada en filename para categoría 28
+2025-09-24 11:42:48,896 - DocumentOrganizer - DEBUG - Keyword 'vacaciones' encontrada en carpeta padre para categoría 28
+2025-09-24 11:42:48,900 - DocumentOrganizer - INFO - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-24 11:42:48,903 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,907 - DocumentOrganizer - INFO - Archivo procesado: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> 06 (nombre_archivo)
+2025-09-24 11:42:48,912 - DocumentOrganizer - DEBUG - Keyword 'certificacion laboral' encontrada en filename para categoría 04
+2025-09-24 11:42:48,914 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,916 - DocumentOrganizer - WARNING - Archivo ambiguo con empate en categorías ['04', '06']: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-24 11:42:48,917 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> ambiguo
+2025-09-24 11:42:48,918 - DocumentOrganizer - DEBUG - Keyword 'certificacion laboral' encontrada en filename para categoría 04
+2025-09-24 11:42:48,920 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,920 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,919 - DocumentOrganizer - INFO - Archivo procesado: 4. Certificados Laborales.pdf -> 04 (prefijo_numerico)
+2025-09-24 11:42:48,922 - DocumentOrganizer - WARNING - Archivo ambiguo con empate en categorías ['04', '06']: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-24 11:42:48,923 - DocumentOrganizer - DEBUG - Keyword 'cc' encontrada en filename para categoría 10
+2025-09-24 11:42:48,924 - DocumentOrganizer - DEBUG - Keyword 'deduccion' encontrada en filename para categoría 32
+2025-09-24 11:42:48,925 - DocumentOrganizer - DEBUG - Keyword 'cc' encontrada en carpeta padre para categoría 10
+2025-09-24 11:42:48,926 - DocumentOrganizer - DEBUG - Keyword 'deduccion' encontrada en carpeta padre para categoría 32
+2025-09-24 11:42:48,926 - DocumentOrganizer - WARNING - Archivo ambiguo con empate en categorías ['10', '32']: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf
+2025-09-24 11:42:48,929 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> ambiguo
+2025-09-24 11:42:48,932 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> ambiguo
+2025-09-24 11:42:48,933 - DocumentOrganizer - INFO - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 01 (prefijo_numerico)
+2025-09-24 11:42:48,936 - DocumentOrganizer - INFO - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 01 (prefijo_numerico)
+2025-09-24 11:42:48,937 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,938 - DocumentOrganizer - DEBUG - Keyword 'incapacidad' encontrada en filename para categoría 27
+2025-09-24 11:42:48,939 - DocumentOrganizer - DEBUG - Keyword 'incapacidad' encontrada en carpeta padre para categoría 27
+2025-09-24 11:42:48,938 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,941 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 11:42:48,942 - DocumentOrganizer - DEBUG - Keyword 'incapacidad' encontrada en filename para categoría 27
+2025-09-24 11:42:48,944 - DocumentOrganizer - DEBUG - Keyword 'incapacidad' encontrada en carpeta padre para categoría 27
+2025-09-24 11:42:48,943 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,945 - DocumentOrganizer - DEBUG - Keyword 'incapacidad' encontrada en filename para categoría 27
+2025-09-24 11:42:48,946 - DocumentOrganizer - DEBUG - Keyword 'incapacidad' encontrada en carpeta padre para categoría 27
+2025-09-24 11:42:48,947 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-24 11:42:48,947 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 11:42:48,949 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,949 - DocumentOrganizer - DEBUG - Keyword 'incapacidad' encontrada en filename para categoría 27
+2025-09-24 11:42:48,951 - DocumentOrganizer - DEBUG - Keyword 'incapacidad' encontrada en carpeta padre para categoría 27
+2025-09-24 11:42:48,954 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-24 11:42:48,959 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,959 - DocumentOrganizer - DEBUG - Keyword 'incapacidad' encontrada en filename para categoría 27
+2025-09-24 11:42:48,960 - DocumentOrganizer - DEBUG - Keyword 'incapacidad' encontrada en carpeta padre para categoría 27
+2025-09-24 11:42:48,961 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-24 11:42:48,963 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,964 - DocumentOrganizer - DEBUG - Keyword 'permiso' encontrada en filename para categoría 25
+2025-09-24 11:42:48,965 - DocumentOrganizer - DEBUG - Keyword 'permiso' encontrada en carpeta padre para categoría 25
+2025-09-24 11:42:48,966 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-24 11:42:48,967 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,969 - DocumentOrganizer - DEBUG - Keyword 'permiso' encontrada en carpeta padre para categoría 25
+2025-09-24 11:42:48,974 - DocumentOrganizer - INFO - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 11:42:48,990 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:48,991 - DocumentOrganizer - DEBUG - Keyword 'permiso' encontrada en filename para categoría 25
+2025-09-24 11:42:48,996 - DocumentOrganizer - DEBUG - Keyword 'permiso' encontrada en carpeta padre para categoría 25
+2025-09-24 11:42:48,999 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:49,007 - DocumentOrganizer - INFO - Archivo procesado: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> 06 (nombre_archivo)
+2025-09-24 11:42:49,008 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 11:42:49,012 - DocumentOrganizer - DEBUG - Keyword 'estudios' encontrada en filename para categoría 03
+2025-09-24 11:42:49,013 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:49,016 - DocumentOrganizer - DEBUG - Keyword 'permiso' encontrada en filename para categoría 25
+2025-09-24 11:42:49,016 - DocumentOrganizer - DEBUG - Keyword 'arl' encontrada en filename para categoría 06
+2025-09-24 11:42:49,017 - DocumentOrganizer - DEBUG - Keyword 'permiso' encontrada en carpeta padre para categoría 25
+2025-09-24 11:42:49,019 - DocumentOrganizer - DEBUG - Keyword 'permiso' encontrada en carpeta padre para categoría 25
+2025-09-24 11:42:49,020 - DocumentOrganizer - INFO - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 06 (carpeta_padre)
+2025-09-24 11:42:49,021 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 11:42:49,030 - DocumentOrganizer - INFO - Resultados guardados en: resultados.csv
+2025-09-24 11:43:21,726 - DocumentOrganizer - INFO - Iniciando organización de documentos
+2025-09-24 11:43:21,726 - DocumentOrganizer - INFO - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-24 11:43:21,726 - DocumentOrganizer - INFO - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-24 11:43:21,726 - DocumentOrganizer - INFO - Modo: COPY
+2025-09-24 11:43:21,730 - DocumentOrganizer - INFO - Encontrados 54 archivos para procesar
+2025-09-24 11:43:21,740 - DocumentOrganizer - INFO - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 09 (prefijo_numerico)
+2025-09-24 11:43:21,744 - DocumentOrganizer - INFO - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 25 (prefijo_numerico)
+2025-09-24 11:43:21,744 - DocumentOrganizer - INFO - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 08 (prefijo_numerico)
+2025-09-24 11:43:21,746 - DocumentOrganizer - WARNING - Archivo sin clasificar (puntuación 5 < 10): estructura_proyecto.txt
+2025-09-24 11:43:21,747 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: estructura_proyecto.txt -> sin_clasificar
+2025-09-24 11:43:21,751 - DocumentOrganizer - INFO - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 13 (prefijo_numerico)
+2025-09-24 11:43:21,754 - DocumentOrganizer - INFO - Archivo procesado: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> 22 (prefijo_numerico)
+2025-09-24 11:43:21,759 - DocumentOrganizer - INFO - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 18 (prefijo_numerico)
+2025-09-24 11:43:21,763 - DocumentOrganizer - INFO - Archivo procesado: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 11:43:21,768 - DocumentOrganizer - INFO - Archivo procesado: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> 06 (carpeta_padre)
+2025-09-24 11:43:21,772 - DocumentOrganizer - INFO - Archivo procesado: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> 05 (prefijo_numerico)
+2025-09-24 11:43:21,775 - DocumentOrganizer - INFO - Archivo procesado: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> 10 (prefijo_numerico)
+2025-09-24 11:43:21,780 - DocumentOrganizer - INFO - Archivo procesado: 19. FP CARLOS BAUTISTA.pdf -> 19 (prefijo_numerico)
+2025-09-24 11:43:21,782 - DocumentOrganizer - INFO - Archivo procesado: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> 12 (prefijo_numerico)
+2025-09-24 11:43:21,787 - DocumentOrganizer - INFO - Archivo procesado: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> 00 (prefijo_numerico)
+2025-09-24 11:43:21,787 - DocumentOrganizer - INFO - Archivo procesado: 2. Hoja de vida.pdf -> 02 (prefijo_numerico)
+2025-09-24 11:43:21,790 - DocumentOrganizer - INFO - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 23 (prefijo_numerico)
+2025-09-24 11:43:21,793 - DocumentOrganizer - INFO - Archivo procesado: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> 21 (prefijo_numerico)
+2025-09-24 11:43:21,801 - DocumentOrganizer - INFO - Archivo procesado: 3. Certificados estudios.pdf -> 03 (prefijo_numerico)
+2025-09-24 11:43:21,803 - DocumentOrganizer - INFO - Archivo procesado: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> 06 (carpeta_padre)
+2025-09-24 11:43:21,808 - DocumentOrganizer - INFO - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (carpeta_padre)
+2025-09-24 11:43:21,809 - DocumentOrganizer - INFO - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 06 (prefijo_numerico)
+2025-09-24 11:43:21,823 - DocumentOrganizer - INFO - Archivo procesado: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> 06 (carpeta_padre)
+2025-09-24 11:43:21,823 - DocumentOrganizer - INFO - Archivo procesado: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 11:43:21,836 - DocumentOrganizer - INFO - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (prefijo_numerico)
+2025-09-24 11:43:21,840 - DocumentOrganizer - INFO - Archivo procesado: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> 00 (prefijo_numerico)
+2025-09-24 11:43:21,845 - DocumentOrganizer - INFO - Archivo procesado: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> 07 (prefijo_numerico)
+2025-09-24 11:43:21,855 - DocumentOrganizer - INFO - Archivo procesado: 11. TP CARLOS BAUTISTA.pdf -> 11 (prefijo_numerico)
+2025-09-24 11:43:21,858 - DocumentOrganizer - INFO - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 20 (prefijo_numerico)
+2025-09-24 11:43:21,861 - DocumentOrganizer - WARNING - Archivo sin clasificar (puntuación 5 < 10): 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf
+2025-09-24 11:43:21,866 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> sin_clasificar
+2025-09-24 11:43:21,874 - DocumentOrganizer - INFO - Archivo procesado: 17. FOTO.jpeg -> 17 (prefijo_numerico)
+2025-09-24 11:43:21,875 - DocumentOrganizer - INFO - Archivo procesado: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 06 (nombre_archivo)
+2025-09-24 11:43:21,881 - DocumentOrganizer - INFO - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-24 11:43:21,888 - DocumentOrganizer - INFO - Archivo procesado: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> 34 (carpeta_padre)
+2025-09-24 11:43:21,890 - DocumentOrganizer - INFO - Archivo procesado: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> 00 (prefijo_numerico)
+2025-09-24 11:43:21,896 - DocumentOrganizer - INFO - Archivo procesado: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> 06 (carpeta_padre)
+2025-09-24 11:43:21,907 - DocumentOrganizer - INFO - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-24 11:43:21,909 - DocumentOrganizer - INFO - Archivo procesado: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> 06 (nombre_archivo)
+2025-09-24 11:43:21,913 - DocumentOrganizer - WARNING - Archivo ambiguo con empate en categorías ['04', '06']: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-24 11:43:21,918 - DocumentOrganizer - WARNING - Archivo ambiguo con empate en categorías ['04', '06']: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-24 11:43:21,920 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> ambiguo
+2025-09-24 11:43:21,923 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> ambiguo
+2025-09-24 11:43:21,925 - DocumentOrganizer - INFO - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 01 (prefijo_numerico)
+2025-09-24 11:43:21,930 - DocumentOrganizer - INFO - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 01 (prefijo_numerico)
+2025-09-24 11:43:21,935 - DocumentOrganizer - WARNING - Archivo ambiguo con empate en categorías ['10', '32']: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf
+2025-09-24 11:43:21,936 - DocumentOrganizer - INFO - Archivo procesado: 4. Certificados Laborales.pdf -> 04 (prefijo_numerico)
+2025-09-24 11:43:21,942 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> ambiguo
+2025-09-24 11:43:21,944 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 11:43:21,950 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 11:43:21,953 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-24 11:43:21,954 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-24 11:43:21,968 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-24 11:43:21,972 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-24 11:43:21,973 - DocumentOrganizer - INFO - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 11:43:21,985 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 11:43:21,991 - DocumentOrganizer - INFO - Archivo procesado: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> 06 (nombre_archivo)
+2025-09-24 11:43:21,991 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 11:43:21,999 - DocumentOrganizer - INFO - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 06 (carpeta_padre)
+2025-09-24 11:43:22,005 - DocumentOrganizer - INFO - Resultados guardados en: resultados.csv
+2025-09-24 11:50:43,946 - DocumentOrganizer - INFO - Iniciando organización de documentos
+2025-09-24 11:50:43,946 - DocumentOrganizer - INFO - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-24 11:50:43,946 - DocumentOrganizer - INFO - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-24 11:50:43,946 - DocumentOrganizer - INFO - Modo: COPY
+2025-09-24 11:50:43,962 - DocumentOrganizer - INFO - Encontrados 54 archivos para procesar
+2025-09-24 11:50:43,986 - DocumentOrganizer - INFO - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 09 (prefijo_numerico)
+2025-09-24 11:50:43,987 - DocumentOrganizer - INFO - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 25 (prefijo_numerico)
+2025-09-24 11:50:43,988 - DocumentOrganizer - INFO - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 08 (prefijo_numerico)
+2025-09-24 11:50:43,990 - DocumentOrganizer - WARNING - Archivo sin clasificar (puntuación 5 < 10): estructura_proyecto.txt
+2025-09-24 11:50:43,992 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: estructura_proyecto.txt -> sin_clasificar
+2025-09-24 11:50:43,994 - DocumentOrganizer - INFO - Archivo procesado: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> 22 (prefijo_numerico)
+2025-09-24 11:50:43,999 - DocumentOrganizer - INFO - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 13 (prefijo_numerico)
+2025-09-24 11:50:44,001 - DocumentOrganizer - INFO - Archivo procesado: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 11:50:44,003 - DocumentOrganizer - INFO - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 18 (prefijo_numerico)
+2025-09-24 11:50:44,007 - DocumentOrganizer - INFO - Archivo procesado: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> 06 (carpeta_padre)
+2025-09-24 11:50:44,015 - DocumentOrganizer - INFO - Archivo procesado: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> 05 (prefijo_numerico)
+2025-09-24 11:50:44,018 - DocumentOrganizer - INFO - Archivo procesado: 2. Hoja de vida.pdf -> 02 (prefijo_numerico)
+2025-09-24 11:50:44,024 - DocumentOrganizer - INFO - Archivo procesado: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> 12 (prefijo_numerico)
+2025-09-24 11:50:44,025 - DocumentOrganizer - INFO - Archivo procesado: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> 10 (prefijo_numerico)
+2025-09-24 11:50:44,027 - DocumentOrganizer - INFO - Archivo procesado: 19. FP CARLOS BAUTISTA.pdf -> 19 (prefijo_numerico)
+2025-09-24 11:50:44,029 - DocumentOrganizer - INFO - Archivo procesado: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> 00 (prefijo_numerico)
+2025-09-24 11:50:44,031 - DocumentOrganizer - INFO - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 23 (prefijo_numerico)
+2025-09-24 11:50:44,034 - DocumentOrganizer - INFO - Archivo procesado: 3. Certificados estudios.pdf -> 03 (prefijo_numerico)
+2025-09-24 11:50:44,035 - DocumentOrganizer - INFO - Archivo procesado: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> 06 (carpeta_padre)
+2025-09-24 11:50:44,037 - DocumentOrganizer - INFO - Archivo procesado: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> 21 (prefijo_numerico)
+2025-09-24 11:50:44,043 - DocumentOrganizer - INFO - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 06 (prefijo_numerico)
+2025-09-24 11:50:44,044 - DocumentOrganizer - INFO - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (carpeta_padre)
+2025-09-24 11:50:44,052 - DocumentOrganizer - INFO - Archivo procesado: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> 06 (carpeta_padre)
+2025-09-24 11:50:44,055 - DocumentOrganizer - INFO - Archivo procesado: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 11:50:44,067 - DocumentOrganizer - INFO - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (prefijo_numerico)
+2025-09-24 11:50:44,070 - DocumentOrganizer - INFO - Archivo procesado: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> 00 (prefijo_numerico)
+2025-09-24 11:50:44,074 - DocumentOrganizer - INFO - Archivo procesado: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> 07 (prefijo_numerico)
+2025-09-24 11:50:44,081 - DocumentOrganizer - INFO - Archivo procesado: 11. TP CARLOS BAUTISTA.pdf -> 11 (prefijo_numerico)
+2025-09-24 11:50:44,087 - DocumentOrganizer - WARNING - Archivo sin clasificar (puntuación 5 < 10): 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf
+2025-09-24 11:50:44,090 - DocumentOrganizer - INFO - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 20 (prefijo_numerico)
+2025-09-24 11:50:44,092 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> sin_clasificar
+2025-09-24 11:50:44,106 - DocumentOrganizer - INFO - Archivo procesado: 17. FOTO.jpeg -> 17 (prefijo_numerico)
+2025-09-24 11:50:44,107 - DocumentOrganizer - INFO - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-24 11:50:44,108 - DocumentOrganizer - INFO - Archivo procesado: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 06 (nombre_archivo)
+2025-09-24 11:50:44,124 - DocumentOrganizer - INFO - Archivo procesado: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> 00 (prefijo_numerico)
+2025-09-24 11:50:44,140 - DocumentOrganizer - INFO - Archivo procesado: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> 34 (carpeta_padre)
+2025-09-24 11:50:44,141 - DocumentOrganizer - INFO - Archivo procesado: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> 06 (carpeta_padre)
+2025-09-24 11:50:44,155 - DocumentOrganizer - INFO - Archivo procesado: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> 06 (nombre_archivo)
+2025-09-24 11:50:44,177 - DocumentOrganizer - INFO - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-24 11:50:44,179 - DocumentOrganizer - WARNING - Archivo ambiguo con empate en categorías ['10', '32']: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf
+2025-09-24 11:50:44,180 - DocumentOrganizer - INFO - Archivo procesado: 4. Certificados Laborales.pdf -> 04 (prefijo_numerico)
+2025-09-24 11:50:44,187 - DocumentOrganizer - WARNING - Archivo ambiguo con empate en categorías ['04', '06']: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-24 11:50:44,188 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> ambiguo
+2025-09-24 11:50:44,189 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> ambiguo
+2025-09-24 11:50:44,193 - DocumentOrganizer - INFO - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 01 (prefijo_numerico)
+2025-09-24 11:50:44,202 - DocumentOrganizer - INFO - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 01 (prefijo_numerico)
+2025-09-24 11:50:44,208 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 11:50:44,210 - DocumentOrganizer - WARNING - Archivo ambiguo con empate en categorías ['04', '06']: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-24 11:50:44,219 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-24 11:50:44,223 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> ambiguo
+2025-09-24 11:50:44,225 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 11:50:44,235 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-24 11:50:44,255 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-24 11:50:44,263 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-24 11:50:44,265 - DocumentOrganizer - INFO - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 11:50:44,283 - DocumentOrganizer - INFO - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 06 (carpeta_padre)
+2025-09-24 11:50:44,288 - DocumentOrganizer - INFO - Archivo procesado: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> 06 (nombre_archivo)
+2025-09-24 11:50:44,298 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 11:50:44,302 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 11:50:44,306 - DocumentOrganizer - INFO - Resultados guardados en: resultados.csv
+2025-09-24 14:50:14,919 - DocumentOrganizer - INFO - Iniciando organización de documentos
+2025-09-24 14:50:14,919 - DocumentOrganizer - INFO - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-24 14:50:14,919 - DocumentOrganizer - INFO - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-24 14:50:14,919 - DocumentOrganizer - INFO - Modo: COPY
+2025-09-24 14:50:14,938 - DocumentOrganizer - INFO - Encontrados 54 archivos para procesar
+2025-09-24 14:50:14,964 - DocumentOrganizer - INFO - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 09 (prefijo_numerico)
+2025-09-24 14:50:14,965 - DocumentOrganizer - INFO - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 08 (prefijo_numerico)
+2025-09-24 14:50:14,967 - DocumentOrganizer - INFO - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 25 (prefijo_numerico)
+2025-09-24 14:50:14,970 - DocumentOrganizer - WARNING - Archivo sin clasificar (puntuación 5 < 10): estructura_proyecto.txt
+2025-09-24 14:50:14,970 - DocumentOrganizer - INFO - Archivo procesado: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> 22 (prefijo_numerico)
+2025-09-24 14:50:14,973 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: estructura_proyecto.txt -> sin_clasificar
+2025-09-24 14:50:14,977 - DocumentOrganizer - INFO - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 13 (prefijo_numerico)
+2025-09-24 14:50:14,990 - DocumentOrganizer - INFO - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 18 (prefijo_numerico)
+2025-09-24 14:50:15,391 - DocumentOrganizer - INFO - Archivo procesado: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> 06 (carpeta_padre)
+2025-09-24 14:50:15,392 - DocumentOrganizer - INFO - Archivo procesado: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 14:50:15,394 - DocumentOrganizer - INFO - Archivo procesado: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> 12 (prefijo_numerico)
+2025-09-24 14:50:15,396 - DocumentOrganizer - INFO - Archivo procesado: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> 05 (prefijo_numerico)
+2025-09-24 14:50:15,398 - DocumentOrganizer - INFO - Archivo procesado: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> 10 (prefijo_numerico)
+2025-09-24 14:50:15,400 - DocumentOrganizer - INFO - Archivo procesado: 2. Hoja de vida.pdf -> 02 (prefijo_numerico)
+2025-09-24 14:50:15,400 - DocumentOrganizer - INFO - Archivo procesado: 19. FP CARLOS BAUTISTA.pdf -> 19 (prefijo_numerico)
+2025-09-24 14:50:15,403 - DocumentOrganizer - INFO - Archivo procesado: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> 00 (prefijo_numerico)
+2025-09-24 14:50:15,403 - DocumentOrganizer - INFO - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 23 (prefijo_numerico)
+2025-09-24 14:50:15,408 - DocumentOrganizer - INFO - Archivo procesado: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> 21 (prefijo_numerico)
+2025-09-24 14:50:15,536 - DocumentOrganizer - INFO - Archivo procesado: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> 06 (carpeta_padre)
+2025-09-24 14:50:15,558 - DocumentOrganizer - INFO - Archivo procesado: 3. Certificados estudios.pdf -> 03 (prefijo_numerico)
+2025-09-24 14:50:15,617 - DocumentOrganizer - INFO - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (carpeta_padre)
+2025-09-24 14:50:15,619 - DocumentOrganizer - INFO - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 06 (prefijo_numerico)
+2025-09-24 14:50:15,826 - DocumentOrganizer - INFO - Archivo procesado: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 14:50:15,827 - DocumentOrganizer - INFO - Archivo procesado: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> 06 (carpeta_padre)
+2025-09-24 14:50:15,835 - DocumentOrganizer - INFO - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (prefijo_numerico)
+2025-09-24 14:50:15,838 - DocumentOrganizer - INFO - Archivo procesado: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> 00 (prefijo_numerico)
+2025-09-24 14:50:15,845 - DocumentOrganizer - INFO - Archivo procesado: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> 07 (prefijo_numerico)
+2025-09-24 14:50:15,848 - DocumentOrganizer - INFO - Archivo procesado: 11. TP CARLOS BAUTISTA.pdf -> 11 (prefijo_numerico)
+2025-09-24 14:50:15,852 - DocumentOrganizer - INFO - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 20 (prefijo_numerico)
+2025-09-24 14:50:15,857 - DocumentOrganizer - INFO - Archivo procesado: 17. FOTO.jpeg -> 17 (prefijo_numerico)
+2025-09-24 14:50:15,898 - DocumentOrganizer - INFO - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-24 14:50:16,028 - DocumentOrganizer - INFO - Archivo procesado: 4. Certificados Laborales.pdf -> 04 (prefijo_numerico)
+2025-09-24 14:50:16,093 - DocumentOrganizer - WARNING - Archivo sin clasificar (puntuación 6 < 10): 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf
+2025-09-24 14:50:16,145 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> sin_clasificar
+2025-09-24 14:50:16,162 - DocumentOrganizer - INFO - Archivo procesado: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 06 (ocr)
+2025-09-24 14:50:16,163 - DocumentOrganizer - INFO - Archivo procesado: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> 00 (prefijo_numerico)
+2025-09-24 14:50:16,244 - DocumentOrganizer - INFO - Archivo procesado: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> 06 (carpeta_padre)
+2025-09-24 14:50:16,515 - DocumentOrganizer - INFO - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-24 14:50:16,595 - DocumentOrganizer - INFO - Archivo procesado: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> 34 (carpeta_padre)
+2025-09-24 14:50:16,871 - DocumentOrganizer - INFO - Archivo procesado: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> 06 (ocr)
+2025-09-24 14:50:17,099 - DocumentOrganizer - INFO - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 01 (prefijo_numerico)
+2025-09-24 14:50:17,348 - DocumentOrganizer - INFO - Archivo procesado: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> 06 (ocr)
+2025-09-24 14:50:17,355 - DocumentOrganizer - INFO - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 01 (prefijo_numerico)
+2025-09-24 14:50:17,681 - DocumentOrganizer - INFO - Archivo procesado: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> 06 (ocr)
+2025-09-24 14:50:17,682 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 14:50:18,108 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-24 14:50:18,124 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 14:50:18,454 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-24 14:50:19,448 - DocumentOrganizer - INFO - Archivo procesado: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> 06 (ocr)
+2025-09-24 14:50:19,459 - DocumentOrganizer - INFO - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 06 (carpeta_padre)
+2025-09-24 14:50:20,120 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-24 14:50:20,627 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 14:50:21,415 - DocumentOrganizer - INFO - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 06 (carpeta_padre)
+2025-09-24 14:50:21,537 - DocumentOrganizer - INFO - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 14:50:25,892 - DocumentOrganizer - INFO - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-24 14:50:30,124 - DocumentOrganizer - WARNING - Archivo ambiguo con empate en categorías ['10', '32']: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf
+2025-09-24 14:50:30,161 - DocumentOrganizer - WARNING - Archivo pendiente de revisar: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> ambiguo
+2025-09-24 14:50:30,165 - DocumentOrganizer - INFO - Resultados guardados en: resultados.csv
+2025-09-24 16:20:25,849 - INFO - [MainThread] - organize_documents:947 - Iniciando organización de documentos
+2025-09-24 16:20:25,849 - INFO - [MainThread] - organize_documents:948 - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-24 16:20:25,849 - INFO - [MainThread] - organize_documents:949 - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-24 16:20:25,849 - INFO - [MainThread] - organize_documents:950 - Modo: COPY
+2025-09-24 16:20:25,863 - INFO - [MainThread] - organize_documents:958 - Encontrados 54 archivos para procesar
+2025-09-24 16:20:25,871 - INFO - [ThreadPoolExecutor-0_0] - classify_file:596 - Prefijo numérico '09' encontrado en: 9. Medidas correctivas Carlos Bautista.pdf
+2025-09-24 16:20:25,872 - INFO - [ThreadPoolExecutor-0_0] - process_file:910 - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 09 (prefijo_numerico)
+2025-09-24 16:20:25,873 - INFO - [ThreadPoolExecutor-0_2] - classify_file:596 - Prefijo numérico '25' encontrado en: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf
+2025-09-24 16:20:25,874 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 25 (prefijo_numerico)
+2025-09-24 16:20:25,875 - INFO - [ThreadPoolExecutor-0_1] - classify_file:596 - Prefijo numérico '08' encontrado en: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf
+2025-09-24 16:20:25,876 - INFO - [ThreadPoolExecutor-0_1] - process_file:910 - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 08 (prefijo_numerico)
+2025-09-24 16:20:25,877 - INFO - [ThreadPoolExecutor-0_3] - classify_file:596 - Prefijo numérico '22' encontrado en: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf
+2025-09-24 16:20:25,878 - INFO - [ThreadPoolExecutor-0_2] - classify_file:596 - Prefijo numérico '13' encontrado en: 13. Declaración de inhabilidad.pdf
+2025-09-24 16:20:25,879 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> 22 (prefijo_numerico)
+2025-09-24 16:20:25,881 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 13 (prefijo_numerico)
+2025-09-24 16:20:25,889 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:709 - Archivo sin clasificar (7 < 25): estructura_proyecto_desorganizado.txt
+2025-09-24 16:20:25,890 - WARNING - [ThreadPoolExecutor-0_2] - process_file:908 - Archivo pendiente de revisar: estructura_proyecto_desorganizado.txt -> baja_confianza
+2025-09-24 16:20:25,916 - INFO - [ThreadPoolExecutor-0_2] - classify_file:596 - Prefijo numérico '18' encontrado en: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf
+2025-09-24 16:20:25,918 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 18 (prefijo_numerico)
+2025-09-24 16:20:26,373 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:709 - Archivo sin clasificar (23 < 25): 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf
+2025-09-24 16:20:26,375 - WARNING - [ThreadPoolExecutor-0_3] - process_file:908 - Archivo pendiente de revisar: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 16:20:26,377 - INFO - [ThreadPoolExecutor-0_1] - classify_file:596 - Prefijo numérico '02' encontrado en: 2. Hoja de vida.pdf
+2025-09-24 16:20:26,426 - INFO - [ThreadPoolExecutor-0_1] - process_file:910 - Archivo procesado: 2. Hoja de vida.pdf -> 02 (prefijo_numerico)
+2025-09-24 16:20:26,548 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:709 - Archivo sin clasificar (23 < 25): 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf
+2025-09-24 16:20:26,549 - WARNING - [ThreadPoolExecutor-0_2] - process_file:908 - Archivo pendiente de revisar: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> baja_confianza
+2025-09-24 16:20:26,550 - INFO - [ThreadPoolExecutor-0_0] - classify_file:596 - Prefijo numérico '12' encontrado en: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf
+2025-09-24 16:20:26,550 - INFO - [ThreadPoolExecutor-0_1] - classify_file:596 - Prefijo numérico '05' encontrado en: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf
+2025-09-24 16:20:26,551 - INFO - [ThreadPoolExecutor-0_1] - process_file:910 - Archivo procesado: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> 05 (prefijo_numerico)
+2025-09-24 16:20:26,551 - INFO - [ThreadPoolExecutor-0_0] - process_file:910 - Archivo procesado: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> 12 (prefijo_numerico)
+2025-09-24 16:20:26,553 - INFO - [ThreadPoolExecutor-0_2] - classify_file:596 - Prefijo numérico '10' encontrado en: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf
+2025-09-24 16:20:26,554 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> 10 (prefijo_numerico)
+2025-09-24 16:20:26,555 - INFO - [ThreadPoolExecutor-0_2] - classify_file:596 - Prefijo numérico '00' encontrado en: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx
+2025-09-24 16:20:26,555 - INFO - [ThreadPoolExecutor-0_1] - classify_file:596 - Prefijo numérico '19' encontrado en: 19. FP CARLOS BAUTISTA.pdf
+2025-09-24 16:20:26,556 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> 00 (prefijo_numerico)
+2025-09-24 16:20:26,556 - INFO - [ThreadPoolExecutor-0_1] - process_file:910 - Archivo procesado: 19. FP CARLOS BAUTISTA.pdf -> 19 (prefijo_numerico)
+2025-09-24 16:20:26,558 - INFO - [ThreadPoolExecutor-0_2] - classify_file:596 - Prefijo numérico '23' encontrado en: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf
+2025-09-24 16:20:26,562 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 23 (prefijo_numerico)
+2025-09-24 16:20:26,583 - INFO - [ThreadPoolExecutor-0_2] - classify_file:596 - Prefijo numérico '21' encontrado en: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf
+2025-09-24 16:20:26,646 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> 21 (prefijo_numerico)
+2025-09-24 16:20:26,984 - INFO - [ThreadPoolExecutor-0_3] - classify_file:596 - Prefijo numérico '03' encontrado en: 3. Certificados estudios.pdf
+2025-09-24 16:20:27,023 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:709 - Archivo sin clasificar (23 < 25): 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF
+2025-09-24 16:20:27,027 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: 3. Certificados estudios.pdf -> 03 (prefijo_numerico)
+2025-09-24 16:20:27,027 - WARNING - [ThreadPoolExecutor-0_1] - process_file:908 - Archivo pendiente de revisar: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> baja_confianza
+2025-09-24 16:20:27,061 - INFO - [ThreadPoolExecutor-0_1] - classify_file:596 - Prefijo numérico '06' encontrado en: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf
+2025-09-24 16:20:27,064 - INFO - [ThreadPoolExecutor-0_1] - process_file:910 - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 06 (prefijo_numerico)
+2025-09-24 16:20:27,095 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (carpeta_padre)
+2025-09-24 16:20:27,506 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:709 - Archivo sin clasificar (23 < 25): 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-24 16:20:27,508 - WARNING - [ThreadPoolExecutor-0_2] - process_file:908 - Archivo pendiente de revisar: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> baja_confianza
+2025-09-24 16:20:27,711 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:709 - Archivo sin clasificar (23 < 25): 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf
+2025-09-24 16:20:27,712 - WARNING - [ThreadPoolExecutor-0_1] - process_file:908 - Archivo pendiente de revisar: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> baja_confianza
+2025-09-24 16:20:27,714 - INFO - [ThreadPoolExecutor-0_2] - classify_file:596 - Prefijo numérico '01' encontrado en: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf
+2025-09-24 16:20:27,715 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (prefijo_numerico)
+2025-09-24 16:20:27,716 - INFO - [ThreadPoolExecutor-0_2] - classify_file:596 - Prefijo numérico '00' encontrado en: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx
+2025-09-24 16:20:27,717 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> 00 (prefijo_numerico)
+2025-09-24 16:20:27,719 - INFO - [ThreadPoolExecutor-0_2] - classify_file:596 - Prefijo numérico '07' encontrado en: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf
+2025-09-24 16:20:27,720 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> 07 (prefijo_numerico)
+2025-09-24 16:20:27,724 - INFO - [ThreadPoolExecutor-0_1] - classify_file:596 - Prefijo numérico '11' encontrado en: 11. TP CARLOS BAUTISTA.pdf
+2025-09-24 16:20:27,724 - INFO - [ThreadPoolExecutor-0_3] - classify_file:596 - Prefijo numérico '17' encontrado en: 17. FOTO.jpeg
+2025-09-24 16:20:27,728 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: 17. FOTO.jpeg -> 17 (prefijo_numerico)
+2025-09-24 16:20:27,728 - INFO - [ThreadPoolExecutor-0_1] - process_file:910 - Archivo procesado: 11. TP CARLOS BAUTISTA.pdf -> 11 (prefijo_numerico)
+2025-09-24 16:20:27,740 - INFO - [ThreadPoolExecutor-0_3] - classify_file:596 - Prefijo numérico '20' encontrado en: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf
+2025-09-24 16:20:27,744 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 20 (prefijo_numerico)
+2025-09-24 16:20:27,819 - INFO - [ThreadPoolExecutor-0_3] - process_file:860 - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-24 16:20:27,871 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:709 - Archivo sin clasificar (13 < 25): 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf
+2025-09-24 16:20:27,876 - WARNING - [ThreadPoolExecutor-0_2] - process_file:908 - Archivo pendiente de revisar: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> baja_confianza
+2025-09-24 16:20:27,885 - INFO - [ThreadPoolExecutor-0_0] - classify_file:596 - Prefijo numérico '04' encontrado en: 4. Certificados Laborales.pdf
+2025-09-24 16:20:27,892 - INFO - [ThreadPoolExecutor-0_0] - process_file:910 - Archivo procesado: 4. Certificados Laborales.pdf -> 04 (prefijo_numerico)
+2025-09-24 16:20:27,893 - INFO - [ThreadPoolExecutor-0_0] - classify_file:596 - Prefijo numérico '00' encontrado en: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx
+2025-09-24 16:20:27,929 - INFO - [ThreadPoolExecutor-0_0] - process_file:910 - Archivo procesado: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> 00 (prefijo_numerico)
+2025-09-24 16:20:28,193 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:709 - Archivo sin clasificar (16 < 25): CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf
+2025-09-24 16:20:28,196 - WARNING - [ThreadPoolExecutor-0_0] - process_file:908 - Archivo pendiente de revisar: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> baja_confianza
+2025-09-24 16:20:28,304 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:709 - Archivo sin clasificar (16 < 25): EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf
+2025-09-24 16:20:28,307 - WARNING - [ThreadPoolExecutor-0_1] - process_file:908 - Archivo pendiente de revisar: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 16:20:28,589 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:709 - Archivo sin clasificar (17 < 25): VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf
+2025-09-24 16:20:28,593 - WARNING - [ThreadPoolExecutor-0_2] - process_file:908 - Archivo pendiente de revisar: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 16:20:28,917 - INFO - [ThreadPoolExecutor-0_1] - process_file:910 - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-24 16:20:29,472 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:709 - Archivo sin clasificar (10 < 25): CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf
+2025-09-24 16:20:29,545 - WARNING - [ThreadPoolExecutor-0_3] - process_file:908 - Archivo pendiente de revisar: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> baja_confianza
+2025-09-24 16:20:29,712 - INFO - [ThreadPoolExecutor-0_3] - classify_file:596 - Prefijo numérico '01' encontrado en: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx
+2025-09-24 16:20:29,775 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 01 (prefijo_numerico)
+2025-09-24 16:20:29,883 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:709 - Archivo sin clasificar (20 < 25): CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-24 16:20:29,937 - WARNING - [ThreadPoolExecutor-0_2] - process_file:908 - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> baja_confianza
+2025-09-24 16:20:29,994 - INFO - [ThreadPoolExecutor-0_3] - classify_file:596 - Prefijo numérico '01' encontrado en: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf
+2025-09-24 16:20:30,026 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 01 (prefijo_numerico)
+2025-09-24 16:20:30,539 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:709 - Archivo sin clasificar (20 < 25): CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-24 16:20:30,629 - WARNING - [ThreadPoolExecutor-0_1] - process_file:908 - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> baja_confianza
+2025-09-24 16:20:30,907 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 16:20:31,503 - INFO - [ThreadPoolExecutor-0_1] - process_file:910 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 16:20:31,611 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-24 16:20:32,058 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-24 16:20:33,411 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-24 16:20:33,756 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:709 - Archivo sin clasificar (18 < 25): LICENCIA DE LUTO CARLOS BAUTISTA.pdf
+2025-09-24 16:20:33,874 - WARNING - [ThreadPoolExecutor-0_2] - process_file:908 - Archivo pendiente de revisar: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 16:20:35,274 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-24 16:20:36,744 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 25 (carpeta_padre)
+2025-09-24 16:20:36,983 - INFO - [ThreadPoolExecutor-0_2] - process_file:910 - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 16:20:37,788 - INFO - [ThreadPoolExecutor-0_3] - process_file:910 - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 16:20:41,195 - INFO - [ThreadPoolExecutor-0_1] - process_file:910 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-24 16:20:41,650 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:709 - Archivo sin clasificar (17 < 25): ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf
+2025-09-24 16:20:41,651 - WARNING - [ThreadPoolExecutor-0_0] - process_file:908 - Archivo pendiente de revisar: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 16:20:41,653 - INFO - [MainThread] - save_results_csv:1000 - Resultados guardados en: resultados.csv
+2025-09-24 21:28:08,065 - INFO - [MainThread] - organize_documents:1011 - Iniciando organización de documentos
+2025-09-24 21:28:08,065 - INFO - [MainThread] - organize_documents:1012 - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-24 21:28:08,065 - INFO - [MainThread] - organize_documents:1013 - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-24 21:28:08,065 - INFO - [MainThread] - organize_documents:1014 - Modo: COPY
+2025-09-24 21:28:08,078 - INFO - [MainThread] - organize_documents:1024 - Encontrados 54 archivos para procesar
+2025-09-24 21:28:08,832 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 15 (carpeta_padre)
+2025-09-24 21:28:09,534 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (22 < 25): 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf
+2025-09-24 21:28:09,542 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> baja_confianza
+2025-09-24 21:28:17,334 - INFO - [ThreadPoolExecutor-0_2] - process_file:962 - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 11 (carpeta_padre)
+2025-09-24 21:28:19,388 - INFO - [ThreadPoolExecutor-0_1] - process_file:962 - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 14 (carpeta_padre)
+2025-09-24 21:28:19,708 - INFO - [ThreadPoolExecutor-0_3] - process_file:962 - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 22 (carpeta_padre)
+2025-09-24 21:28:19,748 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (7 < 25): estructura_proyecto_desorganizado.txt
+2025-09-24 21:28:19,975 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: estructura_proyecto_desorganizado.txt -> baja_confianza
+2025-09-24 21:28:21,023 - INFO - [ThreadPoolExecutor-0_3] - process_file:962 - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 05 (carpeta_padre)
+2025-09-24 21:28:21,654 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (23 < 25): 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf
+2025-09-24 21:28:22,205 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 21:28:23,267 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (23 < 25): 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf
+2025-09-24 21:28:23,321 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> baja_confianza
+2025-09-24 21:28:33,154 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (20 < 25): 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf
+2025-09-24 21:28:33,158 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 21:28:40,204 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (23 < 25): 10. CERT. BANCARIA CARLOS BAUTISTA.pdf
+2025-09-24 21:28:40,205 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 21:28:53,939 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (23 < 25): 19. FP CARLOS BAUTISTA.pdf
+2025-09-24 21:28:53,940 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 19. FP CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 21:28:54,238 - INFO - [ThreadPoolExecutor-0_2] - process_file:962 - Archivo procesado: 2. Hoja de vida.pdf -> 03 (carpeta_padre)
+2025-09-24 21:28:54,338 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:748 - Archivo sin clasificar (7 < 25): 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx
+2025-09-24 21:28:54,401 - WARNING - [ThreadPoolExecutor-0_2] - process_file:958 - Archivo pendiente de revisar: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> baja_confianza
+2025-09-24 21:28:54,928 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (23 < 25): 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf
+2025-09-24 21:28:55,011 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 21:28:55,338 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:725 - Penalización por ambigüedad: -6 puntos para 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf
+2025-09-24 21:28:55,343 - INFO - [ThreadPoolExecutor-0_2] - process_file:962 - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 19 (carpeta_padre)
+2025-09-24 21:28:55,411 - WARNING - [ThreadPoolExecutor-0_2] - is_pdf_scanned:238 - Error verificando PDF escaneado /home/roddek-dev/Escritorio/Documentos_Desordenados/D BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-24 21:28:55,481 - ERROR - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:441 - Error convirtiendo PDF para OCR /home/roddek-dev/Escritorio/Documentos_Desordenados/D BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: Unable to get page count.
+Command Line Error: Incorrect password
+
+2025-09-24 21:28:55,495 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:748 - Archivo sin clasificar (20 < 25): 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf
+2025-09-24 21:28:55,516 - WARNING - [ThreadPoolExecutor-0_2] - process_file:958 - Archivo pendiente de revisar: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> baja_confianza
+2025-09-24 21:28:56,424 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (19 < 25): 3. Certificados estudios.pdf
+2025-09-24 21:28:56,501 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: 3. Certificados estudios.pdf -> baja_confianza
+2025-09-24 21:28:56,985 - INFO - [ThreadPoolExecutor-0_2] - process_file:962 - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (carpeta_padre)
+2025-09-24 21:28:57,179 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (23 < 25): 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF
+2025-09-24 21:28:57,271 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> baja_confianza
+2025-09-24 21:28:59,634 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:725 - Penalización por ambigüedad: -6 puntos para 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf
+2025-09-24 21:28:59,640 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (22 < 25): 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf
+2025-09-24 21:28:59,855 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> baja_confianza
+2025-09-24 21:29:01,300 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> 16 (carpeta_padre)
+2025-09-24 21:29:01,871 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (carpeta_padre)
+2025-09-24 21:29:15,941 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (20 < 25): 17. FOTO.jpeg
+2025-09-24 21:29:15,943 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: 17. FOTO.jpeg -> baja_confianza
+2025-09-24 21:29:15,974 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (17 < 25): 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx
+2025-09-24 21:29:15,975 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> baja_confianza
+2025-09-24 21:29:19,069 - INFO - [ThreadPoolExecutor-0_2] - process_file:962 - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 12 (carpeta_padre)
+2025-09-24 21:29:19,420 - INFO - [ThreadPoolExecutor-0_2] - process_file:962 - Archivo procesado: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> 03 (carpeta_padre)
+2025-09-24 21:29:19,712 - INFO - [ThreadPoolExecutor-0_2] - process_file:962 - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 06 (carpeta_padre)
+2025-09-24 21:29:20,310 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:748 - Archivo sin clasificar (16 < 25): EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf
+2025-09-24 21:29:20,311 - WARNING - [ThreadPoolExecutor-0_2] - process_file:958 - Archivo pendiente de revisar: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 21:29:20,320 - INFO - [ThreadPoolExecutor-0_2] - process_file:908 - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-24 21:29:20,793 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:748 - Archivo sin clasificar (10 < 25): CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf
+2025-09-24 21:29:20,794 - WARNING - [ThreadPoolExecutor-0_2] - process_file:958 - Archivo pendiente de revisar: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> baja_confianza
+2025-09-24 21:29:21,327 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:748 - Archivo sin clasificar (23 < 25): VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf
+2025-09-24 21:29:21,329 - WARNING - [ThreadPoolExecutor-0_2] - process_file:958 - Archivo pendiente de revisar: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 21:29:21,361 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:748 - Archivo sin clasificar (17 < 25): 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx
+2025-09-24 21:29:21,362 - WARNING - [ThreadPoolExecutor-0_2] - process_file:958 - Archivo pendiente de revisar: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> baja_confianza
+2025-09-24 21:29:21,567 - INFO - [ThreadPoolExecutor-0_2] - process_file:962 - Archivo procesado: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> 32 (carpeta_padre)
+2025-09-24 21:29:24,265 - INFO - [ThreadPoolExecutor-0_1] - process_file:962 - Archivo procesado: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> 13 (carpeta_padre)
+2025-09-24 21:29:24,688 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (17 < 25): 11. TP CARLOS BAUTISTA.pdf
+2025-09-24 21:29:24,770 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: 11. TP CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-24 21:29:25,081 - INFO - [ThreadPoolExecutor-0_1] - process_file:962 - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-24 21:29:26,045 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (20 < 25): CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-24 21:29:26,066 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> baja_confianza
+2025-09-24 21:29:26,253 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (20 < 25): CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-24 21:29:26,344 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> baja_confianza
+2025-09-24 21:29:26,355 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 00 (nombre_archivo)
+2025-09-24 21:29:27,191 - INFO - [ThreadPoolExecutor-0_1] - process_file:962 - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 00 (ocr)
+2025-09-24 21:29:27,673 - INFO - [ThreadPoolExecutor-0_1] - process_file:962 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 21:29:28,361 - INFO - [ThreadPoolExecutor-0_1] - process_file:962 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-24 21:29:29,331 - INFO - [ThreadPoolExecutor-0_1] - process_file:962 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-24 21:29:30,751 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (19 < 25): 4. Certificados Laborales.pdf
+2025-09-24 21:29:30,766 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> 25 (ocr)
+2025-09-24 21:29:30,809 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 4. Certificados Laborales.pdf -> baja_confianza
+2025-09-24 21:29:31,321 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-24 21:29:32,918 - INFO - [ThreadPoolExecutor-0_3] - process_file:962 - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-24 21:29:33,420 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-24 21:29:35,391 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 25 (carpeta_padre)
+2025-09-24 21:29:35,667 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:725 - Penalización por ambigüedad: -6 puntos para PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf
+2025-09-24 21:29:35,731 - INFO - [ThreadPoolExecutor-0_3] - process_file:962 - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 21:29:36,429 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-24 21:29:38,580 - INFO - [ThreadPoolExecutor-0_2] - process_file:962 - Archivo procesado: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> 32 (carpeta_padre)
+2025-09-24 21:29:39,752 - INFO - [ThreadPoolExecutor-0_1] - process_file:962 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-24 21:29:39,765 - INFO - [MainThread] - save_results_csv:1068 - Resultados guardados en: resultados.csv
+2025-09-25 14:09:58,619 - INFO - [MainThread] - organize_documents:1011 - Iniciando organización de documentos
+2025-09-25 14:09:58,620 - INFO - [MainThread] - organize_documents:1012 - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-25 14:09:58,620 - INFO - [MainThread] - organize_documents:1013 - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-25 14:09:58,620 - INFO - [MainThread] - organize_documents:1014 - Modo: COPY
+2025-09-25 14:09:58,633 - INFO - [MainThread] - organize_documents:1024 - Encontrados 54 archivos para procesar
+2025-09-25 14:09:59,140 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (17 < 25): 9. Medidas correctivas Carlos Bautista.pdf
+2025-09-25 14:09:59,216 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: 9. Medidas correctivas Carlos Bautista.pdf -> baja_confianza
+2025-09-25 14:10:00,195 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (19 < 25): 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf
+2025-09-25 14:10:00,237 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> baja_confianza
+2025-09-25 14:10:09,975 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:748 - Archivo sin clasificar (23 < 25): 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf
+2025-09-25 14:10:09,993 - WARNING - [ThreadPoolExecutor-0_2] - process_file:958 - Archivo pendiente de revisar: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:10:11,785 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:725 - Penalización por ambigüedad: -9 puntos para 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf
+2025-09-25 14:10:11,791 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (17 < 25): 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf
+2025-09-25 14:10:11,894 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:10:11,938 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (22 < 25): 13. Declaración de inhabilidad.pdf
+2025-09-25 14:10:11,998 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 13. Declaración de inhabilidad.pdf -> baja_confianza
+2025-09-25 14:10:12,025 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (7 < 25): estructura_proyecto_desorganizado.txt
+2025-09-25 14:10:12,025 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: estructura_proyecto_desorganizado.txt -> baja_confianza
+2025-09-25 14:10:12,808 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (23 < 25): 18. Afiliación EPS - Carlos Andrés Bautista González.pdf
+2025-09-25 14:10:13,037 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> baja_confianza
+2025-09-25 14:10:13,799 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (23 < 25): 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf
+2025-09-25 14:10:13,926 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:10:15,479 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (23 < 25): 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf
+2025-09-25 14:10:15,553 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> baja_confianza
+2025-09-25 14:10:24,804 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (20 < 25): 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf
+2025-09-25 14:10:24,812 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:10:40,132 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (23 < 25): 10. CERT. BANCARIA CARLOS BAUTISTA.pdf
+2025-09-25 14:10:40,136 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:10:51,949 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:748 - Archivo sin clasificar (18 < 25): 2. Hoja de vida.pdf
+2025-09-25 14:10:51,954 - WARNING - [ThreadPoolExecutor-0_2] - process_file:958 - Archivo pendiente de revisar: 2. Hoja de vida.pdf -> baja_confianza
+2025-09-25 14:10:53,044 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (23 < 25): 19. FP CARLOS BAUTISTA.pdf
+2025-09-25 14:10:53,046 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 19. FP CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:10:53,072 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (7 < 25): 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx
+2025-09-25 14:10:53,100 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> baja_confianza
+2025-09-25 14:10:53,804 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (23 < 25): 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf
+2025-09-25 14:10:53,892 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:10:55,171 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (23 < 25): 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF
+2025-09-25 14:10:55,229 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> baja_confianza
+2025-09-25 14:10:55,300 - WARNING - [ThreadPoolExecutor-0_3] - is_pdf_scanned:238 - Error verificando PDF escaneado /home/roddek-dev/Escritorio/Documentos_Desordenados/D BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-25 14:10:55,403 - ERROR - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:441 - Error convirtiendo PDF para OCR /home/roddek-dev/Escritorio/Documentos_Desordenados/D BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: Unable to get page count.
+Command Line Error: Incorrect password
+
+2025-09-25 14:10:55,414 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (20 < 25): 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf
+2025-09-25 14:10:55,503 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:10:55,910 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (19 < 25): 3. Certificados estudios.pdf
+2025-09-25 14:10:55,949 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: 3. Certificados estudios.pdf -> baja_confianza
+2025-09-25 14:10:56,156 - INFO - [ThreadPoolExecutor-0_3] - process_file:962 - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (carpeta_padre)
+2025-09-25 14:10:57,217 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (23 < 25): 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf
+2025-09-25 14:10:57,333 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:10:59,880 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (23 < 25): 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf
+2025-09-25 14:10:59,882 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:11:00,126 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (23 < 25): 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-25 14:11:00,127 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> baja_confianza
+2025-09-25 14:11:00,482 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (carpeta_padre)
+2025-09-25 14:11:17,764 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (20 < 25): 17. FOTO.jpeg
+2025-09-25 14:11:17,766 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: 17. FOTO.jpeg -> baja_confianza
+2025-09-25 14:11:17,782 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (17 < 25): 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx
+2025-09-25 14:11:17,785 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> baja_confianza
+2025-09-25 14:11:20,034 - INFO - [ThreadPoolExecutor-0_3] - process_file:962 - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 12 (carpeta_padre)
+2025-09-25 14:11:20,673 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (13 < 25): 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf
+2025-09-25 14:11:20,674 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> baja_confianza
+2025-09-25 14:11:20,992 - INFO - [ThreadPoolExecutor-0_3] - process_file:962 - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 06 (carpeta_padre)
+2025-09-25 14:11:21,401 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (16 < 25): EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf
+2025-09-25 14:11:21,401 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:11:21,421 - INFO - [ThreadPoolExecutor-0_3] - process_file:908 - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-25 14:11:21,883 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (10 < 25): CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf
+2025-09-25 14:11:21,885 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> baja_confianza
+2025-09-25 14:11:22,261 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (17 < 25): VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf
+2025-09-25 14:11:22,267 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:11:22,274 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (7 < 25): 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx
+2025-09-25 14:11:22,275 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> baja_confianza
+2025-09-25 14:11:22,485 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (16 < 25): CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf
+2025-09-25 14:11:22,486 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> baja_confianza
+2025-09-25 14:11:23,249 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (17 < 25): 11. TP CARLOS BAUTISTA.pdf
+2025-09-25 14:11:23,265 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: 11. TP CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:11:23,959 - INFO - [ThreadPoolExecutor-0_1] - process_file:962 - Archivo procesado: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> 13 (carpeta_padre)
+2025-09-25 14:11:24,279 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-25 14:11:25,758 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (20 < 25): CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-25 14:11:25,892 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> baja_confianza
+2025-09-25 14:11:25,982 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (20 < 25): CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-25 14:11:25,986 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (20 < 25): 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx
+2025-09-25 14:11:25,987 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> baja_confianza
+2025-09-25 14:11:25,986 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> baja_confianza
+2025-09-25 14:11:26,989 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:748 - Archivo sin clasificar (19 < 25): 4. Certificados Laborales.pdf
+2025-09-25 14:11:27,051 - WARNING - [ThreadPoolExecutor-0_2] - process_file:958 - Archivo pendiente de revisar: 4. Certificados Laborales.pdf -> baja_confianza
+2025-09-25 14:11:27,158 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:725 - Penalización por ambigüedad: -12 puntos para 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf
+2025-09-25 14:11:27,158 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (20 < 25): 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf
+2025-09-25 14:11:27,179 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:11:27,950 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (23 < 25): INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf
+2025-09-25 14:11:27,985 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:748 - Archivo sin clasificar (23 < 25): INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf
+2025-09-25 14:11:28,052 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> baja_confianza
+2025-09-25 14:11:28,086 - WARNING - [ThreadPoolExecutor-0_2] - process_file:958 - Archivo pendiente de revisar: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> baja_confianza
+2025-09-25 14:11:28,117 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (18 < 25): LICENCIA DE LUTO CARLOS BAUTISTA.pdf
+2025-09-25 14:11:28,198 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:11:28,870 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (23 < 25): INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf
+2025-09-25 14:11:29,028 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> baja_confianza
+2025-09-25 14:11:29,072 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (23 < 25): INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf
+2025-09-25 14:11:29,088 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> baja_confianza
+2025-09-25 14:11:30,839 - INFO - [ThreadPoolExecutor-0_0] - process_file:962 - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-25 14:11:31,057 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:748 - Archivo sin clasificar (16 < 25): SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf
+2025-09-25 14:11:31,114 - WARNING - [ThreadPoolExecutor-0_1] - process_file:958 - Archivo pendiente de revisar: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:11:32,592 - INFO - [ThreadPoolExecutor-0_1] - process_file:962 - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 25 (carpeta_padre)
+2025-09-25 14:11:33,133 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:748 - Archivo sin clasificar (23 < 25): PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf
+2025-09-25 14:11:33,192 - WARNING - [ThreadPoolExecutor-0_0] - process_file:958 - Archivo pendiente de revisar: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> baja_confianza
+2025-09-25 14:11:33,922 - INFO - [ThreadPoolExecutor-0_1] - process_file:962 - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-25 14:11:37,183 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:748 - Archivo sin clasificar (23 < 25): INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf
+2025-09-25 14:11:37,275 - WARNING - [ThreadPoolExecutor-0_2] - process_file:958 - Archivo pendiente de revisar: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> baja_confianza
+2025-09-25 14:11:37,746 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:748 - Archivo sin clasificar (17 < 25): ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf
+2025-09-25 14:11:37,747 - WARNING - [ThreadPoolExecutor-0_3] - process_file:958 - Archivo pendiente de revisar: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-25 14:11:37,763 - INFO - [MainThread] - save_results_csv:1068 - Resultados guardados en: resultados.csv

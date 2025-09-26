@@ -360,67 +360,37 @@ class DocumentOrganizer:
     
     def get_keyword_score(self, keyword: str, category_id: str) -> Tuple[int, str]:
         """Determina puntuación de keyword basada en especificidad."""
-        specific_keywords = {
-            "00": ["check list", "lista chequeo", "formato check list"],
-            "01": ["requisicion personal", "solicitud personal", "requisicion"],
-            "02": ["hoja vida", "curriculum vitae", "cv profesional"],
-            "03": ["diploma", "acta grado", "titulo profesional", "certificado estudios"],
-            "04": ["certificacion laboral", "experiencia laboral", "constancia laboral"],
-            "05": ["afiliacion eps", "salud eps"],
-            "06": ["afiliacion arl", "riesgos laborales"],
-            "07": ["caja compensacion", "ccf"],
-            "08": ["fondo pension", "afiliacion pension"],
-            "09": ["contrato trabajo", "contrato laboral"],
-            "10": ["cedula ciudadania", "documento identidad"],
-            "11": ["examen medico ingreso", "aptitud medica"],
-            "12": ["pgn", "procuraduria", "antecedentes disciplinarios"],
-            "13": ["cgr", "contraloria", "antecedentes fiscales"],
-            "14": ["ponal", "antecedentes judiciales"],
-            "15": ["medidas correctivas ponal"],
-            "16": ["certificacion bancaria", "cuenta bancaria"],
-            "17": ["licencia conduccion"],
-            "18": ["tarjeta profesional", "matricula profesional"],
-            "19": ["induccion corporativa", "constancia induccion"],
-            "20": ["foto"],
-            "21": ["tratamiento datos personales", "habeas data", "autorizacion datos"],
-            "22": ["inhabilidad incompatibilidad", "declaracion juramentada"],
-            "23": ["otros documentos ingreso"],
-            "24": ["examen medico periodico", "reubicacion medica"],
-            "25": ["permisos", "licencia no remunerada"],
-            "27": ["incapacidad medica"],
-            "28": ["vacaciones", "solicitud vacaciones"],
-            "29": ["encargo"],
-            "30": ["cesantias"],
-            "31": ["certificaciones laborales"],
-            "32": ["deduccion retefuente", "retencion fuente"],
-            "33": ["ingresos retenciones"],
-            "34": ["verificacion titulo", "poligrafo"],
-            "35": ["reinducciones"],
-            "36": ["carnet vacunas", "vacunacion"],
-            "37": ["paz salvo", "acta retiro", "examen egreso"],
-            "38": ["acta entrega puesto"],
-            "39": ["validacion"],
-            "40": ["proceso disciplinario", "memorando disciplinario"],
-            "41": ["otros documentos"],
-            "42": ["evaluacion desempeno", "evaluacion rendimiento"],
+        # Keywords muy específicas que requieren coincidencia exacta para categorías críticas
+        critical_specific_keywords = {
+            "06": ["afiliacion en nuestra arl", "afiliacion en el ramo de resgos laborales", "afiliacion arl", "certificado de afiliacion"],
+            "10": ["documento de identidad", "republica de colombia", "cedula de ciudadania"]
         }
-
+        
         generic_keywords = [
-            "carlos", "bautista", "andres", "gonzalez", "certificado",
+            "certificado",
             "certificacion", "formato", "documento", "ingreso", "laboral", "personal"
         ]
 
         normalized_keyword = self.normalize_text(keyword)
 
-        if category_id in specific_keywords:
-            for specific in specific_keywords[category_id]:
-                if self.normalize_text(specific) == normalized_keyword:
-                    return 20, "específica"
+        # Verificar keywords críticas primero (para categorías 06 y 10)
+        if category_id in critical_specific_keywords:
+            for critical in critical_specific_keywords[category_id]:
+                if self.normalize_text(critical) == normalized_keyword:
+                    return 30, "crítica específica"
 
+        # Para categorías críticas (06 y 10), penalizar keywords genéricas más severamente
+        if category_id in ["06", "10"]:
+            for generic in generic_keywords:
+                if self.normalize_text(generic) in normalized_keyword:
+                    return 2, "genérica penalizada"  # Puntuación muy baja para categorías críticas
+        
+        # Keywords genéricas normales para otras categorías
         for generic in generic_keywords:
             if self.normalize_text(generic) in normalized_keyword:
                 return 5, "genérica"
 
+        # Para todas las demás keywords (las del config.yml), puntuación normal
         return 10, "normal"
 
     def classify_file(self, file_path: Path) -> Tuple[str, str, int, List[str]]:
@@ -843,7 +813,6 @@ def load_config(config_path: Optional[str] = None) -> Dict:
         "scanned_pdf_threshold": 50,
         "ocr_min_text_threshold": 30,
         "max_filename_length": 100,
-        "single_file_name_categories": {"00": True, "02": True, "10": True, "20": True},
         "enable_user_organization": False,
     }
 
@@ -908,7 +877,7 @@ Ejemplos de uso:
         sys.exit(1)
     
     config = load_config(args.config)
-    
+
     # Actualizar configuración con argumentos de línea de comandos
     # SOLO si se especifican explícitamente
     config_updates = {

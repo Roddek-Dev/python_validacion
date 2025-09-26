@@ -40,17 +40,17 @@ python organizador_documentos.py --enable-ocr --enable-content --verbose
 # Simulación (recomendado para probar)
 python organizador_documentos.py --enable-ocr --enable-content --verbose
 
-# Ejecución real
-python organizador_documentos.py --enable-ocr --enable-content --verbose --dry-run false
+# Ejecución real con organización por usuario
+python organizador_documentos.py --enable-ocr --enable-content --enable-users --verbose --dry-run false
 
-# Con organización por usuario
-python organizador_documentos.py --enable-ocr --enable-content --enable-users --verbose
+# Ejecución real sin organización por usuario (estructura tradicional)
+python organizador_documentos.py --enable-ocr --enable-content --verbose --dry-run false
 
 # Con configuración personalizada
 python organizador_documentos.py --config mi_config.yml --enable-ocr --enable-content --verbose
 
 # Con número específico de hilos
-python organizador_documentos.py --threads 8 --enable-ocr --enable-content --verbose
+python organizador_documentos.py --threads 8 --enable-ocr --enable-content --enable-users --verbose
 ```
 
 ### Argumentos Disponibles
@@ -82,15 +82,6 @@ ocr_max_pages: 1                 # Páginas para OCR (1 = más rápido)
 
 Las categorías y keywords se configuran en `config.yml`. Cada categoría puede tener máximo 5 keywords para optimizar rendimiento.
 
-### Categorías con Un Solo Archivo
-
-```yaml
-single_file_name_categories:
-  "00": true    # Formato Check List
-  "02": true    # Hoja de Vida
-  "10": true    # Documento de Identidad
-  "20": true    # Foto
-```
 
 ### Organización por Usuario
 
@@ -99,9 +90,10 @@ enable_user_organization: true  # Habilita organización por usuario
 ```
 
 **Funcionamiento:**
-- Detecta automáticamente el nombre del usuario de la estructura de carpetas
-- Crea carpetas por usuario dentro de cada categoría
-- Ejemplo: `10 Documento de Identidad/Carlos_Bautista/`
+- Detecta automáticamente el nombre del usuario de la estructura de carpetas origen
+- Crea carpetas de usuario en la raíz del destino
+- Estructura: `Documentos_Organizados/Usuario/Categoria/Archivo`
+- Ejemplo: `Documentos_Organizados/Bautista_Gonzalez_Carlos_Andres/06 Afiliación ARL/archivo.pdf`
 
 
 ## Algoritmo de Clasificación
@@ -137,8 +129,9 @@ enable_user_organization: true  # Habilita organización por usuario
 - **Configuración de Hilos**: Respeta configuración de `config.yml`
 - **Código Optimizado**: Eliminación de redundancias y comentarios innecesarios
 - **Gestión de Memoria**: Procesamiento eficiente de archivos grandes
-- **Organización por Usuario**: Detección automática y organización por usuario
+- **Organización por Usuario**: Detección automática de usuarios y estructura jerárquica
 - **Nombres Originales**: Mantiene los nombres originales de los archivos
+- **Detección de Usuarios**: Patrones regex mejorados para caracteres especiales del español
 
 ## Solución de Problemas
 

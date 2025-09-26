@@ -18,11 +18,6 @@ ocr_min_text_threshold: 30
 
 # Configuración de Renombrado
 max_filename_length: 100
-single_file_name_categories:
-  "00": true
-  "02": true
-  "10": true
-  "20": true
 
 # Configuración de Organización por Usuario
 enable_user_organization: true
@@ -77,14 +72,14 @@ keywords:
   "00": ["check list", "lista chequeo", "formato check list", "expediente laboral", "lista de chequeo"]
   "01": ["requisicion", "solicitud personal", "requisicion personal", "formato requisicion", "solicitud empleo"]
   "02": ["hoja de vida", "cv", "curriculum", "hv", "curriculum vitae"]
-  "03": ["estudios", "diploma", "acta grado", "titulo profesional", "tecnologo"]
-  "04": ["experiencia laboral", "certificacion laboral", "constancia laboral", "certificaciones experiencia", "certificado experiencia"]
+  "03": ["estudios", "diploma", "acta de grado", "titulo profesional", "tecnologo", "certificados estudios", "CERTIFICADO A"]
+  "04": ["experiencia laboral", "certificaciones de experiencia laboral", "presto sus servicios", "certificaciones experiencia", "certificado experiencia"]
   "05": ["eps", "afiliacion salud", "salud eps", "afiliacion eps", "certificacion eps"]
-  "06": ["arl", "riesgos laborales", "afiliacion arl", "certificado arl", "seguro riesgos laborales"]
-  "07": ["caja compensacion", "ccf", "compensacion familiar", "certificado caja compensacion", "afiliacion compensacion familiar"]
-  "08": ["pensiones", "fondo pension", "afiliacion pension", "fondo pensiones obligatorias", "porvenir"]
+  "06": ["afiliacion en nuestra ARL", "afiliacion en el ramo de resgos laborales", "riesgos laborales", "AFILIACION ARL", "certificado de afiliacion", "seguro riesgos laborales"]
+  "07": ["caja compensacion", "ccf", "compensacion familiar", "afiliacion caja de compensacion", "afiliacion compensacion familiar"]
+  "08": ["afiliacion fondo de pensiones", "fondo pension", "afiliacion pension", "fondo pensiones obligatorias", "porvenir"]
   "09": ["contrato", "contrato trabajo", "contrato laboral", "contrato individual trabajo", "termino indefinido"]
-  "10": ["cedula", "documento identidad", "cc", "cedula ciudadania", "identificacion personal"]
+  "10": ["documento de identidad", "documento identidad", "republica de colombia", "cedula de ciudadania", "identificacion personal"]
   "11": ["examen medico", "examen ingreso", "aptitud medica", "examen medico ingreso", "certificado medico ocupacional"]
   "12": ["pgn", "procuraduria", "antecedentes disciplinarios", "certificado antecedentes", "procuraduria general nacion"]
   "13": ["cgr", "contraloria", "antecedentes fiscales", "contraloria general republica", "certificado fiscal"]
@@ -92,7 +87,7 @@ keywords:
   "15": ["medidas correctivas", "medidas correctivas ponal", "registro nacional medidas correctivas", "rnmc", "certificado medidas correctivas"]
   "16": ["certificacion bancaria", "cuenta bancaria", "certificado bancario", "cuenta ahorros", "cuenta corriente"]
   "17": ["licencia conduccion", "pase", "licencia conducir", "licencia transito", "pase conduccion"]
-  "18": ["tarjeta profesional", "matricula profesional", "copnia", "consejo profesional ingenieria", "matricula ingeniero"]
+  "18": ["tarjeta profesional", "matricula profesional", "copnia", "TP", "TP profesional"]
   "19": ["induccion", "reinduccion", "induccion corporativa", "constancia induccion", "formato induccion"]
   "20": ["foto", "fotografia", "foto documento", "foto carnet", "foto 3x4"]
   "21": ["tratamiento datos", "habeas data", "autorizacion datos", "datos personales", "autorizacion tratamiento datos"]

@@ -152,7 +152,7 @@ class FileClassifier:
         # Verificar keywords críticas específicas
         if category_id in CRITICAL_SPECIFIC_KEYWORDS:
             for critical in CRITICAL_SPECIFIC_KEYWORDS[category_id]:
-                if self._normalize_text(critical) == normalized_keyword:
+                if self._normalize_text(critical) in normalized_keyword or normalized_keyword in self._normalize_text(critical):
                     return 30, "crítica específica"
         
         # Penalizar keywords genéricas en categorías críticas

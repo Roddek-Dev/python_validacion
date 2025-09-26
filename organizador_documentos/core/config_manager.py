@@ -19,6 +19,23 @@ class ConfigManager:
     
     def __init__(self):
         self.config = DEFAULT_CONFIG.copy()
+        # Cargar configuración por defecto completa
+        self._load_default_config()
+    
+    def _load_default_config(self) -> None:
+        """Carga la configuración por defecto completa desde config_defaults.yml."""
+        try:
+            # Buscar config_defaults.yml en el directorio del paquete
+            config_path = Path(__file__).parent.parent / "config" / "config_defaults.yml"
+            if config_path.exists():
+                with open(config_path, "r", encoding="utf-8") as f:
+                    default_config = yaml.safe_load(f) or {}
+                    self.config.update(default_config)
+                    logger.debug("Configuración por defecto completa cargada")
+            else:
+                logger.warning(f"No se encontró config_defaults.yml en {config_path}")
+        except Exception as e:
+            logger.error(f"Error cargando configuración por defecto: {e}")
     
     def load_config_file(self, config_path: Optional[str] = None) -> Dict[str, Any]:
         """

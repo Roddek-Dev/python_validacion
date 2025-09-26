@@ -1,0 +1,2 @@
+[console_scripts]
+organizador-documentos = organizador_documentos.main:main

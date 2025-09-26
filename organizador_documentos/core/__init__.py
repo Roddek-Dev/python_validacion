@@ -1,0 +1,1 @@
+"""Componentes principales del organizador de documentos."""

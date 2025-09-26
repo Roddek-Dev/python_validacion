@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  organizador-documentos:
+    build: .
+    container_name: organizador-documentos
+    volumes:
+      - ./data/origen:/app/data/origen
+      - ./data/destino:/app/data/destino
+      - ./logs:/app/logs
+      - ./config.yml:/app/config.yml
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: >
+      --origen /app/data/origen
+      --destino /app/data/destino
+      --enable-ocr
+      --enable-content
+      --verbose
+    restart: "no"
+
+  # Servicio para desarrollo con hot reload
+  organizador-dev:
+    build: .
+    container_name: organizador-dev
+    volumes:
+      - .:/app
+      - ./data/origen:/app/data/origen
+      - ./data/destino:/app/data/destino
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+    command: tail -f /dev/null  # Mantener contenedor activo
+    restart: "no"

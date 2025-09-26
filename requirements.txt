@@ -1,0 +1,21 @@
+# Dependencias principales
+PyYAML>=6.0
+tqdm>=4.64.0
+
+# Dependencias opcionales para análisis de contenido
+pdfplumber>=0.7.0
+python-docx>=0.8.11
+openpyxl>=3.0.10
+
+# Dependencias opcionales para OCR
+Pillow>=9.0.0
+pytesseract>=0.3.10
+pdf2image>=3.1.0
+
+# Dependencias para desarrollo y testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-mock>=3.10.0
+
+# Dependencias para logging estructurado (opcional)
+python-json-logger>=2.0.0

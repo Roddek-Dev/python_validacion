@@ -1,0 +1,45 @@
+PENDIENTES DE MEJORAS - ORGANIZADOR DE DOCUMENTOS
+================================================
+
+PROBLEMAS CRÍTICOS:
+==================
+
+1. ARCHIVOS PENDIENTES (16 archivos):
+   - 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf (45 pts) → Categoría 10
+   - CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf (44 pts) → Categoría 18
+   - 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf (39 pts) → Categoría 16
+   - 19. FP CARLOS BAUTISTA.pdf (24 pts) → Categoría 18
+   - 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF (13 pts) → Revisar
+   - 26.5.1 Acta individual de grado Magíster... (13 pts) → Categoría 03
+   - 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf (6 pts) → Categoría 23
+   - 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis... (5 pts) → Categoría 23
+   - EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf (6 pts) → Categoría 23
+   - 10. CERT. BANCARIA CARLOS BAUTISTA.pdf (0 pts) → Categoría 16
+
+2. CATEGORÍAS CON POCOS ARCHIVOS (1 archivo cada una):
+   - Categoría 01 (Requisición Personal)
+   - Categoría 02 (Hoja de Vida)
+   - Categoría 05 (EPS)
+   - Categoría 07 (Caja de Compensación)
+   - Categoría 09 (Contrato de Trabajo)
+   - Categoría 10 (Documento de Identidad)
+   - Categoría 12 (Antecedentes Disciplinarios PGN)
+   - Categoría 14 (Antecedentes Judiciales PONAL)
+   - Categoría 18 (Tarjeta Profesional)
+   - Categoría 19 (Constancia Inducción)
+
+MEJORAS URGENTES:
+================
+
+1. CATEGORÍA 10: Reducir umbral de 50 a 45 puntos
+2. CATEGORÍA 16: Agregar keywords "certificacion bancaria", "cuenta bancaria"
+3. CATEGORÍA 18: Agregar keywords "fp", "fondo de pensiones", "tarjeta profesional"
+4. CATEGORÍA 23: Agregar keywords "evaluacion periodo", "periodo prueba"
+5. CATEGORÍA 03: Agregar keywords "acta individual", "grado", "magister"
+
+ESTADÍSTICAS:
+============
+- Total archivos: 53
+- Pendientes: 16 (30.2%)
+- Clasificados: 37 (69.8%)
+- Categorías con problemas: 10+

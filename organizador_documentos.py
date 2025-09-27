@@ -358,12 +358,85 @@ class DocumentOrganizer:
             return self.extract_text_from_txt(file_path)
         return ""
     
+    def detect_identity_document_patterns(self, text: str) -> int:
+        """Detecta patrones específicos de documentos de identidad colombianos."""
+        if not text:
+            return 0
+            
+        normalized_text = self.normalize_text(text)
+        score = 0
+        
+        # Patrones MUY específicos de cédulas colombianas (más restrictivos)
+        identity_patterns = [
+            ("republica de colombia", 20),  # Aumentado
+            ("identificacion personal", 20),  # Aumentado
+            ("cedula de ciudadania", 20),  # Aumentado
+            ("documento de identidad", 15),  # Aumentado
+            ("fotocopia cc", 15),  # Aumentado
+            ("fotocopia cedula", 15),  # Aumentado
+            ("copia cedula", 12),  # Aumentado
+            ("copia cc", 12),  # Aumentado
+        ]
+        
+        for pattern, points in identity_patterns:
+            if pattern in normalized_text:
+                score += points
+        
+        # Detectar números de cédula (8 dígitos seguidos) - más específico
+        import re
+        cedula_pattern = r'\b\d{8}\b'
+        cedula_matches = re.findall(cedula_pattern, text)
+        if cedula_matches:
+            # Solo dar puntos si hay exactamente 1 número de cédula (no múltiples)
+            if len(cedula_matches) == 1:
+                score += 8  # Aumentado
+            
+        # Detectar fechas de nacimiento (DD-MES-YYYY) - más específico
+        fecha_pattern = r'\b\d{1,2}-[A-Z]{3}-\d{4}\b'
+        fecha_matches = re.findall(fecha_pattern, text)
+        if fecha_matches:
+            # Solo dar puntos si hay exactamente 1 fecha (no múltiples)
+            if len(fecha_matches) == 1:
+                score += 8  # Aumentado
+        
+        # Penalizar si contiene palabras que NO deberían estar en una cédula
+        exclusion_words = [
+            "contrato", "certificado", "diploma", "estudios", "laboral", 
+            "medidas", "correctivas", "antecedentes", "pgn", "cgr", "ponal",
+            "afiliacion", "eps", "arl", "ccf", "pension", "vacaciones",
+            "incapacidad", "permiso", "licencia", "formato", "solicitud",
+            "magister", "inteligencia", "negocios", "cambio", "cuenta",
+            "herramientas", "google", "rte", "fete", "deduccion", "retefuente",
+            "certificacion", "constancia", "recomendacion", "medica", "ocupacional"
+        ]
+        
+        # Solo penalizar nombres propios si NO es un documento de identidad real
+        name_penalty_words = ["bautista", "carlos", "andres", "gonzalez"]
+        
+        for word in exclusion_words:
+            if word in normalized_text:
+                score -= 15  # Penalización más fuerte
+                break  # Solo una penalización por documento
+        
+        # Penalización adicional por nombres propios (solo si no es documento de identidad)
+        if score < 30:  # Solo si no tiene alta puntuación de patrones de identidad
+            for name in name_penalty_words:
+                if name in normalized_text:
+                    score -= 10
+                    break
+            
+        return max(0, score)  # No permitir puntuación negativa
+
     def get_keyword_score(self, keyword: str, category_id: str) -> Tuple[int, str]:
         """Determina puntuación de keyword basada en especificidad."""
         # Keywords muy específicas que requieren coincidencia exacta para categorías críticas
         critical_specific_keywords = {
             "06": ["afiliacion en nuestra arl", "afiliacion en el ramo de resgos laborales", "afiliacion arl", "certificado de afiliacion"],
-            "10": ["documento de identidad", "republica de colombia", "cedula de ciudadania"]
+            "10": [
+                "republica de colombia", "identificacion personal", "cedula de ciudadania", 
+                "documento de identidad", "cc", "cedula ciudadania", "identificacion",
+                "fotocopia cc", "fotocopia cedula", "copia cedula", "copia cc"
+            ]
         }
         
         generic_keywords = [
@@ -376,14 +449,22 @@ class DocumentOrganizer:
         # Verificar keywords críticas primero (para categorías 06 y 10)
         if category_id in critical_specific_keywords:
             for critical in critical_specific_keywords[category_id]:
-                if self.normalize_text(critical) == normalized_keyword:
-                    return 30, "crítica específica"
+                normalized_critical = self.normalize_text(critical)
+                # Para categoría 10, usar comparación más flexible
+                if category_id == "10":
+                    if (normalized_critical in normalized_keyword or 
+                        normalized_keyword in normalized_critical or
+                        any(word in normalized_keyword for word in normalized_critical.split() if len(word) > 3)):
+                        return 30, "crítica específica"
+                else:
+                    if self.normalize_text(critical) == normalized_keyword:
+                        return 30, "crítica específica"
 
         # Para categorías críticas (06 y 10), penalizar keywords genéricas más severamente
         if category_id in ["06", "10"]:
             for generic in generic_keywords:
                 if self.normalize_text(generic) in normalized_keyword:
-                    return 2, "genérica penalizada"  # Puntuación muy baja para categorías críticas
+                    return 1, "genérica penalizada"  # Puntuación muy baja para categorías críticas
         
         # Keywords genéricas normales para otras categorías
         for generic in generic_keywords:
@@ -403,14 +484,15 @@ class DocumentOrganizer:
         scores = {cat_id: 0 for cat_id in categories.keys()}
         found_keywords = []
         
-        # Clasificación por palabras clave en nombre de archivo
+        # Clasificación por palabras clave en nombre de archivo (MAYOR PESO)
         for cat_id, cat_keywords in keywords.items():
             filename_score = 0
             for keyword in cat_keywords:
                 normalized_keyword = self.normalize_text(keyword)
                 if normalized_keyword in normalized_filename:
                     keyword_score, keyword_type = self.get_keyword_score(keyword, cat_id)
-                    filename_score += keyword_score
+                    # Multiplicar por 1.5 para dar mayor peso al nombre de archivo
+                    filename_score += int(keyword_score * 1.5)
                     found_keywords.append(f"filename:{keyword}")
 
             scores[cat_id] += filename_score
@@ -467,9 +549,24 @@ class DocumentOrganizer:
                             found_keywords.append(f"ocr:{keyword}")
 
                     scores[cat_id] += ocr_score
+                
+                # Detección especial para documentos de identidad (categoría 10)
+                identity_score = self.detect_identity_document_patterns(ocr_text)
+                if identity_score > 0:
+                    scores["10"] += identity_score
+                    found_keywords.append(f"ocr:patrones_identidad(+{identity_score})")
 
         max_score = max(scores.values()) if scores.values() else 0
-        confidence_threshold = self.config.get("confidence_threshold", 15)
+        
+        # Umbral de confianza más estricto para categoría 10 (Documento de Identidad)
+        if max_score > 0:
+            top_category = max(scores, key=scores.get)
+            if top_category == "10":
+                confidence_threshold = 40  # AÚN más estricto para categoría 10
+            else:
+                confidence_threshold = self.config.get("confidence_threshold", 15)
+        else:
+            confidence_threshold = self.config.get("confidence_threshold", 15)
 
         if max_score >= confidence_threshold:
             top_categories = [cat_id for cat_id, score in scores.items() if score == max_score]

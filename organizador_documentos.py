@@ -452,6 +452,28 @@ class DocumentOrganizer:
 
         normalized_keyword = self.normalize_text(keyword)
 
+        # PRIORIDAD MÁXIMA: Códigos de formato específicos (primera posición en cada categoría)
+        format_codes = {
+            "00": "GAF-JTH-PD-01-FT-04",
+            "01": "GRH-PD-02-FT-07", 
+            "02": "GRH-PD-02-FT-02",
+            "16": "GAF-JTH-PD-02-FT-11",
+            "19": "GAF-JTH-PD-Ol-FT-03",
+            "21": "GTE-PD-05-FT-01",
+            "23": "GAF-JTH-PD-02-FT-07",
+            "24": "GAF-JTH-SST-PD-07-FT-02",
+            "25": "GAF-JTH-PD-02-FT-02",
+            "28": "GAF-JTH-PD-02-FT-07",
+            "32": "GAF-JTH-PD-02-FT-08",
+            "39": "GAF-JTH-PD-01-FT-08"
+        }
+        
+        # Verificar si es un código de formato específico
+        if category_id in format_codes:
+            format_code = format_codes[category_id]
+            if self.normalize_text(format_code) in normalized_keyword or normalized_keyword in self.normalize_text(format_code):
+                return 50, "código_formato_específico"  # MÁXIMA PRIORIDAD
+
         # Verificar keywords críticas primero (para categorías 06 y 10)
         if category_id in critical_specific_keywords:
             for critical in critical_specific_keywords[category_id]:
@@ -507,6 +529,29 @@ class DocumentOrganizer:
         scores = {cat_id: 0 for cat_id in categories.keys()}
         found_keywords = []
         
+        # DETECCIÓN AUTOMÁTICA DE CÓDIGOS DE FORMATO (MÁXIMA PRIORIDAD)
+        format_codes = {
+            "GAF-JTH-PD-01-FT-04": "00",  # Check List
+            "GRH-PD-02-FT-07": "01",      # Requisición
+            "GRH-PD-02-FT-02": "02",      # Hoja de Vida
+            "GAF-JTH-PD-02-FT-11": "16",  # Certificación Bancaria
+            "GAF-JTH-PD-Ol-FT-03": "19",  # Inducción
+            "GTE-PD-05-FT-01": "21",      # Autorización Datos
+            "GAF-JTH-PD-02-FT-07": "23",  # Evaluación Periodo Prueba
+            "GAF-JTH-SST-PD-07-FT-02": "24",  # Examen Médico
+            "GAF-JTH-PD-02-FT-02": "25",  # Permisos
+            "GAF-JTH-PD-02-FT-07": "28",  # Vacaciones
+            "GAF-JTH-PD-02-FT-08": "32",  # RTE FETE
+            "GAF-JTH-PD-01-FT-08": "39"   # Validaciones
+        }
+        
+        # Buscar códigos de formato en el nombre del archivo
+        for format_code, category_id in format_codes.items():
+            if self.normalize_text(format_code) in normalized_filename:
+                scores[category_id] += 75  # MÁXIMA PRIORIDAD
+                found_keywords.append(f"código_formato:{format_code}")
+                self.logger.info(f"Código de formato detectado: {format_code} -> Categoría {category_id} en {file_path.name}")
+
         # Clasificación por palabras clave en nombre de archivo (MAYOR PESO)
         for cat_id, cat_keywords in keywords.items():
             filename_score = 0
@@ -614,6 +659,13 @@ class DocumentOrganizer:
 
                     scores[cat_id] += content_score
                 
+                # DETECCIÓN AUTOMÁTICA DE CÓDIGOS DE FORMATO EN CONTENIDO
+                for format_code, category_id in format_codes.items():
+                    if self.normalize_text(format_code) in normalized_content:
+                        scores[category_id] += 50  # ALTA PRIORIDAD en contenido
+                        found_keywords.append(f"código_formato_contenido:{format_code}")
+                        self.logger.info(f"Código de formato detectado en contenido: {format_code} -> Categoría {category_id} en {file_path.name}")
+
                 # ELIMINACIÓN INMEDIATA EN CONTENIDO: Si el contenido contiene keywords de Hoja de Vida, eliminar Categoría 03 completamente
                 hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
                 for hv_keyword in hoja_vida_keywords:
@@ -661,6 +713,13 @@ class DocumentOrganizer:
 
                     scores[cat_id] += ocr_score
                 
+                # DETECCIÓN AUTOMÁTICA DE CÓDIGOS DE FORMATO EN OCR
+                for format_code, category_id in format_codes.items():
+                    if self.normalize_text(format_code) in normalized_ocr:
+                        scores[category_id] += 50  # ALTA PRIORIDAD en OCR
+                        found_keywords.append(f"código_formato_ocr:{format_code}")
+                        self.logger.info(f"Código de formato detectado en OCR: {format_code} -> Categoría {category_id} en {file_path.name}")
+
                 # ELIMINACIÓN INMEDIATA EN OCR: Si el OCR contiene keywords de Hoja de Vida, eliminar Categoría 03 completamente
                 hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
                 for hv_keyword in hoja_vida_keywords:

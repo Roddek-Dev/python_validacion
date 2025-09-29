@@ -9,14 +9,15 @@ Se ha implementado un sistema de penalizaciones cruzadas para evitar confusiones
 **Problema**: Los certificados de estudios a veces contienen keywords de "hoja de vida" y se clasifican incorrectamente.
 
 **Solución**: 
-- Si un archivo tiene puntuación en Categoría 03 pero contiene keywords de Categoría 02, se aplica una penalización fuerte
+- Si un archivo tiene puntuación en Categoría 03 pero contiene keywords de Categoría 02, se aplica **ELIMINACIÓN TOTAL**
 - Keywords de penalización: `["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]`
 
-**Penalizaciones aplicadas**:
-- **Nombre de archivo**: -20 puntos (penalización fuerte)
-- **Carpeta padre**: -15 puntos (penalización moderada)
-- **Contenido**: -10 puntos (penalización leve)
-- **OCR**: -10 puntos (penalización leve)
+**Penalizaciones aplicadas** (ELIMINACIÓN TOTAL):
+- **Keywords individuales**: 0 puntos (eliminación total)
+- **Nombre de archivo**: 0 puntos (eliminación total)
+- **Carpeta padre**: 0 puntos (eliminación total)
+- **Contenido**: 0 puntos (eliminación total)
+- **OCR**: 0 puntos (eliminación total)
 
 ### 2. Categoría 06 (Afiliación ARL) vs Categoría 00 (Check List)
 **Problema**: Los documentos de ARL a veces contienen keywords de "check list" y se clasifican incorrectamente.
@@ -35,7 +36,8 @@ Se ha implementado un sistema de penalizaciones cruzadas para evitar confusiones
 
 ### Nivel 1: Penalización en `get_keyword_score()`
 - Se aplica directamente a las keywords individuales
-- Puntuación reducida a 1 punto si contiene keywords de otras categorías
+- **Categoría 03**: Puntuación reducida a 0 puntos (eliminación total) si contiene keywords de Hoja de Vida
+- **Categoría 06**: Puntuación reducida a 1 punto si contiene keywords de Check List
 - Tipo de penalización: `"penalizado_por_hoja_vida"` o `"penalizado_por_check_list"`
 
 ### Nivel 2: Penalización en `classify_file()`
@@ -47,20 +49,23 @@ Se ha implementado un sistema de penalizaciones cruzadas para evitar confusiones
 
 El sistema registra todas las penalizaciones cruzadas aplicadas:
 ```
-WARNING - Penalización cruzada aplicada: Categoría 03 penalizada por contener keywords de Hoja de Vida en archivo.pdf
+WARNING - ELIMINACIÓN TOTAL: Categoría 03 eliminada por contener keywords de Hoja de Vida en archivo.pdf
+WARNING - ELIMINACIÓN TOTAL: Categoría 03 eliminada por carpeta con keywords de Hoja de Vida en archivo.pdf
+WARNING - ELIMINACIÓN TOTAL: Categoría 03 eliminada por contenido con keywords de Hoja de Vida en archivo.pdf
+WARNING - ELIMINACIÓN TOTAL: Categoría 03 eliminada por OCR con keywords de Hoja de Vida en archivo.pdf
 WARNING - Penalización cruzada aplicada: Categoría 06 penalizada por contener keywords de Check List en documento.pdf
 ```
 
 ## Resultados en CSV
 
 Las penalizaciones se registran en el campo `palabras_clave_encontradas` con etiquetas específicas:
-- `penalizacion:contiene_hoja_vida`
+- `penalizacion:contiene_hoja_vida_ELIMINADO` (eliminación total)
 - `penalizacion:contiene_check_list`
-- `penalizacion_carpeta:contiene_hoja_vida`
+- `penalizacion_carpeta:contiene_hoja_vida_ELIMINADO` (eliminación total)
 - `penalizacion_carpeta:contiene_check_list`
-- `penalizacion_contenido:contiene_hoja_vida`
+- `penalizacion_contenido:contiene_hoja_vida_ELIMINADO` (eliminación total)
 - `penalizacion_contenido:contiene_check_list`
-- `penalizacion_ocr:contiene_hoja_vida`
+- `penalizacion_ocr:contiene_hoja_vida_ELIMINADO` (eliminación total)
 - `penalizacion_ocr:contiene_check_list`
 
 ## Configuración

@@ -468,12 +468,12 @@ class DocumentOrganizer:
 
         # PENALIZACIONES CRUZADAS: Verificar si contiene keywords de otras categorías más específicas
         if category_id == "03":  # Certificados de Estudios
-            # Penalizar si contiene keywords de Categoría 02 (Hoja de Vida)
+            # Penalizar si contiene keywords de Categoría 02 (Hoja de Vida) - PENALIZACIÓN MUY FUERTE
             for penalty_keyword in cross_category_penalties["02"]:
                 normalized_penalty = self.normalize_text(penalty_keyword)
                 if (normalized_penalty in normalized_keyword or 
                     any(word in normalized_keyword for word in normalized_penalty.split() if len(word) > 3)):
-                    return 1, "penalizado_por_hoja_vida"  # Puntuación muy baja
+                    return 0, "penalizado_por_hoja_vida"  # Puntuación CERO - eliminación total
         
         if category_id == "06":  # Afiliación ARL
             # Penalizar si contiene keywords de Categoría 00 (Check List)
@@ -521,14 +521,14 @@ class DocumentOrganizer:
             scores[cat_id] += filename_score
         
         # PENALIZACIONES CRUZADAS ADICIONALES: Verificar si el archivo contiene keywords de categorías más específicas
-        # Penalizar Categoría 03 si contiene keywords de Categoría 02
+        # Penalizar Categoría 03 si contiene keywords de Categoría 02 - ELIMINACIÓN TOTAL
         if scores.get("03", 0) > 0:
             hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
             for hv_keyword in hoja_vida_keywords:
                 if self.normalize_text(hv_keyword) in normalized_filename:
-                    scores["03"] = max(1, scores["03"] - 20)  # Penalización fuerte
-                    found_keywords.append(f"penalizacion:contiene_hoja_vida")
-                    self.logger.warning(f"Penalización cruzada aplicada: Categoría 03 penalizada por contener keywords de Hoja de Vida en {file_path.name}")
+                    scores["03"] = 0  # ELIMINACIÓN TOTAL - puntuación cero
+                    found_keywords.append(f"penalizacion:contiene_hoja_vida_ELIMINADO")
+                    self.logger.warning(f"ELIMINACIÓN TOTAL: Categoría 03 eliminada por contener keywords de Hoja de Vida en {file_path.name}")
                     break
         
         # Penalizar Categoría 06 si contiene keywords de Categoría 00
@@ -557,13 +557,14 @@ class DocumentOrganizer:
             scores[cat_id] += folder_score
         
         # PENALIZACIONES CRUZADAS EN CARPETA PADRE
-        # Penalizar Categoría 03 si la carpeta contiene keywords de Categoría 02
+        # Penalizar Categoría 03 si la carpeta contiene keywords de Categoría 02 - ELIMINACIÓN TOTAL
         if scores.get("03", 0) > 0:
             hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
             for hv_keyword in hoja_vida_keywords:
                 if self.normalize_text(hv_keyword) in normalized_parent:
-                    scores["03"] = max(1, scores["03"] - 15)  # Penalización moderada para carpeta
-                    found_keywords.append(f"penalizacion_carpeta:contiene_hoja_vida")
+                    scores["03"] = 0  # ELIMINACIÓN TOTAL - puntuación cero
+                    found_keywords.append(f"penalizacion_carpeta:contiene_hoja_vida_ELIMINADO")
+                    self.logger.warning(f"ELIMINACIÓN TOTAL: Categoría 03 eliminada por carpeta con keywords de Hoja de Vida en {file_path.name}")
                     break
         
         # Penalizar Categoría 06 si la carpeta contiene keywords de Categoría 00
@@ -596,13 +597,14 @@ class DocumentOrganizer:
                     scores[cat_id] += content_score
                 
                 # PENALIZACIONES CRUZADAS EN CONTENIDO
-                # Penalizar Categoría 03 si el contenido contiene keywords de Categoría 02
+                # Penalizar Categoría 03 si el contenido contiene keywords de Categoría 02 - ELIMINACIÓN TOTAL
                 if scores.get("03", 0) > 0:
                     hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
                     for hv_keyword in hoja_vida_keywords:
                         if self.normalize_text(hv_keyword) in normalized_content:
-                            scores["03"] = max(1, scores["03"] - 10)  # Penalización leve para contenido
-                            found_keywords.append(f"penalizacion_contenido:contiene_hoja_vida")
+                            scores["03"] = 0  # ELIMINACIÓN TOTAL - puntuación cero
+                            found_keywords.append(f"penalizacion_contenido:contiene_hoja_vida_ELIMINADO")
+                            self.logger.warning(f"ELIMINACIÓN TOTAL: Categoría 03 eliminada por contenido con keywords de Hoja de Vida en {file_path.name}")
                             break
                 
                 # Penalizar Categoría 06 si el contenido contiene keywords de Categoría 00
@@ -633,13 +635,14 @@ class DocumentOrganizer:
                     scores[cat_id] += ocr_score
                 
                 # PENALIZACIONES CRUZADAS EN OCR
-                # Penalizar Categoría 03 si el OCR contiene keywords de Categoría 02
+                # Penalizar Categoría 03 si el OCR contiene keywords de Categoría 02 - ELIMINACIÓN TOTAL
                 if scores.get("03", 0) > 0:
                     hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
                     for hv_keyword in hoja_vida_keywords:
                         if self.normalize_text(hv_keyword) in normalized_ocr:
-                            scores["03"] = max(1, scores["03"] - 10)  # Penalización leve para OCR
-                            found_keywords.append(f"penalizacion_ocr:contiene_hoja_vida")
+                            scores["03"] = 0  # ELIMINACIÓN TOTAL - puntuación cero
+                            found_keywords.append(f"penalizacion_ocr:contiene_hoja_vida_ELIMINADO")
+                            self.logger.warning(f"ELIMINACIÓN TOTAL: Categoría 03 eliminada por OCR con keywords de Hoja de Vida en {file_path.name}")
                             break
                 
                 # Penalizar Categoría 06 si el OCR contiene keywords de Categoría 00

@@ -1320,3 +1320,567 @@ Command Line Error: Incorrect password
 2025-09-27 11:11:37,117 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:593 - Archivo sin clasificar (15 < 20): 11. TP CARLOS BAUTISTA.pdf
 2025-09-27 11:11:37,118 - WARNING - [ThreadPoolExecutor-0_0] - process_file:753 - Archivo pendiente de revisar: 11. TP CARLOS BAUTISTA.pdf -> baja_confianza
 2025-09-27 11:11:37,126 - INFO - [MainThread] - save_results_csv:824 - Resultados guardados en: resultados.csv
+2025-09-29 04:04:13,106 - INFO - [MainThread] - organize_documents:778 - Iniciando organización de documentos
+2025-09-29 04:04:13,107 - INFO - [MainThread] - organize_documents:779 - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-29 04:04:13,107 - INFO - [MainThread] - organize_documents:780 - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-29 04:04:13,107 - INFO - [MainThread] - organize_documents:781 - Modo: COPY
+2025-09-29 04:04:13,121 - INFO - [MainThread] - organize_documents:787 - Encontrados 53 archivos para procesar
+2025-09-29 04:04:13,121 - INFO - [MainThread] - organize_documents:794 - Usando 6 hilos para procesamiento
+2025-09-29 04:04:14,322 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 10 (contenido)
+2025-09-29 04:04:16,296 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf
+2025-09-29 04:04:16,372 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> 09 (contenido)
+2025-09-29 04:04:19,875 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 03 (contenido)
+2025-09-29 04:04:21,311 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 05 (contenido)
+2025-09-29 04:04:23,733 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> 11 (contenido)
+2025-09-29 04:04:28,133 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf (1841 chars)
+2025-09-29 04:04:28,501 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 11 (ocr)
+2025-09-29 04:04:33,504 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 13. Declaración de inhabilidad.pdf (2171 chars)
+2025-09-29 04:04:33,581 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 22 (ocr)
+2025-09-29 04:04:34,589 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf (1634 chars)
+2025-09-29 04:04:34,599 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf
+2025-09-29 04:04:34,957 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 14 (ocr)
+2025-09-29 04:04:36,929 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf (338 chars)
+2025-09-29 04:04:37,277 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> 10 (nombre_archivo)
+2025-09-29 04:04:40,293 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:324 - OCR exitoso en PDF: 3. Certificados estudios.pdf (1675 chars)
+2025-09-29 04:04:40,343 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 3. Certificados estudios.pdf -> 03 (ocr)
+2025-09-29 04:04:41,054 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:593 - Archivo sin clasificar (5 < 15): 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx
+2025-09-29 04:04:41,124 - WARNING - [ThreadPoolExecutor-0_3] - process_file:753 - Archivo pendiente de revisar: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> baja_confianza
+2025-09-29 04:04:41,977 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 19 (contenido)
+2025-09-29 04:04:42,816 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf (1132 chars)
+2025-09-29 04:04:42,920 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> 03 (ocr)
+2025-09-29 04:04:43,213 - ERROR - [ThreadPoolExecutor-0_5] - extract_text_from_pdf:246 - Error extrayendo texto de PDF /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 04:04:43,230 - WARNING - [ThreadPoolExecutor-0_5] - is_pdf_scanned:198 - Error verificando PDF escaneado /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 04:04:43,258 - ERROR - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:328 - Error convirtiendo PDF para OCR /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: Unable to get page count.
+Command Line Error: Incorrect password
+
+2025-09-29 04:04:43,330 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> 07 (nombre_archivo)
+2025-09-29 04:04:43,421 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:593 - Archivo sin clasificar (13 < 15): 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF
+2025-09-29 04:04:43,484 - WARNING - [ThreadPoolExecutor-0_3] - process_file:753 - Archivo pendiente de revisar: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> baja_confianza
+2025-09-29 04:04:43,920 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 04:04:45,510 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 19. FP CARLOS BAUTISTA.pdf (758 chars)
+2025-09-29 04:04:45,511 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:593 - Archivo sin clasificar (24 < 40): 19. FP CARLOS BAUTISTA.pdf
+2025-09-29 04:04:45,672 - WARNING - [ThreadPoolExecutor-0_1] - process_file:753 - Archivo pendiente de revisar: 19. FP CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-29 04:04:47,713 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: 2. Hoja de vida.pdf (1930 chars)
+2025-09-29 04:04:47,855 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 2. Hoja de vida.pdf -> 02 (ocr)
+2025-09-29 04:04:48,493 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> 11 (contenido)
+2025-09-29 04:04:49,708 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:593 - Archivo sin clasificar (39 < 40): 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 04:04:49,773 - WARNING - [ThreadPoolExecutor-0_0] - process_file:753 - Archivo pendiente de revisar: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> baja_confianza
+2025-09-29 04:04:51,297 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (contenido)
+2025-09-29 04:04:51,410 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx
+2025-09-29 04:04:51,414 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> 00 (contenido)
+2025-09-29 04:04:52,834 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:339 - OCR exitoso en imagen: 17. FOTO.jpeg (368 chars)
+2025-09-29 04:04:52,872 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 17. FOTO.jpeg -> 20 (nombre_archivo)
+2025-09-29 04:04:53,906 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 04:04:54,586 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 06 (contenido)
+2025-09-29 04:04:55,250 - DEBUG - [ThreadPoolExecutor-0_4] - extract_text_with_ocr:324 - OCR exitoso en PDF: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf (2500 chars)
+2025-09-29 04:04:55,273 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:593 - Archivo sin clasificar (4 < 15): 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf
+2025-09-29 04:04:55,310 - WARNING - [ThreadPoolExecutor-0_4] - process_file:753 - Archivo pendiente de revisar: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-29 04:04:55,369 - INFO - [ThreadPoolExecutor-0_4] - process_file:699 - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 04:04:56,350 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 23 (contenido)
+2025-09-29 04:04:57,340 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -6 puntos para CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf
+2025-09-29 04:04:57,341 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:593 - Archivo sin clasificar (38 < 40): CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf
+2025-09-29 04:04:57,341 - WARNING - [ThreadPoolExecutor-0_4] - process_file:753 - Archivo pendiente de revisar: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> baja_confianza
+2025-09-29 04:04:57,688 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> 00 (carpeta_padre)
+2025-09-29 04:04:57,943 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> 34 (carpeta_padre)
+2025-09-29 04:04:58,482 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:593 - Archivo sin clasificar (39 < 40): CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf
+2025-09-29 04:04:58,500 - WARNING - [ThreadPoolExecutor-0_4] - process_file:753 - Archivo pendiente de revisar: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> baja_confianza
+2025-09-29 04:04:59,895 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-29 04:05:01,591 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:593 - Archivo sin clasificar (39 < 40): CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-29 04:05:01,592 - WARNING - [ThreadPoolExecutor-0_4] - process_file:753 - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> baja_confianza
+2025-09-29 04:05:02,740 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:593 - Archivo sin clasificar (39 < 40): CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-29 04:05:02,747 - WARNING - [ThreadPoolExecutor-0_4] - process_file:753 - Archivo pendiente de revisar: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> baja_confianza
+2025-09-29 04:05:03,180 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx
+2025-09-29 04:05:03,189 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 00 (contenido)
+2025-09-29 04:05:05,578 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 06 (contenido)
+2025-09-29 04:05:07,622 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> 25 (contenido)
+2025-09-29 04:05:08,477 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 04:05:09,589 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 04:05:11,032 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-29 04:05:13,380 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 4. Certificados Laborales.pdf (1784 chars)
+2025-09-29 04:05:13,394 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:593 - Archivo sin clasificar (24 < 40): 4. Certificados Laborales.pdf
+2025-09-29 04:05:13,455 - WARNING - [ThreadPoolExecutor-0_2] - process_file:753 - Archivo pendiente de revisar: 4. Certificados Laborales.pdf -> baja_confianza
+2025-09-29 04:05:15,326 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-29 04:05:17,146 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf (2585 chars)
+2025-09-29 04:05:17,179 - WARNING - [ThreadPoolExecutor-0_5] - classify_file:581 - Penalización por ambigüedad: -9 puntos para 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf
+2025-09-29 04:05:17,200 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 12 (ocr)
+2025-09-29 04:05:17,201 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 04:05:17,520 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf (1157 chars)
+2025-09-29 04:05:17,532 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:593 - Archivo sin clasificar (29 < 40): 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf
+2025-09-29 04:05:17,565 - WARNING - [ThreadPoolExecutor-0_1] - process_file:753 - Archivo pendiente de revisar: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> baja_confianza
+2025-09-29 04:05:18,668 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: 11. TP CARLOS BAUTISTA.pdf (708 chars)
+2025-09-29 04:05:18,835 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 11. TP CARLOS BAUTISTA.pdf -> 18 (nombre_archivo)
+2025-09-29 04:05:19,145 - DEBUG - [ThreadPoolExecutor-0_4] - extract_text_with_ocr:324 - OCR exitoso en PDF: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf (1452 chars)
+2025-09-29 04:05:19,286 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-29 04:05:19,750 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 04:05:20,410 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 25 (carpeta_padre)
+2025-09-29 04:05:20,591 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 04:05:21,418 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 04:05:27,064 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> 32 (carpeta_padre)
+2025-09-29 04:05:27,066 - INFO - [MainThread] - save_results_csv:824 - Resultados guardados en: resultados.csv
+2025-09-29 04:39:16,994 - INFO - [MainThread] - organize_documents:778 - Iniciando organización de documentos
+2025-09-29 04:39:16,994 - INFO - [MainThread] - organize_documents:779 - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-29 04:39:16,994 - INFO - [MainThread] - organize_documents:780 - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-29 04:39:16,994 - INFO - [MainThread] - organize_documents:781 - Modo: COPY
+2025-09-29 04:39:16,997 - INFO - [MainThread] - organize_documents:787 - Encontrados 53 archivos para procesar
+2025-09-29 04:39:16,997 - INFO - [MainThread] - organize_documents:794 - Usando 6 hilos para procesamiento
+2025-09-29 04:39:18,507 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 9. Medidas correctivas Carlos Bautista.pdf
+2025-09-29 04:39:18,566 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 15 (contenido)
+2025-09-29 04:39:19,777 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf
+2025-09-29 04:39:19,883 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> 09 (contenido)
+2025-09-29 04:39:23,252 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf
+2025-09-29 04:39:23,520 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 23 (contenido)
+2025-09-29 04:39:24,656 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 05 (contenido)
+2025-09-29 04:39:27,303 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> 24 (contenido)
+2025-09-29 04:39:32,733 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf (1841 chars)
+2025-09-29 04:39:32,790 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 11 (ocr)
+2025-09-29 04:39:36,956 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf (1634 chars)
+2025-09-29 04:39:36,977 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf
+2025-09-29 04:39:37,032 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 14 (ocr)
+2025-09-29 04:39:37,742 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 13. Declaración de inhabilidad.pdf (2171 chars)
+2025-09-29 04:39:37,819 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 22 (ocr)
+2025-09-29 04:39:42,653 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf (338 chars)
+2025-09-29 04:39:42,759 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> 10 (nombre_archivo)
+2025-09-29 04:39:46,056 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf (1132 chars)
+2025-09-29 04:39:46,058 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 10. CERT. BANCARIA CARLOS BAUTISTA.pdf
+2025-09-29 04:39:46,152 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> 16 (ocr)
+2025-09-29 04:39:46,670 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> 39 (contenido)
+2025-09-29 04:39:47,930 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 19 (contenido)
+2025-09-29 04:39:49,455 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> 24 (contenido)
+2025-09-29 04:39:49,489 - ERROR - [ThreadPoolExecutor-0_1] - extract_text_from_pdf:246 - Error extrayendo texto de PDF /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 04:39:49,510 - WARNING - [ThreadPoolExecutor-0_1] - is_pdf_scanned:198 - Error verificando PDF escaneado /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 04:39:49,546 - ERROR - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:328 - Error convirtiendo PDF para OCR /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: Unable to get page count.
+Command Line Error: Incorrect password
+
+2025-09-29 04:39:49,548 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> 07 (nombre_archivo)
+2025-09-29 04:39:50,009 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 04:39:54,811 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 19. FP CARLOS BAUTISTA.pdf (758 chars)
+2025-09-29 04:39:54,817 - WARNING - [ThreadPoolExecutor-0_5] - classify_file:593 - Archivo sin clasificar (24 < 40): 19. FP CARLOS BAUTISTA.pdf
+2025-09-29 04:39:54,827 - WARNING - [ThreadPoolExecutor-0_5] - process_file:753 - Archivo pendiente de revisar: 19. FP CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-29 04:40:03,612 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: 2. Hoja de vida.pdf (1930 chars)
+2025-09-29 04:40:03,634 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 2. Hoja de vida.pdf -> 02 (ocr)
+2025-09-29 04:40:06,324 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> 24 (contenido)
+2025-09-29 04:40:07,273 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 04:40:07,282 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> 16 (contenido)
+2025-09-29 04:40:07,670 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:324 - OCR exitoso en PDF: 3. Certificados estudios.pdf (1675 chars)
+2025-09-29 04:40:07,774 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 3. Certificados estudios.pdf -> 03 (ocr)
+2025-09-29 04:40:08,914 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (contenido)
+2025-09-29 04:40:09,106 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx
+2025-09-29 04:40:09,108 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> 00 (contenido)
+2025-09-29 04:40:27,083 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:339 - OCR exitoso en imagen: 17. FOTO.jpeg (368 chars)
+2025-09-29 04:40:27,097 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 17. FOTO.jpeg -> 20 (nombre_archivo)
+2025-09-29 04:40:27,811 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 04:40:28,420 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 06 (contenido)
+2025-09-29 04:40:29,340 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 23 (contenido)
+2025-09-29 04:40:29,343 - INFO - [ThreadPoolExecutor-0_1] - process_file:699 - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 04:40:30,445 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf
+2025-09-29 04:40:30,445 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:593 - Archivo sin clasificar (38 < 40): CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf
+2025-09-29 04:40:30,446 - WARNING - [ThreadPoolExecutor-0_1] - process_file:753 - Archivo pendiente de revisar: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> baja_confianza
+2025-09-29 04:40:31,800 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> 34 (carpeta_padre)
+2025-09-29 04:40:32,072 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> 00 (carpeta_padre)
+2025-09-29 04:40:32,517 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:593 - Archivo sin clasificar (39 < 40): CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf
+2025-09-29 04:40:32,518 - WARNING - [ThreadPoolExecutor-0_1] - process_file:753 - Archivo pendiente de revisar: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> baja_confianza
+2025-09-29 04:40:47,390 - DEBUG - [ThreadPoolExecutor-0_4] - extract_text_with_ocr:324 - OCR exitoso en PDF: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf (2500 chars)
+2025-09-29 04:40:47,412 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:593 - Archivo sin clasificar (8 < 15): 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf
+2025-09-29 04:40:47,464 - WARNING - [ThreadPoolExecutor-0_4] - process_file:753 - Archivo pendiente de revisar: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> baja_confianza
+2025-09-29 04:40:49,380 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-29 04:40:51,564 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -9 puntos para CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-29 04:40:51,599 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> 31 (carpeta_padre)
+2025-09-29 04:40:53,025 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -6 puntos para CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-29 04:40:53,026 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> 31 (carpeta_padre)
+2025-09-29 04:40:53,632 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx
+2025-09-29 04:40:53,641 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 00 (contenido)
+2025-09-29 04:40:55,244 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 4. Certificados Laborales.pdf (1784 chars)
+2025-09-29 04:40:55,249 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:593 - Archivo sin clasificar (24 < 40): 4. Certificados Laborales.pdf
+2025-09-29 04:40:55,265 - WARNING - [ThreadPoolExecutor-0_2] - process_file:753 - Archivo pendiente de revisar: 4. Certificados Laborales.pdf -> baja_confianza
+2025-09-29 04:40:56,356 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf (1157 chars)
+2025-09-29 04:40:56,372 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:593 - Archivo sin clasificar (29 < 40): 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf
+2025-09-29 04:40:56,381 - WARNING - [ThreadPoolExecutor-0_0] - process_file:753 - Archivo pendiente de revisar: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> baja_confianza
+2025-09-29 04:40:56,866 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 06 (contenido)
+2025-09-29 04:40:58,945 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 04:40:58,945 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf (2585 chars)
+2025-09-29 04:40:58,967 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 04:40:58,990 - WARNING - [ThreadPoolExecutor-0_5] - classify_file:581 - Penalización por ambigüedad: -9 puntos para 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf
+2025-09-29 04:40:59,153 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 12 (ocr)
+2025-09-29 04:40:59,914 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:324 - OCR exitoso en PDF: 11. TP CARLOS BAUTISTA.pdf (708 chars)
+2025-09-29 04:40:59,916 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> 25 (contenido)
+2025-09-29 04:41:00,050 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 11. TP CARLOS BAUTISTA.pdf -> 18 (nombre_archivo)
+2025-09-29 04:41:00,605 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-29 04:41:00,610 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-29 04:41:02,969 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 04:41:03,119 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 04:41:04,603 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 25 (carpeta_padre)
+2025-09-29 04:41:05,275 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 04:41:05,299 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 04:41:09,428 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf (1452 chars)
+2025-09-29 04:41:09,478 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-29 04:41:09,880 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> 32 (carpeta_padre)
+2025-09-29 04:41:09,884 - INFO - [MainThread] - save_results_csv:824 - Resultados guardados en: resultados.csv
+2025-09-29 14:22:15,506 - INFO - [MainThread] - organize_documents:778 - Iniciando organización de documentos
+2025-09-29 14:22:15,506 - INFO - [MainThread] - organize_documents:779 - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-29 14:22:15,506 - INFO - [MainThread] - organize_documents:780 - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-29 14:22:15,506 - INFO - [MainThread] - organize_documents:781 - Modo: COPY
+2025-09-29 14:22:15,519 - INFO - [MainThread] - organize_documents:787 - Encontrados 53 archivos para procesar
+2025-09-29 14:22:15,519 - INFO - [MainThread] - organize_documents:794 - Usando 6 hilos para procesamiento
+2025-09-29 14:22:16,928 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 9. Medidas correctivas Carlos Bautista.pdf
+2025-09-29 14:22:17,033 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 15 (contenido)
+2025-09-29 14:22:18,243 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf
+2025-09-29 14:22:18,445 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> 09 (contenido)
+2025-09-29 14:22:21,454 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf
+2025-09-29 14:22:21,611 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 23 (contenido)
+2025-09-29 14:22:22,733 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 05 (contenido)
+2025-09-29 14:22:25,135 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> 24 (contenido)
+2025-09-29 14:22:30,572 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf (1841 chars)
+2025-09-29 14:22:30,696 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 11 (ocr)
+2025-09-29 14:22:35,769 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 13. Declaración de inhabilidad.pdf (2171 chars)
+2025-09-29 14:22:35,956 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 22 (ocr)
+2025-09-29 14:22:36,728 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf (1634 chars)
+2025-09-29 14:22:36,737 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf
+2025-09-29 14:22:36,824 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 14 (ocr)
+2025-09-29 14:22:39,532 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf (338 chars)
+2025-09-29 14:22:39,721 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> 10 (nombre_archivo)
+2025-09-29 14:22:42,329 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:324 - OCR exitoso en PDF: 3. Certificados estudios.pdf (1675 chars)
+2025-09-29 14:22:42,453 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 3. Certificados estudios.pdf -> 03 (ocr)
+2025-09-29 14:22:43,330 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> 39 (contenido)
+2025-09-29 14:22:44,264 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 19 (contenido)
+2025-09-29 14:22:45,312 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf (1132 chars)
+2025-09-29 14:22:45,319 - WARNING - [ThreadPoolExecutor-0_5] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 10. CERT. BANCARIA CARLOS BAUTISTA.pdf
+2025-09-29 14:22:45,357 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> 16 (ocr)
+2025-09-29 14:22:45,401 - ERROR - [ThreadPoolExecutor-0_5] - extract_text_from_pdf:246 - Error extrayendo texto de PDF /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 14:22:45,406 - WARNING - [ThreadPoolExecutor-0_5] - is_pdf_scanned:198 - Error verificando PDF escaneado /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 14:22:45,471 - ERROR - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:328 - Error convirtiendo PDF para OCR /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: Unable to get page count.
+Command Line Error: Incorrect password
+
+2025-09-29 14:22:45,473 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> 24 (contenido)
+2025-09-29 14:22:45,473 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> 07 (nombre_archivo)
+2025-09-29 14:22:45,594 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 14:22:47,235 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 19. FP CARLOS BAUTISTA.pdf (758 chars)
+2025-09-29 14:22:47,541 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 19. FP CARLOS BAUTISTA.pdf -> 08 (ocr)
+2025-09-29 14:22:48,719 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: 2. Hoja de vida.pdf (1930 chars)
+2025-09-29 14:22:48,809 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 2. Hoja de vida.pdf -> 03 (ocr)
+2025-09-29 14:22:50,386 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> 24 (contenido)
+2025-09-29 14:22:51,220 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 14:22:51,315 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> 16 (contenido)
+2025-09-29 14:22:53,033 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (contenido)
+2025-09-29 14:22:53,157 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx
+2025-09-29 14:22:53,164 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> 00 (contenido)
+2025-09-29 14:22:55,443 - DEBUG - [ThreadPoolExecutor-0_4] - extract_text_with_ocr:324 - OCR exitoso en PDF: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf (2500 chars)
+2025-09-29 14:22:55,485 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:339 - OCR exitoso en imagen: 17. FOTO.jpeg (368 chars)
+2025-09-29 14:22:55,489 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> 21 (ocr)
+2025-09-29 14:22:55,492 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 17. FOTO.jpeg -> 20 (nombre_archivo)
+2025-09-29 14:22:56,929 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 06 (contenido)
+2025-09-29 14:22:57,793 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 14:22:57,927 - INFO - [ThreadPoolExecutor-0_4] - process_file:699 - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 14:22:58,718 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 23 (contenido)
+2025-09-29 14:22:58,726 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 4. Certificados Laborales.pdf (1784 chars)
+2025-09-29 14:22:58,730 - WARNING - [ThreadPoolExecutor-0_2] - classify_file:593 - Archivo sin clasificar (24 < 40): 4. Certificados Laborales.pdf
+2025-09-29 14:22:58,767 - WARNING - [ThreadPoolExecutor-0_2] - process_file:753 - Archivo pendiente de revisar: 4. Certificados Laborales.pdf -> baja_confianza
+2025-09-29 14:22:58,858 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:324 - OCR exitoso en PDF: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf (2585 chars)
+2025-09-29 14:22:58,864 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -9 puntos para 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf
+2025-09-29 14:22:58,921 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 12 (ocr)
+2025-09-29 14:22:59,141 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> 00 (carpeta_padre)
+2025-09-29 14:22:59,547 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:593 - Archivo sin clasificar (39 < 40): CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf
+2025-09-29 14:22:59,571 - WARNING - [ThreadPoolExecutor-0_3] - process_file:753 - Archivo pendiente de revisar: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> baja_confianza
+2025-09-29 14:22:59,609 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -6 puntos para CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf
+2025-09-29 14:22:59,618 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> 03 (contenido)
+2025-09-29 14:23:00,202 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> 34 (carpeta_padre)
+2025-09-29 14:23:01,536 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-29 14:23:01,936 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: 11. TP CARLOS BAUTISTA.pdf (708 chars)
+2025-09-29 14:23:02,020 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 11. TP CARLOS BAUTISTA.pdf -> 18 (nombre_archivo)
+2025-09-29 14:23:02,040 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -12 puntos para CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-29 14:23:02,105 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> 31 (carpeta_padre)
+2025-09-29 14:23:02,233 - WARNING - [ThreadPoolExecutor-0_5] - classify_file:581 - Penalización por ambigüedad: -6 puntos para CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-29 14:23:02,339 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> 31 (carpeta_padre)
+2025-09-29 14:23:02,705 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 00 (contenido)
+2025-09-29 14:23:03,375 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 14:23:03,738 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 14:23:04,005 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 06 (contenido)
+2025-09-29 14:23:04,505 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-29 14:23:04,903 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-29 14:23:07,725 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf (1157 chars)
+2025-09-29 14:23:07,734 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -9 puntos para 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf
+2025-09-29 14:23:07,850 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 14:23:07,859 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 14:23:07,864 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> 13 (ocr)
+2025-09-29 14:23:08,501 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> 25 (contenido)
+2025-09-29 14:23:10,040 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 14:23:11,120 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 25 (carpeta_padre)
+2025-09-29 14:23:11,675 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 14:23:14,543 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:324 - OCR exitoso en PDF: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf (1452 chars)
+2025-09-29 14:23:14,561 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-29 14:23:17,822 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> 32 (carpeta_padre)
+2025-09-29 14:23:17,825 - INFO - [MainThread] - save_results_csv:824 - Resultados guardados en: resultados.csv
+2025-09-29 14:46:59,079 - INFO - [MainThread] - organize_documents:778 - Iniciando organización de documentos
+2025-09-29 14:46:59,079 - INFO - [MainThread] - organize_documents:779 - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-29 14:46:59,079 - INFO - [MainThread] - organize_documents:780 - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-29 14:46:59,079 - INFO - [MainThread] - organize_documents:781 - Modo: COPY
+2025-09-29 14:46:59,082 - INFO - [MainThread] - organize_documents:787 - Encontrados 53 archivos para procesar
+2025-09-29 14:46:59,083 - INFO - [MainThread] - organize_documents:794 - Usando 6 hilos para procesamiento
+2025-09-29 14:47:00,436 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 9. Medidas correctivas Carlos Bautista.pdf
+2025-09-29 14:47:00,580 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 15 (contenido)
+2025-09-29 14:47:01,288 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf
+2025-09-29 14:47:01,394 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> 09 (contenido)
+2025-09-29 14:47:04,479 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 23 (contenido)
+2025-09-29 14:47:05,842 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 05 (contenido)
+2025-09-29 14:47:08,166 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> 24 (contenido)
+2025-09-29 14:47:15,637 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf (1841 chars)
+2025-09-29 14:47:15,713 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 11 (ocr)
+2025-09-29 14:47:20,760 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 13. Declaración de inhabilidad.pdf (2171 chars)
+2025-09-29 14:47:20,817 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 22 (ocr)
+2025-09-29 14:47:20,971 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf (1634 chars)
+2025-09-29 14:47:20,975 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf
+2025-09-29 14:47:20,976 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 14 (ocr)
+2025-09-29 14:47:24,083 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf (338 chars)
+2025-09-29 14:47:24,211 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> 10 (nombre_archivo)
+2025-09-29 14:47:27,076 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:324 - OCR exitoso en PDF: 3. Certificados estudios.pdf (1675 chars)
+2025-09-29 14:47:27,120 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 3. Certificados estudios.pdf -> 03 (ocr)
+2025-09-29 14:47:27,896 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> 39 (contenido)
+2025-09-29 14:47:29,025 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 19 (contenido)
+2025-09-29 14:47:29,522 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf (1132 chars)
+2025-09-29 14:47:29,525 - WARNING - [ThreadPoolExecutor-0_5] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 10. CERT. BANCARIA CARLOS BAUTISTA.pdf
+2025-09-29 14:47:29,591 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> 16 (ocr)
+2025-09-29 14:47:29,613 - ERROR - [ThreadPoolExecutor-0_5] - extract_text_from_pdf:246 - Error extrayendo texto de PDF /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 14:47:29,617 - WARNING - [ThreadPoolExecutor-0_5] - is_pdf_scanned:198 - Error verificando PDF escaneado /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 14:47:29,658 - ERROR - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:328 - Error convirtiendo PDF para OCR /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: Unable to get page count.
+Command Line Error: Incorrect password
+
+2025-09-29 14:47:29,691 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> 07 (nombre_archivo)
+2025-09-29 14:47:29,691 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> 24 (contenido)
+2025-09-29 14:47:29,877 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 14:47:32,025 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 19. FP CARLOS BAUTISTA.pdf (758 chars)
+2025-09-29 14:47:32,045 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 19. FP CARLOS BAUTISTA.pdf -> 08 (ocr)
+2025-09-29 14:47:32,442 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: 2. Hoja de vida.pdf (1930 chars)
+2025-09-29 14:47:32,552 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 2. Hoja de vida.pdf -> 03 (ocr)
+2025-09-29 14:47:34,590 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 14:47:34,718 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> 16 (contenido)
+2025-09-29 14:47:35,364 - DEBUG - [ThreadPoolExecutor-0_4] - extract_text_with_ocr:324 - OCR exitoso en PDF: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf (2500 chars)
+2025-09-29 14:47:35,416 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> 21 (ocr)
+2025-09-29 14:47:35,649 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> 24 (contenido)
+2025-09-29 14:47:36,311 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx
+2025-09-29 14:47:36,567 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> 00 (contenido)
+2025-09-29 14:47:37,566 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:339 - OCR exitoso en imagen: 17. FOTO.jpeg (368 chars)
+2025-09-29 14:47:37,642 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 17. FOTO.jpeg -> 20 (nombre_archivo)
+2025-09-29 14:47:39,791 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (contenido)
+2025-09-29 14:47:40,824 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 14:47:40,851 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 06 (contenido)
+2025-09-29 14:47:40,865 - INFO - [ThreadPoolExecutor-0_0] - process_file:699 - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 14:47:41,361 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 23 (contenido)
+2025-09-29 14:47:41,777 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf
+2025-09-29 14:47:41,828 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> 03 (contenido)
+2025-09-29 14:47:42,092 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> 00 (carpeta_padre)
+2025-09-29 14:47:42,096 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> 34 (carpeta_padre)
+2025-09-29 14:47:42,273 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:593 - Archivo sin clasificar (39 < 40): CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf
+2025-09-29 14:47:42,275 - WARNING - [ThreadPoolExecutor-0_0] - process_file:753 - Archivo pendiente de revisar: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> baja_confianza
+2025-09-29 14:47:43,597 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-29 14:47:45,425 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -15 puntos para CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-29 14:47:45,437 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> 31 (carpeta_padre)
+2025-09-29 14:47:46,539 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -9 puntos para CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-29 14:47:46,552 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> 31 (carpeta_padre)
+2025-09-29 14:47:47,094 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 00 (contenido)
+2025-09-29 14:47:49,193 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 06 (contenido)
+2025-09-29 14:47:51,359 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> 25 (contenido)
+2025-09-29 14:47:52,381 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 14:47:52,512 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 4. Certificados Laborales.pdf (1784 chars)
+2025-09-29 14:47:52,590 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 4. Certificados Laborales.pdf -> 04 (ocr)
+2025-09-29 14:47:54,571 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 14:47:55,286 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-29 14:47:55,705 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf (2585 chars)
+2025-09-29 14:47:55,706 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf (1157 chars)
+2025-09-29 14:47:55,719 - WARNING - [ThreadPoolExecutor-0_5] - classify_file:581 - Penalización por ambigüedad: -9 puntos para 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf
+2025-09-29 14:47:55,740 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -9 puntos para 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf
+2025-09-29 14:47:55,783 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> 13 (ocr)
+2025-09-29 14:47:55,790 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 12 (ocr)
+2025-09-29 14:47:56,583 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-29 14:47:57,814 - DEBUG - [ThreadPoolExecutor-0_4] - extract_text_with_ocr:324 - OCR exitoso en PDF: 11. TP CARLOS BAUTISTA.pdf (708 chars)
+2025-09-29 14:47:57,872 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 11. TP CARLOS BAUTISTA.pdf -> 18 (nombre_archivo)
+2025-09-29 14:47:58,242 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 14:47:58,527 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 14:48:00,098 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 14:48:00,591 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 14:48:01,631 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 25 (carpeta_padre)
+2025-09-29 14:48:05,014 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf (1452 chars)
+2025-09-29 14:48:05,063 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-29 14:48:08,724 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> 32 (carpeta_padre)
+2025-09-29 14:48:08,727 - INFO - [MainThread] - save_results_csv:824 - Resultados guardados en: resultados.csv
+2025-09-29 14:57:27,383 - INFO - [MainThread] - organize_documents:778 - Iniciando organización de documentos
+2025-09-29 14:57:27,383 - INFO - [MainThread] - organize_documents:779 - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-29 14:57:27,383 - INFO - [MainThread] - organize_documents:780 - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-29 14:57:27,383 - INFO - [MainThread] - organize_documents:781 - Modo: COPY
+2025-09-29 14:57:27,386 - INFO - [MainThread] - organize_documents:787 - Encontrados 53 archivos para procesar
+2025-09-29 14:57:27,386 - INFO - [MainThread] - organize_documents:794 - Usando 6 hilos para procesamiento
+2025-09-29 14:57:28,612 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 9. Medidas correctivas Carlos Bautista.pdf
+2025-09-29 14:57:28,676 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 15 (contenido)
+2025-09-29 14:57:29,851 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf
+2025-09-29 14:57:29,902 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> 09 (contenido)
+2025-09-29 14:57:32,816 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 23 (contenido)
+2025-09-29 14:57:34,114 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 05 (contenido)
+2025-09-29 14:57:36,702 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> 24 (contenido)
+2025-09-29 14:57:41,929 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf (1841 chars)
+2025-09-29 14:57:42,030 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 11 (ocr)
+2025-09-29 14:57:47,101 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 13. Declaración de inhabilidad.pdf (2171 chars)
+2025-09-29 14:57:47,296 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 22 (ocr)
+2025-09-29 14:57:47,338 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf (1634 chars)
+2025-09-29 14:57:47,380 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf
+2025-09-29 14:57:47,456 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 14 (ocr)
+2025-09-29 14:57:49,837 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf (338 chars)
+2025-09-29 14:57:50,017 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> 10 (nombre_archivo)
+2025-09-29 14:57:51,903 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:324 - OCR exitoso en PDF: 3. Certificados estudios.pdf (1675 chars)
+2025-09-29 14:57:52,201 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 3. Certificados estudios.pdf -> 03 (ocr)
+2025-09-29 14:57:53,946 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> 39 (contenido)
+2025-09-29 14:57:55,118 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 19 (contenido)
+2025-09-29 14:57:56,192 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> 24 (contenido)
+2025-09-29 14:57:56,278 - ERROR - [ThreadPoolExecutor-0_3] - extract_text_from_pdf:246 - Error extrayendo texto de PDF /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 14:57:56,282 - WARNING - [ThreadPoolExecutor-0_3] - is_pdf_scanned:198 - Error verificando PDF escaneado /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 14:57:56,309 - ERROR - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:328 - Error convirtiendo PDF para OCR /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: Unable to get page count.
+Command Line Error: Incorrect password
+
+2025-09-29 14:57:56,331 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> 07 (nombre_archivo)
+2025-09-29 14:57:57,679 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 14:57:58,138 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf (1132 chars)
+2025-09-29 14:57:58,141 - WARNING - [ThreadPoolExecutor-0_5] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 10. CERT. BANCARIA CARLOS BAUTISTA.pdf
+2025-09-29 14:57:58,210 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> 16 (ocr)
+2025-09-29 14:58:00,831 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 19. FP CARLOS BAUTISTA.pdf (758 chars)
+2025-09-29 14:58:00,897 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 19. FP CARLOS BAUTISTA.pdf -> 08 (ocr)
+2025-09-29 14:58:01,790 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: 2. Hoja de vida.pdf (1930 chars)
+2025-09-29 14:58:01,912 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 2. Hoja de vida.pdf -> 03 (ocr)
+2025-09-29 14:58:04,044 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> 24 (contenido)
+2025-09-29 14:58:04,049 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 14:58:04,141 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> 16 (contenido)
+2025-09-29 14:58:06,531 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:339 - OCR exitoso en imagen: 17. FOTO.jpeg (368 chars)
+2025-09-29 14:58:06,589 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 17. FOTO.jpeg -> 20 (nombre_archivo)
+2025-09-29 14:58:06,721 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (contenido)
+2025-09-29 14:58:06,771 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx
+2025-09-29 14:58:06,773 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> 00 (contenido)
+2025-09-29 14:58:08,343 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 14:58:08,893 - DEBUG - [ThreadPoolExecutor-0_4] - extract_text_with_ocr:324 - OCR exitoso en PDF: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf (2500 chars)
+2025-09-29 14:58:08,971 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> 21 (ocr)
+2025-09-29 14:58:09,108 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 06 (contenido)
+2025-09-29 14:58:09,398 - INFO - [ThreadPoolExecutor-0_3] - process_file:699 - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 14:58:10,346 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 23 (contenido)
+2025-09-29 14:58:10,511 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -6 puntos para CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf
+2025-09-29 14:58:10,513 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> 03 (contenido)
+2025-09-29 14:58:10,722 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> 00 (carpeta_padre)
+2025-09-29 14:58:11,240 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> 32 (carpeta_padre)
+2025-09-29 14:58:11,639 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> 34 (carpeta_padre)
+2025-09-29 14:58:12,830 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-29 14:58:14,090 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -15 puntos para CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-29 14:58:14,102 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> 31 (carpeta_padre)
+2025-09-29 14:58:15,098 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -9 puntos para CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-29 14:58:15,113 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> 31 (carpeta_padre)
+2025-09-29 14:58:15,505 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 00 (contenido)
+2025-09-29 14:58:17,654 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 06 (contenido)
+2025-09-29 14:58:19,897 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> 25 (contenido)
+2025-09-29 14:58:20,515 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 4. Certificados Laborales.pdf (1784 chars)
+2025-09-29 14:58:20,583 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 4. Certificados Laborales.pdf -> 04 (ocr)
+2025-09-29 14:58:21,619 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 14:58:22,153 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 14:58:23,299 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-29 14:58:24,504 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-29 14:58:26,079 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 14:58:26,696 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf (1157 chars)
+2025-09-29 14:58:26,699 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -9 puntos para 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf
+2025-09-29 14:58:26,713 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> 13 (ocr)
+2025-09-29 14:58:27,724 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf (2585 chars)
+2025-09-29 14:58:27,732 - WARNING - [ThreadPoolExecutor-0_5] - classify_file:581 - Penalización por ambigüedad: -9 puntos para 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf
+2025-09-29 14:58:27,828 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 12 (ocr)
+2025-09-29 14:58:29,013 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 14:58:30,120 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: 11. TP CARLOS BAUTISTA.pdf (708 chars)
+2025-09-29 14:58:30,123 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf (1452 chars)
+2025-09-29 14:58:30,236 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-29 14:58:30,241 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 11. TP CARLOS BAUTISTA.pdf -> 18 (nombre_archivo)
+2025-09-29 14:58:30,579 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 14:58:31,028 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 14:58:31,129 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 25 (carpeta_padre)
+2025-09-29 14:58:39,197 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> 32 (carpeta_padre)
+2025-09-29 14:58:39,201 - INFO - [MainThread] - save_results_csv:824 - Resultados guardados en: resultados.csv
+2025-09-29 15:04:38,216 - INFO - [MainThread] - organize_documents:778 - Iniciando organización de documentos
+2025-09-29 15:04:38,216 - INFO - [MainThread] - organize_documents:779 - Origen: /home/roddek-dev/Escritorio/Documentos_Desordenados
+2025-09-29 15:04:38,216 - INFO - [MainThread] - organize_documents:780 - Destino: /home/roddek-dev/Escritorio/Documentos_Organizados
+2025-09-29 15:04:38,216 - INFO - [MainThread] - organize_documents:781 - Modo: COPY
+2025-09-29 15:04:38,219 - INFO - [MainThread] - organize_documents:787 - Encontrados 53 archivos para procesar
+2025-09-29 15:04:38,219 - INFO - [MainThread] - organize_documents:794 - Usando 6 hilos para procesamiento
+2025-09-29 15:04:39,653 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 9. Medidas correctivas Carlos Bautista.pdf
+2025-09-29 15:04:39,758 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 9. Medidas correctivas Carlos Bautista.pdf -> 15 (contenido)
+2025-09-29 15:04:40,630 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf
+2025-09-29 15:04:40,731 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 22. CONTRATO-PROFESIONAL FUENTES DE INFORMACION ANTICONTRABANDO.Firmado.pdf -> 09 (contenido)
+2025-09-29 15:04:44,308 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.1 EVALUACIÓN PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 23 (contenido)
+2025-09-29 15:04:45,375 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 18. Afiliación EPS - Carlos Andrés Bautista González.pdf -> 05 (contenido)
+2025-09-29 15:04:47,774 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.3 Recomendaciones CARLOS ANDRES BAUTISTA GONZALEZ (1).pdf -> 24 (contenido)
+2025-09-29 15:04:54,583 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf (1841 chars)
+2025-09-29 15:04:54,861 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 25.  EXAMEN MÉDICO INGRESO CARLOS BAUTISTA.pdf -> 11 (ocr)
+2025-09-29 15:04:59,744 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 13. Declaración de inhabilidad.pdf (2171 chars)
+2025-09-29 15:04:59,751 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 13. Declaración de inhabilidad.pdf -> 22 (ocr)
+2025-09-29 15:05:00,109 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf (1634 chars)
+2025-09-29 15:05:00,115 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf
+2025-09-29 15:05:00,116 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 8. CERT. ANTECEDENTES PONAL CARLOS BAUTISTA.pdf -> 14 (ocr)
+2025-09-29 15:05:02,275 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf (338 chars)
+2025-09-29 15:05:02,746 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 5. FOTOCOPIA CC CARLOS BAUTISTA.pdf -> 10 (nombre_archivo)
+2025-09-29 15:05:05,815 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:324 - OCR exitoso en PDF: 3. Certificados estudios.pdf (1675 chars)
+2025-09-29 15:05:05,905 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 3. Certificados estudios.pdf -> 03 (ocr)
+2025-09-29 15:05:06,668 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 0.1 GAF-JTH-PD-01-FT-08 Formato Análisis de formación y experiencia (1).xlsx -> 39 (contenido)
+2025-09-29 15:05:07,557 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 23. SOPORTE INDUCCIÓN REINDUCCIÓN - CARLOS ANDRES BAUTISTA.pdf -> 19 (contenido)
+2025-09-29 15:05:08,892 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.2 Concepto CARLOS ANDRES BAUTISTA GONZALEZ.PDF -> 24 (contenido)
+2025-09-29 15:05:08,962 - ERROR - [ThreadPoolExecutor-0_3] - extract_text_from_pdf:246 - Error extrayendo texto de PDF /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 15:05:08,969 - WARNING - [ThreadPoolExecutor-0_3] - is_pdf_scanned:198 - Error verificando PDF escaneado /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: 
+2025-09-29 15:05:08,991 - ERROR - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:328 - Error convirtiendo PDF para OCR /home/roddek-dev/Escritorio/Documentos_Desordenados/BAUTISTA GONZÁLEZ CARLOS ANDRÉS - CC 1023902294/21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf: Unable to get page count.
+Command Line Error: Incorrect password
+
+2025-09-29 15:05:08,992 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 21. AFILIACION CCF CARLOS ANDRES BAUTISTA.pdf -> 07 (nombre_archivo)
+2025-09-29 15:05:09,333 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:324 - OCR exitoso en PDF: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf (1132 chars)
+2025-09-29 15:05:09,336 - WARNING - [ThreadPoolExecutor-0_5] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 10. CERT. BANCARIA CARLOS BAUTISTA.pdf
+2025-09-29 15:05:09,629 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 10. CERT. BANCARIA CARLOS BAUTISTA.pdf -> 16 (ocr)
+2025-09-29 15:05:09,892 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 26.5 Diploma Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 15:05:12,355 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 19. FP CARLOS BAUTISTA.pdf (758 chars)
+2025-09-29 15:05:12,565 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 19. FP CARLOS BAUTISTA.pdf -> 08 (ocr)
+2025-09-29 15:05:13,203 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: 2. Hoja de vida.pdf (1930 chars)
+2025-09-29 15:05:13,431 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 2. Hoja de vida.pdf -> 03 (ocr)
+2025-09-29 15:05:15,513 - DEBUG - [ThreadPoolExecutor-0_4] - extract_text_with_ocr:324 - OCR exitoso en PDF: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf (2500 chars)
+2025-09-29 15:05:15,738 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 12. FORMATO AUTORIZACION TRATAMIENTO DE DATOS CARLOS BAUTISTA.pdf -> 21 (ocr)
+2025-09-29 15:05:15,817 - WARNING - [ThreadPoolExecutor-0_0] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 15:05:15,957 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 26.4 CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf -> 16 (contenido)
+2025-09-29 15:05:16,070 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 26. CARTA RECOMENDACIONES MÉDICAS CARLOS ANDRES BAUTISTA.pdf -> 24 (contenido)
+2025-09-29 15:05:16,360 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx
+2025-09-29 15:05:16,476 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO BAUTISTA GONZALEZ CARLOS ANDRES 14-11-2023.xlsx -> 00 (contenido)
+2025-09-29 15:05:18,115 - DEBUG - [ThreadPoolExecutor-0_5] - extract_text_with_ocr:339 - OCR exitoso en imagen: 17. FOTO.jpeg (368 chars)
+2025-09-29 15:05:18,246 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 17. FOTO.jpeg -> 20 (nombre_archivo)
+2025-09-29 15:05:19,045 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 1. FORMATO REQUISICION DE PERSONAL-Profesional Fuentes de Infomación Anticontrabando.pdf -> 01 (contenido)
+2025-09-29 15:05:19,900 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 20. AFILIACION ARL CARLOS ANDRES BAUTISTA GONZALEZ.pdf -> 06 (contenido)
+2025-09-29 15:05:20,191 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 26.5.1 Acta individual de grado Magíster en Inteligencia de Negocios.pdf -> 03 (contenido)
+2025-09-29 15:05:20,401 - INFO - [ThreadPoolExecutor-0_5] - process_file:699 - Archivo duplicado: CAMBIO CUENTA CARLOS BAUTISTA ENERO2024.pdf
+2025-09-29 15:05:21,062 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: EVALUACION PERIODO DE PRUEBA CARLOS BAUTISTA.pdf -> 23 (contenido)
+2025-09-29 15:05:21,116 - WARNING - [ThreadPoolExecutor-0_5] - classify_file:581 - Penalización por ambigüedad: -6 puntos para CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf
+2025-09-29 15:05:21,119 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: CARLOS ANDRES BAUTISTA GONZALÉZ CERT. HERRAMIENTAS GOOGLE 2025.pdf -> 03 (contenido)
+2025-09-29 15:05:21,200 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: 0. LISTA DE CHEQUEO EXPEDIENTE LABORAL.xlsx -> 00 (carpeta_padre)
+2025-09-29 15:05:21,471 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: CARLOS ANDRES BAUTISTA  GONZALEZ  RTE FETE 2023.pdf -> 32 (carpeta_padre)
+2025-09-29 15:05:21,931 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: VERIFICACIÓN DE TÍTULO CARLOS BAUTISTA.pdf -> 34 (carpeta_padre)
+2025-09-29 15:05:23,893 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: VACACIONES CARLOS BAUTISTA MAY2024.pdf -> 28 (carpeta_padre)
+2025-09-29 15:05:25,326 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -15 puntos para CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf
+2025-09-29 15:05:25,327 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: CERTIFICACION LABORAL CARLOS ANDRES BAUTISTA GONZALEZ FND 22-02-2024.pdf -> 31 (carpeta_padre)
+2025-09-29 15:05:26,057 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -9 puntos para CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf
+2025-09-29 15:05:26,058 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: CERTIFICACION LABORAL CARLOS BAUTISTA 19-02-2025.pdf -> 31 (carpeta_padre)
+2025-09-29 15:05:26,679 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 1.1 GAF-JTH-PD-01-FT-04 - Formato de Check List - Expediente Laboral Vr.2.xlsx -> 00 (contenido)
+2025-09-29 15:05:28,772 - WARNING - [ThreadPoolExecutor-0_4] - classify_file:581 - Penalización por ambigüedad: -6 puntos para 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf
+2025-09-29 15:05:28,782 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: 1. 1023902294_CHECK LIST  CARLOS BAUTISTA.pdf -> 06 (contenido)
+2025-09-29 15:05:30,515 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: LICENCIA DE LUTO CARLOS BAUTISTA.pdf -> 25 (contenido)
+2025-09-29 15:05:31,242 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA OCT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 15:05:32,295 - DEBUG - [ThreadPoolExecutor-0_3] - extract_text_with_ocr:324 - OCR exitoso en PDF: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf (2585 chars)
+2025-09-29 15:05:32,300 - WARNING - [ThreadPoolExecutor-0_3] - classify_file:581 - Penalización por ambigüedad: -9 puntos para 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf
+2025-09-29 15:05:32,317 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: 6. CERT. ANTECEDENTES PGN CARLOS BAUTISTA.pdf -> 12 (ocr)
+2025-09-29 15:05:32,337 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOM SEPT2023.pdf -> 27 (carpeta_padre)
+2025-09-29 15:05:33,299 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA ABR2024.pdf -> 27 (carpeta_padre)
+2025-09-29 15:05:34,173 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA JUN2024.pdf -> 27 (carpeta_padre)
+2025-09-29 15:05:34,503 - DEBUG - [ThreadPoolExecutor-0_2] - extract_text_with_ocr:324 - OCR exitoso en PDF: 4. Certificados Laborales.pdf (1784 chars)
+2025-09-29 15:05:34,623 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: 4. Certificados Laborales.pdf -> 04 (ocr)
+2025-09-29 15:05:35,628 - DEBUG - [ThreadPoolExecutor-0_1] - extract_text_with_ocr:324 - OCR exitoso en PDF: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf (1157 chars)
+2025-09-29 15:05:35,650 - WARNING - [ThreadPoolExecutor-0_1] - classify_file:581 - Penalización por ambigüedad: -9 puntos para 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf
+2025-09-29 15:05:35,719 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: 7. CERT.  ANTECEDENTES CGR - CARLOS  BAUTISTA.pdf -> 13 (ocr)
+2025-09-29 15:05:36,587 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: SOLICITUD DIA DE LA FAMILIA I-2023 CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 15:05:37,022 - DEBUG - [ThreadPoolExecutor-0_0] - extract_text_with_ocr:324 - OCR exitoso en PDF: 11. TP CARLOS BAUTISTA.pdf (708 chars)
+2025-09-29 15:05:37,164 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: 11. TP CARLOS BAUTISTA.pdf -> 18 (nombre_archivo)
+2025-09-29 15:05:37,455 - INFO - [ThreadPoolExecutor-0_2] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIO VIERNES CARLOS BAUTISTA.pdf -> 25 (carpeta_padre)
+2025-09-29 15:05:39,473 - INFO - [ThreadPoolExecutor-0_0] - process_file:755 - Archivo procesado: PERMISO POR VOTACIONES CARLOS BAUTISTA 23-11-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 15:05:39,797 - INFO - [ThreadPoolExecutor-0_3] - process_file:755 - Archivo procesado: DÍA DE LA FAMILIA CARLOS BAUTISTA 27-12-2024.pdf -> 25 (carpeta_padre)
+2025-09-29 15:05:40,147 - INFO - [ThreadPoolExecutor-0_1] - process_file:755 - Archivo procesado: PERMISO POR ESTUDIOS CARLOS BAUTISTA 19-09-2023.pdf -> 25 (carpeta_padre)
+2025-09-29 15:05:41,327 - DEBUG - [ThreadPoolExecutor-0_4] - extract_text_with_ocr:324 - OCR exitoso en PDF: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf (1452 chars)
+2025-09-29 15:05:41,330 - INFO - [ThreadPoolExecutor-0_4] - process_file:755 - Archivo procesado: INCAPACIDAD CARLOS BAUTISTA NOV2024.pdf -> 27 (carpeta_padre)
+2025-09-29 15:05:46,881 - INFO - [ThreadPoolExecutor-0_5] - process_file:755 - Archivo procesado: ACTUALIZACION FORMATO DEDUCCION RTE FTE 2024 CARLOS BAUTISTA.pdf -> 32 (carpeta_padre)
+2025-09-29 15:05:46,883 - INFO - [MainThread] - save_results_csv:824 - Resultados guardados en: resultados.csv

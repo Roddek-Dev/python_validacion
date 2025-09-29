@@ -520,6 +520,15 @@ class DocumentOrganizer:
 
             scores[cat_id] += filename_score
         
+        # ELIMINACIÓN INMEDIATA: Si el archivo contiene keywords de Hoja de Vida, eliminar Categoría 03 completamente
+        hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
+        for hv_keyword in hoja_vida_keywords:
+            if self.normalize_text(hv_keyword) in normalized_filename:
+                scores["03"] = 0  # ELIMINACIÓN INMEDIATA
+                found_keywords.append(f"eliminacion_inmediata:contiene_hoja_vida_en_nombre")
+                self.logger.warning(f"ELIMINACIÓN INMEDIATA: Categoría 03 eliminada por contener 'hoja de vida' en nombre de archivo: {file_path.name}")
+                break
+        
         # PENALIZACIONES CRUZADAS ADICIONALES: Verificar si el archivo contiene keywords de categorías más específicas
         # Penalizar Categoría 03 si contiene keywords de Categoría 02 - ELIMINACIÓN TOTAL
         if scores.get("03", 0) > 0:
@@ -555,6 +564,15 @@ class DocumentOrganizer:
                     found_keywords.append(f"folder:{keyword}")
 
             scores[cat_id] += folder_score
+        
+        # ELIMINACIÓN INMEDIATA EN CARPETA: Si la carpeta contiene keywords de Hoja de Vida, eliminar Categoría 03 completamente
+        hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
+        for hv_keyword in hoja_vida_keywords:
+            if self.normalize_text(hv_keyword) in normalized_parent:
+                scores["03"] = 0  # ELIMINACIÓN INMEDIATA
+                found_keywords.append(f"eliminacion_inmediata:contiene_hoja_vida_en_carpeta")
+                self.logger.warning(f"ELIMINACIÓN INMEDIATA: Categoría 03 eliminada por carpeta con 'hoja de vida': {file_path.name}")
+                break
         
         # PENALIZACIONES CRUZADAS EN CARPETA PADRE
         # Penalizar Categoría 03 si la carpeta contiene keywords de Categoría 02 - ELIMINACIÓN TOTAL
@@ -596,6 +614,15 @@ class DocumentOrganizer:
 
                     scores[cat_id] += content_score
                 
+                # ELIMINACIÓN INMEDIATA EN CONTENIDO: Si el contenido contiene keywords de Hoja de Vida, eliminar Categoría 03 completamente
+                hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
+                for hv_keyword in hoja_vida_keywords:
+                    if self.normalize_text(hv_keyword) in normalized_content:
+                        scores["03"] = 0  # ELIMINACIÓN INMEDIATA
+                        found_keywords.append(f"eliminacion_inmediata:contiene_hoja_vida_en_contenido")
+                        self.logger.warning(f"ELIMINACIÓN INMEDIATA: Categoría 03 eliminada por contenido con 'hoja de vida': {file_path.name}")
+                        break
+                
                 # PENALIZACIONES CRUZADAS EN CONTENIDO
                 # Penalizar Categoría 03 si el contenido contiene keywords de Categoría 02 - ELIMINACIÓN TOTAL
                 if scores.get("03", 0) > 0:
@@ -633,6 +660,15 @@ class DocumentOrganizer:
                             found_keywords.append(f"ocr:{keyword}")
 
                     scores[cat_id] += ocr_score
+                
+                # ELIMINACIÓN INMEDIATA EN OCR: Si el OCR contiene keywords de Hoja de Vida, eliminar Categoría 03 completamente
+                hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
+                for hv_keyword in hoja_vida_keywords:
+                    if self.normalize_text(hv_keyword) in normalized_ocr:
+                        scores["03"] = 0  # ELIMINACIÓN INMEDIATA
+                        found_keywords.append(f"eliminacion_inmediata:contiene_hoja_vida_en_ocr")
+                        self.logger.warning(f"ELIMINACIÓN INMEDIATA: Categoría 03 eliminada por OCR con 'hoja de vida': {file_path.name}")
+                        break
                 
                 # PENALIZACIONES CRUZADAS EN OCR
                 # Penalizar Categoría 03 si el OCR contiene keywords de Categoría 02 - ELIMINACIÓN TOTAL

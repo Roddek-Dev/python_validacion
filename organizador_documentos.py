@@ -559,12 +559,104 @@ class DocumentOrganizer:
                 normalized_keyword = self.normalize_text(keyword)
                 if normalized_keyword in normalized_filename:
                     keyword_score, keyword_type = self.get_keyword_score(keyword, cat_id)
-                    # Multiplicar por 1.5 para dar mayor peso al nombre de archivo
-                    filename_score += int(keyword_score * 1.5)
+                    # Aumentar multiplicador para dar mayor peso al nombre de archivo
+                    filename_score += int(keyword_score * 2.0)
                     found_keywords.append(f"filename:{keyword}")
 
             scores[cat_id] += filename_score
         
+        # BONUS ADICIONAL: Detectar nombres de archivo muy descriptivos
+        descriptive_filename_patterns = {
+            "incapacidad": ["incapacidad", "medica", "salud", "eps", "arl", "licencia"],
+            "hoja_vida": ["hoja de vida", "cv", "curriculum", "vida unica", "hv"],
+            "certificado": ["certificado", "certificacion", "estudios", "diploma", "titulo"],
+            "afiliacion": ["afiliacion", "arl", "eps", "pension", "seguridad social"],
+            "cedula": ["cedula", "identidad", "cc", "documento", "fotocopia"],
+            "check_list": ["check list", "lista", "chequeo", "expediente", "formato"]
+        }
+        
+        # Aplicar bonus por nombres muy descriptivos
+        for pattern_category, patterns in descriptive_filename_patterns.items():
+            for pattern in patterns:
+                if self.normalize_text(pattern) in normalized_filename:
+                    # Bonus adicional para nombres muy descriptivos
+                    bonus_score = 15
+                    found_keywords.append(f"nombre_descriptivo:{pattern_category}(+{bonus_score})")
+                    self.logger.info(f"Nombre descriptivo detectado: '{filename}' contiene '{pattern}' -> +{bonus_score} puntos")
+                    
+                    # Aplicar bonus a la categoría correspondiente
+                    if pattern_category == "incapacidad":
+                        scores["03"] += bonus_score  # Certificados de Estudios (si aplica)
+                    elif pattern_category == "hoja_vida":
+                        scores["02"] += bonus_score  # Hoja de Vida
+                    elif pattern_category == "certificado":
+                        scores["03"] += bonus_score  # Certificados de Estudios
+                    elif pattern_category == "afiliacion":
+                        scores["06"] += bonus_score  # Afiliación ARL
+                    elif pattern_category == "cedula":
+                        scores["10"] += bonus_score  # Documento de Identidad
+                    elif pattern_category == "check_list":
+                        scores["00"] += bonus_score  # Check List
+                    break
+        
+        # PENALIZACIONES GRAVES PARA CATEGORÍA 10: Eliminar completamente si contiene keywords primordiales de otras categorías
+        if scores.get("10", 0) > 0:
+            # Keywords primordiales de otras categorías que deben eliminar completamente la categoría 10
+            category_10_elimination_keywords = {
+                "00": ["check list", "lista chequeo", "formato check list", "expediente laboral", "lista de chequeo"],
+                "01": ["requisicion", "solicitud personal", "requisicion personal", "formato requisicion", "solicitud empleo"],
+                "02": ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"],
+                "03": ["bachiller", "academico", "universidad", "diploma", "acta de grado", "magister", "educacion", "grado", "certificados estudios"],
+                "04": ["experiencia laboral", "en el cargo", "certifica", "certificaciones de experiencia laboral", "presto sus servicios", "certificaciones experiencia", "certificados laborales", "certificado experiencia"],
+                "05": ["eps", "afiliacion salud", "salud eps", "afiliacion eps", "certificacion eps"],
+                "06": ["afiliacion en nuestra arl", "afiliacion en el ramo de resgos laborales", "riesgos laborales", "afiliacion arl", "certificado de afiliacion", "seguro riesgos laborales"],
+                "07": ["caja compensacion", "ccf", "compensacion familiar", "afiliacion caja de compensacion", "afiliacion compensacion familiar"],
+                "08": ["certifica que", "afiliacion fondo de pensiones", "fondo pension", "fp", "fondo de pensiones obligatorias porvenir", "fondo pensiones obligatorias", "porvenir"],
+                "09": ["contrato", "contrato trabajo", "contrato laboral", "contrato individual trabajo", "termino indefinido"],
+                "11": ["examen medico", "examen ingreso", "aptitud medica", "examen medico ingreso", "certificado medico ocupacional"],
+                "12": ["pgn", "procuraduria", "antecedentes disciplinarios", "certificado antecedentes", "procuraduria general nacion"],
+                "13": ["certifica", "cgr", "cert. antecendes fiscales cgr", "antecedentes fiscales", "sibor", "contraloria general republica", "certificado fiscal"],
+                "14": ["ponal", "policia", "antecedentes judiciales", "policia nacional", "antecedentes penales"],
+                "15": ["medidas correctivas", "sistema registro nacional", "registro nacional medidas correctivas", "rnmc", "consulta rnmc"],
+                "16": ["formato para el cambio de cuenta bancaria", "la cuenta de ahorros", "cuenta bancaria", "certifica que", "cert. bancaria", "cambio de la cuenta bancaria"],
+                "17": ["licencia conduccion", "pase", "licencia conducir", "licencia transito", "pase conduccion"],
+                "18": ["t.p.", "tarjeta profesional", "matricula profesional", "copnia", "tp", "tp profesional"],
+                "19": ["induccion", "reinduccion", "induccion corporativa", "constancia induccion", "formato induccion"],
+                "20": ["foto", "fotografia", "foto documento", "foto carnet", "foto 3x4"],
+                "21": ["informacion personal", "tratamiento", "autorizo", "titular de datos", "autorizacion para el tratamiento datos"],
+                "22": ["inhabilidad", "incompatibilidad", "declaracion juramentada", "certificado inhabilidades", "conflicto intereses"],
+                "23": ["evaluacion periodo", "periodo prueba", "evaluacion periodo de prueba", "evaluacion ingreso", "periodo prueba"],
+                "24": ["carta recomendaciones medicas", "examen medico ocupacional", "concepto", "certificado medico de aptitud laboral", "examen medico periodico", "formato entrega de recomendaciones", "medicas ocupacionales"],
+                "25": ["permiso", "licencia no remunerada", "permisos", "formato control novedades", "permiso personal"],
+                "27": ["incapacidad", "incapacidades", "incapacidad medica", "certificado incapacidad", "licencia medica"],
+                "28": ["vacaciones", "solicitud vacaciones", "formato vacaciones", "solicitud disfrute vacaciones", "periodo vacaciones"],
+                "29": ["encargo", "encargos", "encargo cargo", "encargo funciones", "delegacion funciones"],
+                "30": ["cesantias", "retiro cesantias", "solicitud cesantias", "liquidacion cesantias", "certificado cesantias"],
+                "31": ["certificaciones laborales", "asignacion salarial", "certificado laboral", "certificacion laboral", "desempeñando el cargo", "contrato individual de trabajo"],
+                "32": ["rte fete", "fete", "fte", "rte", "rte fte", "deduccion", "retefuente", "hace constar que", "retencion fuente", "deduccion retefuente", "formato deduccion"],
+                "33": ["ingresos y retenciones", "ingresos retenciones", "certificado ingresos", "certificado retenciones", "certificacion ingresos"],
+                "34": ["confirmacion de titulo", "solicitud", "educacion superior para empleado", "examen egreso", "paz salvo"],
+                "35": ["reinducciones", "certificacion reinduccion", "reinduccion", "certificado reinduccion", "certificados reinduccion"],
+                "36": ["carnet de vacunas", "certificado de vacunas", "vacunas", "certificado vacunas", "vacunacion"],
+                "37": ["protocolo de retiro y documentos de retiro", "protocolo retiro", "documentos de retiro"],
+                "38": ["acta entrega", "entrega puesto", "actas entrega", "inventario entrega", "transferencia responsabilidades"],
+                "39": ["validaciones", "formato análisis de formación y experiencia", "revision formal", "validacion documentos"],
+                "40": ["notificacion", "carta", "proceso disciplinario", "llamado atencion", "memorando", "memorando disciplinario", "sancion disciplinaria"],
+                "41": ["bonos", "bono", "acta", "entrega de dotacion", "dotacion", "otros", "varios", "otros documentos", "documentos varios", "miscelaneos"],
+                "42": ["evaluaciones de desempeño", "conocimientos", "evaluacion de desempeño", "evaluacion rendimiento", "evaluacion desempeno", "calificacion desempeño", "review desempeño"]
+            }
+            
+            # Verificar si contiene keywords primordiales de otras categorías
+            for category_id, elimination_keywords in category_10_elimination_keywords.items():
+                for keyword in elimination_keywords:
+                    if self.normalize_text(keyword) in normalized_filename:
+                        scores["10"] = 0  # ELIMINACIÓN COMPLETA
+                        found_keywords.append(f"eliminacion_categoria_10:contiene_keyword_primordial_{category_id}")
+                        self.logger.warning(f"ELIMINACIÓN COMPLETA CATEGORÍA 10: Contiene keyword primordial de categoría {category_id} ('{keyword}') en nombre de archivo: {file_path.name}")
+                        break
+                if scores["10"] == 0:  # Si ya se eliminó, no seguir buscando
+                    break
+
         # ELIMINACIÓN INMEDIATA: Si el archivo contiene keywords de Hoja de Vida, eliminar Categoría 03 completamente
         hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
         for hv_keyword in hoja_vida_keywords:
@@ -595,9 +687,31 @@ class DocumentOrganizer:
                     self.logger.warning(f"Penalización cruzada aplicada: Categoría 06 penalizada por contener keywords de Check List en {file_path.name}")
                     break
 
-        # Clasificación por carpeta padre
+        # Clasificación por carpeta padre (MAYOR PESO)
         parent_folder = file_path.parent.name
         normalized_parent = self.normalize_text(parent_folder)
+        
+        # Detectar si la carpeta padre está organizada por categorías específicas
+        folder_category_boost = 1.0
+        category_folder_patterns = {
+            "incapacidades": ["incapacidad", "medica", "salud", "eps", "arl"],
+            "hojas de vida": ["hoja de vida", "cv", "curriculum", "vida unica"],
+            "certificados": ["certificado", "certificacion", "estudios", "diploma"],
+            "afiliaciones": ["afiliacion", "arl", "eps", "pension"],
+            "documentos identidad": ["cedula", "identidad", "cc", "documento"],
+            "check list": ["check list", "lista", "chequeo", "expediente"]
+        }
+        
+        # Verificar si la carpeta padre indica una categoría específica
+        for category_name, patterns in category_folder_patterns.items():
+            for pattern in patterns:
+                if self.normalize_text(pattern) in normalized_parent:
+                    folder_category_boost = 2.5  # Boost significativo para carpetas organizadas
+                    found_keywords.append(f"carpeta_organizada:{category_name}")
+                    self.logger.info(f"Carpeta organizada detectada: '{parent_folder}' -> {category_name} (boost x{folder_category_boost})")
+                    break
+            if folder_category_boost > 1.0:
+                break
         
         for cat_id, cat_keywords in keywords.items():
             folder_score = 0
@@ -605,11 +719,70 @@ class DocumentOrganizer:
                 normalized_keyword = self.normalize_text(keyword)
                 if normalized_keyword in normalized_parent:
                     keyword_score, keyword_type = self.get_keyword_score(keyword, cat_id)
-                    folder_score += int(keyword_score * 0.7)
+                    # Aumentar multiplicador base y aplicar boost de carpeta organizada
+                    folder_score += int(keyword_score * 1.2 * folder_category_boost)
                     found_keywords.append(f"folder:{keyword}")
 
             scores[cat_id] += folder_score
         
+        # PENALIZACIONES GRAVES PARA CATEGORÍA 10 EN CARPETA PADRE: Eliminar completamente si contiene keywords primordiales de otras categorías
+        if scores.get("10", 0) > 0:
+            # Keywords primordiales de otras categorías que deben eliminar completamente la categoría 10
+            category_10_elimination_keywords = {
+                "00": ["check list", "lista chequeo", "formato check list", "expediente laboral", "lista de chequeo"],
+                "01": ["requisicion", "solicitud personal", "requisicion personal", "formato requisicion", "solicitud empleo"],
+                "02": ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"],
+                "03": ["bachiller", "academico", "universidad", "diploma", "acta de grado", "magister", "educacion", "grado", "certificados estudios"],
+                "04": ["experiencia laboral", "en el cargo", "certifica", "certificaciones de experiencia laboral", "presto sus servicios", "certificaciones experiencia", "certificados laborales", "certificado experiencia"],
+                "05": ["eps", "afiliacion salud", "salud eps", "afiliacion eps", "certificacion eps"],
+                "06": ["afiliacion en nuestra arl", "afiliacion en el ramo de resgos laborales", "riesgos laborales", "afiliacion arl", "certificado de afiliacion", "seguro riesgos laborales"],
+                "07": ["caja compensacion", "ccf", "compensacion familiar", "afiliacion caja de compensacion", "afiliacion compensacion familiar"],
+                "08": ["certifica que", "afiliacion fondo de pensiones", "fondo pension", "fp", "fondo de pensiones obligatorias porvenir", "fondo pensiones obligatorias", "porvenir"],
+                "09": ["contrato", "contrato trabajo", "contrato laboral", "contrato individual trabajo", "termino indefinido"],
+                "11": ["examen medico", "examen ingreso", "aptitud medica", "examen medico ingreso", "certificado medico ocupacional"],
+                "12": ["pgn", "procuraduria", "antecedentes disciplinarios", "certificado antecedentes", "procuraduria general nacion"],
+                "13": ["certifica", "cgr", "cert. antecendes fiscales cgr", "antecedentes fiscales", "sibor", "contraloria general republica", "certificado fiscal"],
+                "14": ["ponal", "policia", "antecedentes judiciales", "policia nacional", "antecedentes penales"],
+                "15": ["medidas correctivas", "sistema registro nacional", "registro nacional medidas correctivas", "rnmc", "consulta rnmc"],
+                "16": ["formato para el cambio de cuenta bancaria", "la cuenta de ahorros", "cuenta bancaria", "certifica que", "cert. bancaria", "cambio de la cuenta bancaria"],
+                "17": ["licencia conduccion", "pase", "licencia conducir", "licencia transito", "pase conduccion"],
+                "18": ["t.p.", "tarjeta profesional", "matricula profesional", "copnia", "tp", "tp profesional"],
+                "19": ["induccion", "reinduccion", "induccion corporativa", "constancia induccion", "formato induccion"],
+                "20": ["foto", "fotografia", "foto documento", "foto carnet", "foto 3x4"],
+                "21": ["informacion personal", "tratamiento", "autorizo", "titular de datos", "autorizacion para el tratamiento datos"],
+                "22": ["inhabilidad", "incompatibilidad", "declaracion juramentada", "certificado inhabilidades", "conflicto intereses"],
+                "23": ["evaluacion periodo", "periodo prueba", "evaluacion periodo de prueba", "evaluacion ingreso", "periodo prueba"],
+                "24": ["carta recomendaciones medicas", "examen medico ocupacional", "concepto", "certificado medico de aptitud laboral", "examen medico periodico", "formato entrega de recomendaciones", "medicas ocupacionales"],
+                "25": ["permiso", "licencia no remunerada", "permisos", "formato control novedades", "permiso personal"],
+                "27": ["incapacidad", "incapacidades", "incapacidad medica", "certificado incapacidad", "licencia medica"],
+                "28": ["vacaciones", "solicitud vacaciones", "formato vacaciones", "solicitud disfrute vacaciones", "periodo vacaciones"],
+                "29": ["encargo", "encargos", "encargo cargo", "encargo funciones", "delegacion funciones"],
+                "30": ["cesantias", "retiro cesantias", "solicitud cesantias", "liquidacion cesantias", "certificado cesantias"],
+                "31": ["certificaciones laborales", "asignacion salarial", "certificado laboral", "certificacion laboral", "desempeñando el cargo", "contrato individual de trabajo"],
+                "32": ["rte fete", "fete", "fte", "rte", "rte fte", "deduccion", "retefuente", "hace constar que", "retencion fuente", "deduccion retefuente", "formato deduccion"],
+                "33": ["ingresos y retenciones", "ingresos retenciones", "certificado ingresos", "certificado retenciones", "certificacion ingresos"],
+                "34": ["confirmacion de titulo", "solicitud", "educacion superior para empleado", "examen egreso", "paz salvo"],
+                "35": ["reinducciones", "certificacion reinduccion", "reinduccion", "certificado reinduccion", "certificados reinduccion"],
+                "36": ["carnet de vacunas", "certificado de vacunas", "vacunas", "certificado vacunas", "vacunacion"],
+                "37": ["protocolo de retiro y documentos de retiro", "protocolo retiro", "documentos de retiro"],
+                "38": ["acta entrega", "entrega puesto", "actas entrega", "inventario entrega", "transferencia responsabilidades"],
+                "39": ["validaciones", "formato análisis de formación y experiencia", "revision formal", "validacion documentos"],
+                "40": ["notificacion", "carta", "proceso disciplinario", "llamado atencion", "memorando", "memorando disciplinario", "sancion disciplinaria"],
+                "41": ["bonos", "bono", "acta", "entrega de dotacion", "dotacion", "otros", "varios", "otros documentos", "documentos varios", "miscelaneos"],
+                "42": ["evaluaciones de desempeño", "conocimientos", "evaluacion de desempeño", "evaluacion rendimiento", "evaluacion desempeno", "calificacion desempeño", "review desempeño"]
+            }
+            
+            # Verificar si la carpeta padre contiene keywords primordiales de otras categorías
+            for category_id, elimination_keywords in category_10_elimination_keywords.items():
+                for keyword in elimination_keywords:
+                    if self.normalize_text(keyword) in normalized_parent:
+                        scores["10"] = 0  # ELIMINACIÓN COMPLETA
+                        found_keywords.append(f"eliminacion_categoria_10_carpeta:contiene_keyword_primordial_{category_id}")
+                        self.logger.warning(f"ELIMINACIÓN COMPLETA CATEGORÍA 10: Carpeta padre contiene keyword primordial de categoría {category_id} ('{keyword}') en: {file_path.name}")
+                        break
+                if scores["10"] == 0:  # Si ya se eliminó, no seguir buscando
+                    break
+
         # ELIMINACIÓN INMEDIATA EN CARPETA: Si la carpeta contiene keywords de Hoja de Vida, eliminar Categoría 03 completamente
         hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
         for hv_keyword in hoja_vida_keywords:
@@ -666,6 +839,64 @@ class DocumentOrganizer:
                         found_keywords.append(f"código_formato_contenido:{format_code}")
                         self.logger.info(f"Código de formato detectado en contenido: {format_code} -> Categoría {category_id} en {file_path.name}")
 
+                # PENALIZACIONES GRAVES PARA CATEGORÍA 10 EN CONTENIDO: Eliminar completamente si contiene keywords primordiales de otras categorías
+                if scores.get("10", 0) > 0:
+                    # Keywords primordiales de otras categorías que deben eliminar completamente la categoría 10
+                    category_10_elimination_keywords = {
+                        "00": ["check list", "lista chequeo", "formato check list", "expediente laboral", "lista de chequeo"],
+                        "01": ["requisicion", "solicitud personal", "requisicion personal", "formato requisicion", "solicitud empleo"],
+                        "02": ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"],
+                        "03": ["bachiller", "academico", "universidad", "diploma", "acta de grado", "magister", "educacion", "grado", "certificados estudios"],
+                        "04": ["experiencia laboral", "en el cargo", "certifica", "certificaciones de experiencia laboral", "presto sus servicios", "certificaciones experiencia", "certificados laborales", "certificado experiencia"],
+                        "05": ["eps", "afiliacion salud", "salud eps", "afiliacion eps", "certificacion eps"],
+                        "06": ["afiliacion en nuestra arl", "afiliacion en el ramo de resgos laborales", "riesgos laborales", "afiliacion arl", "certificado de afiliacion", "seguro riesgos laborales"],
+                        "07": ["caja compensacion", "ccf", "compensacion familiar", "afiliacion caja de compensacion", "afiliacion compensacion familiar"],
+                        "08": ["certifica que", "afiliacion fondo de pensiones", "fondo pension", "fp", "fondo de pensiones obligatorias porvenir", "fondo pensiones obligatorias", "porvenir"],
+                        "09": ["contrato", "contrato trabajo", "contrato laboral", "contrato individual trabajo", "termino indefinido"],
+                        "11": ["examen medico", "examen ingreso", "aptitud medica", "examen medico ingreso", "certificado medico ocupacional"],
+                        "12": ["pgn", "procuraduria", "antecedentes disciplinarios", "certificado antecedentes", "procuraduria general nacion"],
+                        "13": ["certifica", "cgr", "cert. antecendes fiscales cgr", "antecedentes fiscales", "sibor", "contraloria general republica", "certificado fiscal"],
+                        "14": ["ponal", "policia", "antecedentes judiciales", "policia nacional", "antecedentes penales"],
+                        "15": ["medidas correctivas", "sistema registro nacional", "registro nacional medidas correctivas", "rnmc", "consulta rnmc"],
+                        "16": ["formato para el cambio de cuenta bancaria", "la cuenta de ahorros", "cuenta bancaria", "certifica que", "cert. bancaria", "cambio de la cuenta bancaria"],
+                        "17": ["licencia conduccion", "pase", "licencia conducir", "licencia transito", "pase conduccion"],
+                        "18": ["t.p.", "tarjeta profesional", "matricula profesional", "copnia", "tp", "tp profesional"],
+                        "19": ["induccion", "reinduccion", "induccion corporativa", "constancia induccion", "formato induccion"],
+                        "20": ["foto", "fotografia", "foto documento", "foto carnet", "foto 3x4"],
+                        "21": ["informacion personal", "tratamiento", "autorizo", "titular de datos", "autorizacion para el tratamiento datos"],
+                        "22": ["inhabilidad", "incompatibilidad", "declaracion juramentada", "certificado inhabilidades", "conflicto intereses"],
+                        "23": ["evaluacion periodo", "periodo prueba", "evaluacion periodo de prueba", "evaluacion ingreso", "periodo prueba"],
+                        "24": ["carta recomendaciones medicas", "examen medico ocupacional", "concepto", "certificado medico de aptitud laboral", "examen medico periodico", "formato entrega de recomendaciones", "medicas ocupacionales"],
+                        "25": ["permiso", "licencia no remunerada", "permisos", "formato control novedades", "permiso personal"],
+                        "27": ["incapacidad", "incapacidades", "incapacidad medica", "certificado incapacidad", "licencia medica"],
+                        "28": ["vacaciones", "solicitud vacaciones", "formato vacaciones", "solicitud disfrute vacaciones", "periodo vacaciones"],
+                        "29": ["encargo", "encargos", "encargo cargo", "encargo funciones", "delegacion funciones"],
+                        "30": ["cesantias", "retiro cesantias", "solicitud cesantias", "liquidacion cesantias", "certificado cesantias"],
+                        "31": ["certificaciones laborales", "asignacion salarial", "certificado laboral", "certificacion laboral", "desempeñando el cargo", "contrato individual de trabajo"],
+                        "32": ["rte fete", "fete", "fte", "rte", "rte fte", "deduccion", "retefuente", "hace constar que", "retencion fuente", "deduccion retefuente", "formato deduccion"],
+                        "33": ["ingresos y retenciones", "ingresos retenciones", "certificado ingresos", "certificado retenciones", "certificacion ingresos"],
+                        "34": ["confirmacion de titulo", "solicitud", "educacion superior para empleado", "examen egreso", "paz salvo"],
+                        "35": ["reinducciones", "certificacion reinduccion", "reinduccion", "certificado reinduccion", "certificados reinduccion"],
+                        "36": ["carnet de vacunas", "certificado de vacunas", "vacunas", "certificado vacunas", "vacunacion"],
+                        "37": ["protocolo de retiro y documentos de retiro", "protocolo retiro", "documentos de retiro"],
+                        "38": ["acta entrega", "entrega puesto", "actas entrega", "inventario entrega", "transferencia responsabilidades"],
+                        "39": ["validaciones", "formato análisis de formación y experiencia", "revision formal", "validacion documentos"],
+                        "40": ["notificacion", "carta", "proceso disciplinario", "llamado atencion", "memorando", "memorando disciplinario", "sancion disciplinaria"],
+                        "41": ["bonos", "bono", "acta", "entrega de dotacion", "dotacion", "otros", "varios", "otros documentos", "documentos varios", "miscelaneos"],
+                        "42": ["evaluaciones de desempeño", "conocimientos", "evaluacion de desempeño", "evaluacion rendimiento", "evaluacion desempeno", "calificacion desempeño", "review desempeño"]
+                    }
+                    
+                    # Verificar si el contenido contiene keywords primordiales de otras categorías
+                    for category_id, elimination_keywords in category_10_elimination_keywords.items():
+                        for keyword in elimination_keywords:
+                            if self.normalize_text(keyword) in normalized_content:
+                                scores["10"] = 0  # ELIMINACIÓN COMPLETA
+                                found_keywords.append(f"eliminacion_categoria_10_contenido:contiene_keyword_primordial_{category_id}")
+                                self.logger.warning(f"ELIMINACIÓN COMPLETA CATEGORÍA 10: Contenido contiene keyword primordial de categoría {category_id} ('{keyword}') en: {file_path.name}")
+                                break
+                        if scores["10"] == 0:  # Si ya se eliminó, no seguir buscando
+                            break
+
                 # ELIMINACIÓN INMEDIATA EN CONTENIDO: Si el contenido contiene keywords de Hoja de Vida, eliminar Categoría 03 completamente
                 hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]
                 for hv_keyword in hoja_vida_keywords:
@@ -719,6 +950,64 @@ class DocumentOrganizer:
                         scores[category_id] += 50  # ALTA PRIORIDAD en OCR
                         found_keywords.append(f"código_formato_ocr:{format_code}")
                         self.logger.info(f"Código de formato detectado en OCR: {format_code} -> Categoría {category_id} en {file_path.name}")
+
+                # PENALIZACIONES GRAVES PARA CATEGORÍA 10 EN OCR: Eliminar completamente si contiene keywords primordiales de otras categorías
+                if scores.get("10", 0) > 0:
+                    # Keywords primordiales de otras categorías que deben eliminar completamente la categoría 10
+                    category_10_elimination_keywords = {
+                        "00": ["check list", "lista chequeo", "formato check list", "expediente laboral", "lista de chequeo"],
+                        "01": ["requisicion", "solicitud personal", "requisicion personal", "formato requisicion", "solicitud empleo"],
+                        "02": ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"],
+                        "03": ["bachiller", "academico", "universidad", "diploma", "acta de grado", "magister", "educacion", "grado", "certificados estudios"],
+                        "04": ["experiencia laboral", "en el cargo", "certifica", "certificaciones de experiencia laboral", "presto sus servicios", "certificaciones experiencia", "certificados laborales", "certificado experiencia"],
+                        "05": ["eps", "afiliacion salud", "salud eps", "afiliacion eps", "certificacion eps"],
+                        "06": ["afiliacion en nuestra arl", "afiliacion en el ramo de resgos laborales", "riesgos laborales", "afiliacion arl", "certificado de afiliacion", "seguro riesgos laborales"],
+                        "07": ["caja compensacion", "ccf", "compensacion familiar", "afiliacion caja de compensacion", "afiliacion compensacion familiar"],
+                        "08": ["certifica que", "afiliacion fondo de pensiones", "fondo pension", "fp", "fondo de pensiones obligatorias porvenir", "fondo pensiones obligatorias", "porvenir"],
+                        "09": ["contrato", "contrato trabajo", "contrato laboral", "contrato individual trabajo", "termino indefinido"],
+                        "11": ["examen medico", "examen ingreso", "aptitud medica", "examen medico ingreso", "certificado medico ocupacional"],
+                        "12": ["pgn", "procuraduria", "antecedentes disciplinarios", "certificado antecedentes", "procuraduria general nacion"],
+                        "13": ["certifica", "cgr", "cert. antecendes fiscales cgr", "antecedentes fiscales", "sibor", "contraloria general republica", "certificado fiscal"],
+                        "14": ["ponal", "policia", "antecedentes judiciales", "policia nacional", "antecedentes penales"],
+                        "15": ["medidas correctivas", "sistema registro nacional", "registro nacional medidas correctivas", "rnmc", "consulta rnmc"],
+                        "16": ["formato para el cambio de cuenta bancaria", "la cuenta de ahorros", "cuenta bancaria", "certifica que", "cert. bancaria", "cambio de la cuenta bancaria"],
+                        "17": ["licencia conduccion", "pase", "licencia conducir", "licencia transito", "pase conduccion"],
+                        "18": ["t.p.", "tarjeta profesional", "matricula profesional", "copnia", "tp", "tp profesional"],
+                        "19": ["induccion", "reinduccion", "induccion corporativa", "constancia induccion", "formato induccion"],
+                        "20": ["foto", "fotografia", "foto documento", "foto carnet", "foto 3x4"],
+                        "21": ["informacion personal", "tratamiento", "autorizo", "titular de datos", "autorizacion para el tratamiento datos"],
+                        "22": ["inhabilidad", "incompatibilidad", "declaracion juramentada", "certificado inhabilidades", "conflicto intereses"],
+                        "23": ["evaluacion periodo", "periodo prueba", "evaluacion periodo de prueba", "evaluacion ingreso", "periodo prueba"],
+                        "24": ["carta recomendaciones medicas", "examen medico ocupacional", "concepto", "certificado medico de aptitud laboral", "examen medico periodico", "formato entrega de recomendaciones", "medicas ocupacionales"],
+                        "25": ["permiso", "licencia no remunerada", "permisos", "formato control novedades", "permiso personal"],
+                        "27": ["incapacidad", "incapacidades", "incapacidad medica", "certificado incapacidad", "licencia medica"],
+                        "28": ["vacaciones", "solicitud vacaciones", "formato vacaciones", "solicitud disfrute vacaciones", "periodo vacaciones"],
+                        "29": ["encargo", "encargos", "encargo cargo", "encargo funciones", "delegacion funciones"],
+                        "30": ["cesantias", "retiro cesantias", "solicitud cesantias", "liquidacion cesantias", "certificado cesantias"],
+                        "31": ["certificaciones laborales", "asignacion salarial", "certificado laboral", "certificacion laboral", "desempeñando el cargo", "contrato individual de trabajo"],
+                        "32": ["rte fete", "fete", "fte", "rte", "rte fte", "deduccion", "retefuente", "hace constar que", "retencion fuente", "deduccion retefuente", "formato deduccion"],
+                        "33": ["ingresos y retenciones", "ingresos retenciones", "certificado ingresos", "certificado retenciones", "certificacion ingresos"],
+                        "34": ["confirmacion de titulo", "solicitud", "educacion superior para empleado", "examen egreso", "paz salvo"],
+                        "35": ["reinducciones", "certificacion reinduccion", "reinduccion", "certificado reinduccion", "certificados reinduccion"],
+                        "36": ["carnet de vacunas", "certificado de vacunas", "vacunas", "certificado vacunas", "vacunacion"],
+                        "37": ["protocolo de retiro y documentos de retiro", "protocolo retiro", "documentos de retiro"],
+                        "38": ["acta entrega", "entrega puesto", "actas entrega", "inventario entrega", "transferencia responsabilidades"],
+                        "39": ["validaciones", "formato análisis de formación y experiencia", "revision formal", "validacion documentos"],
+                        "40": ["notificacion", "carta", "proceso disciplinario", "llamado atencion", "memorando", "memorando disciplinario", "sancion disciplinaria"],
+                        "41": ["bonos", "bono", "acta", "entrega de dotacion", "dotacion", "otros", "varios", "otros documentos", "documentos varios", "miscelaneos"],
+                        "42": ["evaluaciones de desempeño", "conocimientos", "evaluacion de desempeño", "evaluacion rendimiento", "evaluacion desempeno", "calificacion desempeño", "review desempeño"]
+                    }
+                    
+                    # Verificar si el OCR contiene keywords primordiales de otras categorías
+                    for category_id, elimination_keywords in category_10_elimination_keywords.items():
+                        for keyword in elimination_keywords:
+                            if self.normalize_text(keyword) in normalized_ocr:
+                                scores["10"] = 0  # ELIMINACIÓN COMPLETA
+                                found_keywords.append(f"eliminacion_categoria_10_ocr:contiene_keyword_primordial_{category_id}")
+                                self.logger.warning(f"ELIMINACIÓN COMPLETA CATEGORÍA 10: OCR contiene keyword primordial de categoría {category_id} ('{keyword}') en: {file_path.name}")
+                                break
+                        if scores["10"] == 0:  # Si ya se eliminó, no seguir buscando
+                            break
 
                 # ELIMINACIÓN INMEDIATA EN OCR: Si el OCR contiene keywords de Hoja de Vida, eliminar Categoría 03 completamente
                 hoja_vida_keywords = ["hoja de vida", "formato hoja de vida unica", "cv", "vida unica", "hv", "curriculum vitae"]

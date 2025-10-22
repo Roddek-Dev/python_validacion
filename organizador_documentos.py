@@ -622,7 +622,7 @@ class DocumentOrganizer:
                 "17": ["licencia conduccion", "pase", "licencia conducir", "licencia transito", "pase conduccion"],
                 "18": ["t.p.", "tarjeta profesional", "matricula profesional", "copnia", "tp", "tp profesional"],
                 "19": ["induccion", "reinduccion", "induccion corporativa", "constancia induccion", "formato induccion"],
-                "20": ["foto", "fotografia", "foto documento", "foto carnet", "foto 3x4"],
+                "20": ["foto documento", "foto carnet", "foto 3x4", "fotografia personal", "foto personal"],
                 "21": ["informacion personal", "tratamiento", "autorizo", "titular de datos", "autorizacion para el tratamiento datos"],
                 "22": ["inhabilidad", "incompatibilidad", "declaracion juramentada", "certificado inhabilidades", "conflicto intereses"],
                 "23": ["evaluacion periodo", "periodo prueba", "evaluacion periodo de prueba", "evaluacion ingreso", "periodo prueba"],
@@ -666,6 +666,22 @@ class DocumentOrganizer:
                 self.logger.warning(f"ELIMINACIÓN INMEDIATA: Categoría 03 eliminada por contener 'hoja de vida' en nombre de archivo: {file_path.name}")
                 break
         
+        # PENALIZACIONES GRAVES PARA CATEGORÍA 06: Eliminar completamente si contiene keywords específicas de EPS
+        if scores.get("06", 0) > 0:
+            # Keywords específicas de EPS que deben eliminar completamente la categoría 06
+            eps_specific_keywords = [
+                "certificado de afiliacion eps", "adres", "seguridad social en salud",
+                "salud", "eps", "afiliacion salud", "salud eps", "afiliacion eps", "certificacion eps"
+            ]
+            
+            # Verificar si contiene keywords específicas de EPS
+            for eps_keyword in eps_specific_keywords:
+                if self.normalize_text(eps_keyword) in normalized_filename:
+                    scores["06"] = 0  # ELIMINACIÓN COMPLETA
+                    found_keywords.append(f"eliminacion_categoria_06:contiene_keyword_eps")
+                    self.logger.warning(f"ELIMINACIÓN COMPLETA CATEGORÍA 06: Contiene keyword específica de EPS ('{eps_keyword}') en nombre de archivo: {file_path.name}")
+                    break
+
         # PENALIZACIONES CRUZADAS ADICIONALES: Verificar si el archivo contiene keywords de categorías más específicas
         # Penalizar Categoría 03 si contiene keywords de Categoría 02 - ELIMINACIÓN TOTAL
         if scores.get("03", 0) > 0:
@@ -725,6 +741,22 @@ class DocumentOrganizer:
 
             scores[cat_id] += folder_score
         
+        # PENALIZACIONES GRAVES PARA CATEGORÍA 06 EN CARPETA PADRE: Eliminar completamente si contiene keywords específicas de EPS
+        if scores.get("06", 0) > 0:
+            # Keywords específicas de EPS que deben eliminar completamente la categoría 06
+            eps_specific_keywords = [
+                "certificado de afiliacion eps", "tipo afiliado", "adres", "seguridad social en salud",
+                "salud", "eps", "afiliacion salud", "salud eps", "afiliacion eps", "certificacion eps"
+            ]
+            
+            # Verificar si la carpeta padre contiene keywords específicas de EPS
+            for eps_keyword in eps_specific_keywords:
+                if self.normalize_text(eps_keyword) in normalized_parent:
+                    scores["06"] = 0  # ELIMINACIÓN COMPLETA
+                    found_keywords.append(f"eliminacion_categoria_06_carpeta:contiene_keyword_eps")
+                    self.logger.warning(f"ELIMINACIÓN COMPLETA CATEGORÍA 06: Carpeta padre contiene keyword específica de EPS ('{eps_keyword}') en: {file_path.name}")
+                    break
+
         # PENALIZACIONES GRAVES PARA CATEGORÍA 10 EN CARPETA PADRE: Eliminar completamente si contiene keywords primordiales de otras categorías
         if scores.get("10", 0) > 0:
             # Keywords primordiales de otras categorías que deben eliminar completamente la categoría 10
@@ -748,7 +780,7 @@ class DocumentOrganizer:
                 "17": ["licencia conduccion", "pase", "licencia conducir", "licencia transito", "pase conduccion"],
                 "18": ["t.p.", "tarjeta profesional", "matricula profesional", "copnia", "tp", "tp profesional"],
                 "19": ["induccion", "reinduccion", "induccion corporativa", "constancia induccion", "formato induccion"],
-                "20": ["foto", "fotografia", "foto documento", "foto carnet", "foto 3x4"],
+                "20": ["foto documento", "foto carnet", "foto 3x4", "fotografia personal", "foto personal"],
                 "21": ["informacion personal", "tratamiento", "autorizo", "titular de datos", "autorizacion para el tratamiento datos"],
                 "22": ["inhabilidad", "incompatibilidad", "declaracion juramentada", "certificado inhabilidades", "conflicto intereses"],
                 "23": ["evaluacion periodo", "periodo prueba", "evaluacion periodo de prueba", "evaluacion ingreso", "periodo prueba"],
@@ -839,6 +871,22 @@ class DocumentOrganizer:
                         found_keywords.append(f"código_formato_contenido:{format_code}")
                         self.logger.info(f"Código de formato detectado en contenido: {format_code} -> Categoría {category_id} en {file_path.name}")
 
+                # PENALIZACIONES GRAVES PARA CATEGORÍA 06 EN CONTENIDO: Eliminar completamente si contiene keywords específicas de EPS
+                if scores.get("06", 0) > 0:
+                    # Keywords específicas de EPS que deben eliminar completamente la categoría 06
+                    eps_specific_keywords = [
+                        "certificado de afiliacion eps", "tipo afiliado", "adres", "seguridad social en salud",
+                        "salud", "eps", "afiliacion salud", "salud eps", "afiliacion eps", "certificacion eps"
+                    ]
+                    
+                    # Verificar si el contenido contiene keywords específicas de EPS
+                    for eps_keyword in eps_specific_keywords:
+                        if self.normalize_text(eps_keyword) in normalized_content:
+                            scores["06"] = 0  # ELIMINACIÓN COMPLETA
+                            found_keywords.append(f"eliminacion_categoria_06_contenido:contiene_keyword_eps")
+                            self.logger.warning(f"ELIMINACIÓN COMPLETA CATEGORÍA 06: Contenido contiene keyword específica de EPS ('{eps_keyword}') en: {file_path.name}")
+                            break
+
                 # PENALIZACIONES GRAVES PARA CATEGORÍA 10 EN CONTENIDO: Eliminar completamente si contiene keywords primordiales de otras categorías
                 if scores.get("10", 0) > 0:
                     # Keywords primordiales de otras categorías que deben eliminar completamente la categoría 10
@@ -862,7 +910,7 @@ class DocumentOrganizer:
                         "17": ["licencia conduccion", "pase", "licencia conducir", "licencia transito", "pase conduccion"],
                         "18": ["t.p.", "tarjeta profesional", "matricula profesional", "copnia", "tp", "tp profesional"],
                         "19": ["induccion", "reinduccion", "induccion corporativa", "constancia induccion", "formato induccion"],
-                        "20": ["foto", "fotografia", "foto documento", "foto carnet", "foto 3x4"],
+                        "20": ["foto documento", "foto carnet", "foto 3x4", "fotografia personal", "foto personal"],
                         "21": ["informacion personal", "tratamiento", "autorizo", "titular de datos", "autorizacion para el tratamiento datos"],
                         "22": ["inhabilidad", "incompatibilidad", "declaracion juramentada", "certificado inhabilidades", "conflicto intereses"],
                         "23": ["evaluacion periodo", "periodo prueba", "evaluacion periodo de prueba", "evaluacion ingreso", "periodo prueba"],
@@ -951,6 +999,22 @@ class DocumentOrganizer:
                         found_keywords.append(f"código_formato_ocr:{format_code}")
                         self.logger.info(f"Código de formato detectado en OCR: {format_code} -> Categoría {category_id} en {file_path.name}")
 
+                # PENALIZACIONES GRAVES PARA CATEGORÍA 06 EN OCR: Eliminar completamente si contiene keywords específicas de EPS
+                if scores.get("06", 0) > 0:
+                    # Keywords específicas de EPS que deben eliminar completamente la categoría 06
+                    eps_specific_keywords = [
+                        "certificado de afiliacion eps", "tipo afiliado", "adres", "seguridad social en salud",
+                        "salud", "eps", "afiliacion salud", "salud eps", "afiliacion eps", "certificacion eps"
+                    ]
+                    
+                    # Verificar si el OCR contiene keywords específicas de EPS
+                    for eps_keyword in eps_specific_keywords:
+                        if self.normalize_text(eps_keyword) in normalized_ocr:
+                            scores["06"] = 0  # ELIMINACIÓN COMPLETA
+                            found_keywords.append(f"eliminacion_categoria_06_ocr:contiene_keyword_eps")
+                            self.logger.warning(f"ELIMINACIÓN COMPLETA CATEGORÍA 06: OCR contiene keyword específica de EPS ('{eps_keyword}') en: {file_path.name}")
+                            break
+
                 # PENALIZACIONES GRAVES PARA CATEGORÍA 10 EN OCR: Eliminar completamente si contiene keywords primordiales de otras categorías
                 if scores.get("10", 0) > 0:
                     # Keywords primordiales de otras categorías que deben eliminar completamente la categoría 10
@@ -974,7 +1038,7 @@ class DocumentOrganizer:
                         "17": ["licencia conduccion", "pase", "licencia conducir", "licencia transito", "pase conduccion"],
                         "18": ["t.p.", "tarjeta profesional", "matricula profesional", "copnia", "tp", "tp profesional"],
                         "19": ["induccion", "reinduccion", "induccion corporativa", "constancia induccion", "formato induccion"],
-                        "20": ["foto", "fotografia", "foto documento", "foto carnet", "foto 3x4"],
+                        "20": ["foto documento", "foto carnet", "foto 3x4", "fotografia personal", "foto personal"],
                         "21": ["informacion personal", "tratamiento", "autorizo", "titular de datos", "autorizacion para el tratamiento datos"],
                         "22": ["inhabilidad", "incompatibilidad", "declaracion juramentada", "certificado inhabilidades", "conflicto intereses"],
                         "23": ["evaluacion periodo", "periodo prueba", "evaluacion periodo de prueba", "evaluacion ingreso", "periodo prueba"],

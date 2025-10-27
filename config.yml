@@ -1,7 +1,7 @@
 # Configuración de Operación
 dry_run: false
 default_mode: "copy"
-num_threads: 6
+num_threads: 12
 confidence_threshold: 15
 
 # Configuración de Análisis de Contenido

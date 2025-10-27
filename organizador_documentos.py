@@ -129,11 +129,12 @@ class DocumentOrganizer:
         # Dividir la ruta en partes
         path_parts = relative_path.parts
         
-        # Patrones para detectar carpetas de usuario
+        # Patrones para detectar carpetas de usuario (manteniendo el nombre completo)
         user_patterns = [
-            r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑ\s]+)\s+-\s+CC\s+\d+",  # "NOMBRE APELLIDO - CC 123456789"
-            r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑ\s]+)\s+CC\s+\d+",      # "NOMBRE APELLIDO CC 123456789"
-            r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑ\s]+)\s+-\s+\d+",       # "NOMBRE APELLIDO - 123456789"
+            r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑ\s]+-\s+CC\s+\d+-\d{8}T\d{6}Z-\d+-\d+)",  # "NOMBRE - CC 123-20251021T142258Z-1-001"
+            r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑ\s]+\s+-\s+CC\s+\d+)",  # "NOMBRE APELLIDO - CC 123456789"
+            r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑ\s]+\s+CC\s+\d+)",      # "NOMBRE APELLIDO CC 123456789"
+            r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑ\s]+\s+-\s+\d+)",       # "NOMBRE APELLIDO - 123456789"
         ]
         
         # Buscar en las primeras partes de la ruta (carpetas más cercanas al origen)
@@ -141,14 +142,18 @@ class DocumentOrganizer:
             for pattern in user_patterns:
                 match = re.search(pattern, part, re.IGNORECASE)
                 if match:
-                    user_name = match.group(1).strip()
-                    return self._clean_user_name(user_name)
+                    # Retornar el nombre completo de la carpeta sin limpiar
+                    return part
         
         return None
     
     def _clean_user_name(self, name: str) -> str:
         """Limpia y formatea el nombre de usuario."""
-        # Normalizar y limpiar
+        # Si el nombre contiene el patrón completo con timestamp, mantenerlo tal como está
+        if re.search(r"CC\s+\d+-\d{8}T\d{6}Z-\d+-\d+", name):
+            return name
+        
+        # Para nombres simples, aplicar limpieza tradicional
         clean_name = self.normalize_text(name)
         # Reemplazar espacios con guiones bajos
         clean_name = clean_name.replace(" ", "_")
